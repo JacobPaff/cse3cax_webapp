@@ -1,0 +1,15 @@
+{% extends "base.html" %} {% block content %}
+
+<h1>Subject List</h1>
+<table border="1">
+  <tr>
+    <th>Code</th>
+    <th>Subject Name</th>
+  </tr>
+  {% for subject in subjects %}
+  <tr>
+    <td>{{ subject.subject_id }}</td>
+    <td>{{ subject.subject_name }}</td>
+  </tr>
+  {% endfor %} {% endblock %}
+</table>
