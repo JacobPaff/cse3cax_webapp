@@ -45,6 +45,7 @@ class UserProfileForm(forms.ModelForm):
             'last_name': forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'Surname'}),
         }
 
+    # TODO:email validation
     def clean_email(self):
         email = self.cleaned_data.get('email')
         if UserProfile.objects.filter(email=email).exists():

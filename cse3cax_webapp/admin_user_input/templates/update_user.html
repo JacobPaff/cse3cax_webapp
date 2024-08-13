@@ -1,0 +1,24 @@
+{% load crispy_forms_tags %}
+<div class="card">
+  <div class="card-header bg-secondary text-white">
+    <h2 class="mb-0">Edit User Profile</h2>
+  </div>
+  <div class="card-body">
+    <form id="user-form" hx-post="{% url 'update_user' user.user_id %}" hx-target="#user-form" hx-swap="outerHTML" novalidate>
+      {% csrf_token %}
+      {% crispy form %}
+      <div class="form-group mt-4"> <!-- Added margin-top -->
+        <button type="submit" class="btn btn-primary">Update User</button>
+        <button type="button" class="btn btn-danger" 
+                hx-delete="{% url 'delete_user' user.user_id %}" 
+                hx-confirm="Are you sure you want to delete this user?" 
+                hx-target="#user-form" 
+                hx-swap="outerHTML">Delete User</button>
+        <button type="button" class="btn btn-secondary" 
+                hx-get="{% url 'add_user' %}" 
+                hx-target="#user-form" 
+                hx-swap="outerHTML">Clear</button>
+      </div>
+    </form>
+  </div>
+</div>
