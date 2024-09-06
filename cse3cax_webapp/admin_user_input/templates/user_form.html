@@ -7,36 +7,32 @@
       <h2 class="mb-0">{% if selected_user %}Edit User{% else %}Add New User{% endif %}</h2>
     </div>
     <div class="card-body">
-      <form
-        id="add-user-form"
-        hx-post="{% if selected_user %}{% url 'update_user' selected_user.user_id %}{% else %}{% url 'add_user' %}{% endif %}"
-        hx-target="#user-form"
-        hx-swap="outerHTML"
-        hx-trigger="submit"
-        novalidate
-      >
-        {% csrf_token %} {% crispy form %}
-        <div class="form-group mt-4">
-          <button type="submit" class="btn btn-success">{% if selected_user %}Update User{% else %}Add User{% endif %}</button>
-          <button
-            type="button"
-            class="btn btn-secondary"
-            hx-get="{% url 'add_user' %}"
+      <form id="user-profile-form" method="post"
+            hx-post="{% if selected_user %}{% url 'update_user' selected_user.user_id %}{% else %}{% url 'add_user' %}{% endif %}"
             hx-target="#user-form"
-            hx-swap="outerHTML"
-            onclick="clearActiveUser()"
-          >
-          {% if selected_user %}Cancel{% else %}Clear{% endif %}
+            hx-swap="outerHTML">
+        {% csrf_token %}
+        {% crispy form %}
+        <div class="form-group mt-3">
+          <button type="submit" class="btn btn-primary me-2">
+            {% if selected_user %}Update User{% else %}Add User{% endif %}
+          </button>
+          <button type="button" class="btn btn-secondary"
+                  hx-get="{% url 'add_user' %}"
+                  hx-target="#user-form"
+                  hx-swap="outerHTML"
+                  onclick="clearActiveUser()">
+            {% if selected_user %}Cancel{% else %}Clear{% endif %}
           </button>
         </div>
-        {% if messages %}
-        <div class="container mt-3">
-          {% for message in messages %}
-          <div class="alert {{ message.tags }}">{{ message }}</div>
-          {% endfor %}
-        </div>
-        {% endif %}
       </form>
+      {% if messages %}
+      <div class="container mt-3">
+        {% for message in messages %}
+        <div class="alert {{ message.tags }}">{{ message }}</div>
+        {% endfor %}
+      </div>
+      {% endif %}
     </div>
   </div>
 </div>

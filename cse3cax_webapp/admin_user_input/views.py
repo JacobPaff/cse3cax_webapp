@@ -3,6 +3,7 @@ from django.contrib import messages
 from admin_user_input.models import UserProfile, Subject
 from admin_user_input.forms import UserProfileForm
 from django.views.decorators.http import require_http_methods
+from django.template.loader import render_to_string
 from django.http import HttpResponse
 
 
@@ -93,9 +94,15 @@ def update_user(request, user_id):
         form = UserProfileForm(request.POST, instance=user)
         if form.is_valid():
             form.save()
-            messages.success(request, 'User updated successfully!')
-            # Return a fresh form after updating
-            return render(request, 'user_form.html', {'form': UserProfileForm(), 'selected_user': None})
+            messages.success(request, 'User updated successfully')
+            html = render_to_string('user_form.html', {
+                'form': UserProfileForm(instance=user),
+                'selected_user': user
+            }, request=request)
+                        # Create response with the rendered HTML
+            response = HttpResponse(html)
+            response['HX-Trigger'] = 'refreshUserList'
+            return response
         else:
             # If form is invalid, return the form with validation errors
             return render(request, 'user_form.html', {'form': form, 'selected_user': user})
@@ -111,9 +118,14 @@ def add_user(request):
         form = UserProfileForm(request.POST)
         if form.is_valid():
             form.save()
-            messages.success(request, 'User added successfully!')
-            # Return the form with a success message and reset form
-            return render(request, 'user_form.html', {'form': UserProfileForm(), 'selected_user': None})
+            messages.success(request, 'User added successfully')
+            html = render_to_string('user_form.html', {
+                'form': UserProfileForm(),
+            }, request=request)
+                        # Create response with the rendered HTML
+            response = HttpResponse(html)
+            response['HX-Trigger'] = 'refreshUserList'
+            return response
         else:
             # If the form is invalid, return the form with errors and retain entered data
             return render(request, 'user_form.html', {'form': form, 'selected_user': None})

@@ -7,7 +7,7 @@
     <div
       style="width: 50%"
       id="user-list-container"
-      hx-trigger="userAdded from:body"
+      hx-trigger="refreshUserList from:body"
       hx-get="{% url 'user_list' %}"
       hx-target="#user-list-container"
     >

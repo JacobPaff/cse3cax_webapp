@@ -2,6 +2,8 @@ from django import forms
 from django.core.validators import EmailValidator
 from django.core.exceptions import ValidationError
 from .models import UserProfile, Role
+from crispy_forms.helper import FormHelper
+from crispy_forms.layout import Layout, Field
 
 class UserProfileForm(forms.ModelForm):
     role = forms.ModelChoiceField(
@@ -45,8 +47,19 @@ class UserProfileForm(forms.ModelForm):
             'last_name': forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'Surname'}),
         }
 
-    def init(self, args, **kwargs):
-        super().init(args, **kwargs)
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+        self.helper = FormHelper()
+        self.helper.form_tag = False  # Don't render <form> tag
+        self.helper.layout = Layout(
+            Field('role'),
+            Field('email'),
+            Field('fte_percentage'),
+            Field('honorific'),
+            Field('first_name'),
+            Field('last_name'),
+        )
+        
         if self.instance.pk:
             self.fields['email'].initial = self.instance.email
 
