@@ -15,12 +15,14 @@ def subject_list(request):
     return render(request, 'subject_list.html', {'subjects': subjects})
 
 
-def user_management(request):
-    users = UserProfile.objects.all()
-    form = UserProfileForm()
+def user_management(request, user_id=None):
+    user_profile = get_object_or_404(UserProfile, user_id=user_id) if user_id else None
+    users = UserProfile.objects.all() 
+    form = UserProfileForm(instance=user_profile)
     context = {
         'form': form,
-        'users': users,
+        'users':users,
+        'user_profile': user_profile,
     }
     return render(request, 'user_management.html', context)
 
@@ -36,9 +38,19 @@ def add_user(request):
             form = UserProfileForm()  # Reset the form after saving
     else:
         form = UserProfileForm()
+    return render(request, 'user_form.html', {'form': form})
 
-    return render(request, 'add_user.html', {'form': form})
-
+def update_user(request, user_id):
+    user_profile = get_object_or_404(UserProfile, user_id=user_id)
+    if request.method == 'POST':
+        form = UserProfileForm(request.POST, instance=user_profile)
+        if form.is_valid():
+            form.save()
+            messages.success(request, 'User updated successfully!')
+            return redirect('user_list')
+    else:
+        form = UserProfileForm(instance=user_profile)
+    return render(request, 'user_form.html', {'form': form, 'user': user_profile})
 
 # def add_user(request):
 #     if request.method == 'POST':

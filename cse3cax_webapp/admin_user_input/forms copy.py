@@ -45,14 +45,10 @@ class UserProfileForm(forms.ModelForm):
             'last_name': forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'Surname'}),
         }
 
-    def __init__(self, *args, **kwargs):
-        super().__init__(*args, **kwargs)
-        if self.instance.pk:
-            self.fields['email'].initial = self.instance.email
-
+    # TODO:email validation
     def clean_email(self):
         email = self.cleaned_data.get('email')
-        if UserProfile.objects.filter(email=email).exclude(pk=self.instance.pk).exists():
+        if UserProfile.objects.filter(email=email).exists():
             raise ValidationError("This email is already in use.")
         return email
 
