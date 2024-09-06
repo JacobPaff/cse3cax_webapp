@@ -1,4 +1,6 @@
+{% load static %}
 <div id="user-list"> 
+  <script src="{% static 'js/user_management.js' %}"></script>
   <div class="card">
     <div class="card-header bg-secondary text-white">
       <h2 class="mb-0">User List</h2>
@@ -6,10 +8,15 @@
     <div class="card-body">
       <ul class="list-group">
         {% for user in users %}
-        <li class="list-group-item">
-          {% comment %} <a href="{% url 'user_management' user.user_id %}" class="btn btn-link"> {% endcomment %}
-            {{ user.first_name }} {{ user.last_name }} - {{ user.role }}
-          </a>
+        <li class="list-group-item {% if selected_user.user_id == user.user_id %}active{% endif %}"
+            hx-post="{% url 'select_user' %}"
+            hx-target="#user-form-container"
+            hx-swap="swap"
+            hx-trigger="click"
+            hx-vals='{"user_id": "{{ user.user_id }}"}'
+            hx-headers='{"X-CSRFToken": "{{ csrf_token }}"}'
+            onclick="highlightUser(this)">
+          {{ user.first_name }} {{ user.last_name }} - {{ user.role }}
         </li>
         {% empty %}
         <li class="list-group-item">No users found.</li>

@@ -1,13 +1,15 @@
 {% load crispy_forms_tags %}
+{% load static %}
 <div id="user-form">
+  <script src="{% static 'js/user_management.js' %}"></script>
   <div class="card">
     <div class="card-header bg-secondary text-white">
-      <h2 class="mb-0">{% if user_profile %}Edit User{% else %}Add New User{% endif %}</h2>
+      <h2 class="mb-0">{% if selected_user %}Edit User{% else %}Add New User{% endif %}</h2>
     </div>
     <div class="card-body">
       <form
         id="add-user-form"
-        hx-post="{% if user_profile %}{% url 'update_user' user_profile.user_id %}{% else %}{% url 'add_user' %}{% endif %}}"
+        hx-post="{% if selected_user %}{% url 'update_user' selected_user.user_id %}{% else %}{% url 'add_user' %}{% endif %}"
         hx-target="#user-form"
         hx-swap="outerHTML"
         hx-trigger="submit"
@@ -15,15 +17,16 @@
       >
         {% csrf_token %} {% crispy form %}
         <div class="form-group mt-4">
-          <button type="submit" class="btn btn-success">{% if user_profile %}Update User{% else %}Add User{% endif %}</button>
+          <button type="submit" class="btn btn-success">{% if selected_user %}Update User{% else %}Add User{% endif %}</button>
           <button
             type="button"
             class="btn btn-secondary"
             hx-get="{% url 'add_user' %}"
             hx-target="#user-form"
             hx-swap="outerHTML"
+            onclick="clearActiveUser()"
           >
-          {% if user_profile %}Cancel{% else %}Clear{% endif %}
+          {% if selected_user %}Cancel{% else %}Clear{% endif %}
           </button>
         </div>
         {% if messages %}

@@ -2,7 +2,7 @@
 <div class="container-fluid">
   <div class="row">
     <div style="width: 50%" id="user-form-container">
-      {% include "user_form.html" with form=form user=user %}
+      {% include "user_form.html" with form=form selected_user=selected_user %}
     </div>
     <div
       style="width: 50%"
@@ -11,7 +11,7 @@
       hx-get="{% url 'user_list' %}"
       hx-target="#user-list-container"
     >
-      {% include "user_list.html"  with users=users%}
+      {% include "user_list.html" with users=users selected_user=selected_user%}
     </div>
   </div>
 </div>

@@ -45,8 +45,8 @@ class UserProfileForm(forms.ModelForm):
             'last_name': forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'Surname'}),
         }
 
-    def __init__(self, *args, **kwargs):
-        super().__init__(*args, **kwargs)
+    def init(self, args, **kwargs):
+        super().init(args, **kwargs)
         if self.instance.pk:
             self.fields['email'].initial = self.instance.email
 
