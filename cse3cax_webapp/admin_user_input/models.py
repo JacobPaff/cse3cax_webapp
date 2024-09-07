@@ -33,6 +33,9 @@ class Subject(models.Model):
     class Meta:
         db_table = 'subject'
         managed = True
+    
+    def __str__(self):
+        return f"{self.subject_id} - {self.subject_name}"
 
 
 class SubjectInstance(models.Model):
@@ -49,3 +52,16 @@ class SubjectInstance(models.Model):
     class Meta:
         db_table = 'subject_instance'
         managed = True
+
+class LecturerExpertise(models.Model):
+    expertise_id = models.AutoField(primary_key=True)
+    subject = models.ForeignKey('Subject', on_delete=models.CASCADE)
+    user = models.ForeignKey('UserProfile', on_delete=models.CASCADE)
+
+    class Meta:
+        db_table = 'lecturer_expertise'
+        managed = True
+        unique_together = ('subject', 'user')  # Ensures a lecturer can't have duplicate expertise entries for the same subject
+
+    def __str__(self):
+        return f"{self.user.first_name} {self.user.last_name} - {self.subject.subject_name}"

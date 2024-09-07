@@ -1,22 +1,51 @@
-function highlightUser(element) {
-    clearActiveUser();
-    element.classList.add('active');
-}
+// user_management.js
 
-function clearActiveUser() {
-    document.querySelectorAll('#user-list .list-group-item').forEach(item => {
-        item.classList.remove('active');
-    });
-}
+document.addEventListener('DOMContentLoaded', function() {
+  // User list functionality
+  function highlightUser(element) {
+      clearActiveUser();
+      element.classList.add('active');
+  }
 
-{/* <script>
-  document.body.addEventListener('htmx:afterSwap', function(event) {
-    // Clear messages after 5 seconds
-    setTimeout(function() {
-      var messages = document.querySelectorAll('.alert');
-      messages.forEach(function(message) {
-        message.style.display = 'none';
+  function clearActiveUser() {
+      document.querySelectorAll('#user-list .list-group-item').forEach(item => {
+          item.classList.remove('active');
       });
-    }, 5000);
-  });
-</script> */}
+  }
+
+  // // Expertise field toggle functionality
+  // const roleSelect = document.getElementById('id_role');
+  // const expertiseField = document.querySelector('.expertise-field');
+
+  // function toggleExpertiseField() {
+  //     if (roleSelect && expertiseField) {
+  //         const isLecturer = roleSelect.value === 'Lecturer';
+  //         expertiseField.style.display = isLecturer ? 'block' : 'none';
+  //     }
+  // }
+
+  // if (roleSelect) {
+  //     roleSelect.addEventListener('change', toggleExpertiseField);
+  //     // No need to call toggleExpertiseField() initially, as the form handles the initial state
+  // }
+
+  // User selection functionality
+  // const userList = document.getElementById('user-list');
+
+  // if (userList) {
+  //     userList.addEventListener('click', function(event) {
+  //         const clickedUser = event.target.closest('.list-group-item');
+  //         if (clickedUser) {
+  //             highlightUser(clickedUser);
+  //             const isLecturer = clickedUser.dataset.role === 'Lecturer';
+  //             if (expertiseField) {
+  //                 expertiseField.style.display = isLecturer ? 'block' : 'none';
+  //             }
+  //         }
+  //     });
+  // }
+
+  // Expose functions to global scope if needed
+  window.highlightUser = highlightUser;
+  window.clearActiveUser = clearActiveUser;
+});

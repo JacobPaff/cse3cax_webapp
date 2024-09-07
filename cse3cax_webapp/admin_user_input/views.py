@@ -1,4 +1,5 @@
 from django.shortcuts import redirect, render, get_object_or_404
+from django.views.decorators.csrf import csrf_protect
 from django.contrib import messages
 from admin_user_input.models import UserProfile, Subject
 from admin_user_input.forms import UserProfileForm
@@ -68,10 +69,17 @@ def select_user(request):
 
 
 @require_http_methods(["DELETE"])
+@csrf_protect
 def delete_user(request, user_id):
     user = get_object_or_404(UserProfile, user_id=user_id)
     user.delete()
-    return HttpResponse("<div id='user-form'>User deleted successfully!</div>")
+    messages.success(request, 'User deleted successfully')
+    html = render_to_string('user_form.html', {'form': UserProfileForm()}, request=request)
+                # Create response with the rendered HTML
+    response = HttpResponse(html)
+    response['HX-Trigger'] = 'refreshUserList'
+    return response
+    # return HttpResponse("<div id='user-form'>User deleted successfully!</div>")
 
 
 # @require_http_methods(["GET", "POST"])

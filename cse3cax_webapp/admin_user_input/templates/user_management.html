@@ -1,17 +1,21 @@
-{% extends "base.html" %} {% block content %}
+{% extends "base.html" %}
+{% block content %}
+<style>
+  #user-form-container, #user-list-container {
+    height: calc(100vh - 80px); /* Adjust Npx to match header height */
+    overflow-y: auto;
+  }
+</style>
 <div class="container-fluid">
   <div class="row">
-    <div style="width: 50%" id="user-form-container">
+    <div class="col-md-6" id="user-form-container">
       {% include "user_form.html" with form=form selected_user=selected_user %}
     </div>
-    <div
-      style="width: 50%"
-      id="user-list-container"
-      hx-trigger="refreshUserList from:body"
-      hx-get="{% url 'user_list' %}"
-      hx-target="#user-list-container"
-    >
-      {% include "user_list.html" with users=users selected_user=selected_user%}
+    <div class="col-md-6" id="user-list-container"
+         hx-trigger="refreshUserList from:body"
+         hx-get="{% url 'user_list' %}"
+         hx-target="#user-list-container">
+      {% include "user_list.html" with users=users selected_user=selected_user %}
     </div>
   </div>
 </div>
