@@ -14,7 +14,7 @@
   </div>
   <div class="modal-body">
     <form id="expertise-form" hx-post="{{ request.path }}" hx-headers='{"X-CSRFToken": "{{ csrf_token }}"}'>
-      {{ form.as_p }}
+        {{ form|crispy }}   
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
           Cancel

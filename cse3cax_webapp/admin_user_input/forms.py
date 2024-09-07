@@ -16,7 +16,6 @@ class UserProfileForm(forms.ModelForm):
     )
 
     email = forms.EmailField(
-        validators=[EmailValidator(message="Please enter a valid email address.")],
         widget=forms.EmailInput(attrs={
             'class': 'form-control',
             'placeholder': 'Enter your email'
@@ -68,13 +67,14 @@ class UserProfileForm(forms.ModelForm):
 
     def clean_email(self):
         email = self.cleaned_data.get('email')
-        if self.instance.pk:  # This is an existing user
-            if email != self.instance.email:
+        if email:
+            if self.instance.pk:  # This is an existing user
+                if email != self.instance.email:
+                    if UserProfile.objects.filter(email=email).exists():
+                        raise ValidationError("This email is already in use. Please use a different email address.")
+            else:  # This is a new user
                 if UserProfile.objects.filter(email=email).exists():
                     raise ValidationError("This email is already in use. Please use a different email address.")
-        else:  # This is a new user
-            if UserProfile.objects.filter(email=email).exists():
-                raise ValidationError("This email is already in use. Please use a different email address.")
         return email
 
     def clean_fte_percentage(self):
@@ -82,12 +82,6 @@ class UserProfileForm(forms.ModelForm):
         if fte is not None and (fte < 0.1 or fte > 1.0):
             raise ValidationError("FTE percentage must be between 0.1 and 1.0. Please enter a valid value.")
         return fte
-
-    def clean(self):
-        cleaned_data = super().clean()
-        if self.errors:
-            raise ValidationError("Please correct the errors below and try again.")
-        return cleaned_data
 
 class LecturerExpertiseForm(forms.ModelForm):
     expertise = forms.ModelMultipleChoiceField(
