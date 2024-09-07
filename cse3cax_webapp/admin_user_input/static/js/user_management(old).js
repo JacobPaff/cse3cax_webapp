@@ -12,6 +12,14 @@ document.addEventListener('DOMContentLoaded', function() {
           item.classList.remove('active');
       });
   }
+document.body.addEventListener('htmx:afterSwap', function(event) {
+  if (event.detail.target.id === 'modalContainer') {
+      var modal = new bootstrap.Modal(event.detail.target.querySelector('.modal'));
+      modal.show();
+  }
+});
+
+
 
   // // Expertise field toggle functionality
   // const roleSelect = document.getElementById('id_role');

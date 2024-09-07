@@ -1,0 +1,54 @@
+{% load crispy_forms_tags %} {% load static %}
+<div id="user-form">
+  <script src="{% static 'js/user_management.js' %}"></script>
+  <div class="card">
+    <div class="card-header bg-secondary text-white">
+      <h2 class="mb-0">
+        {% if selected_user %}Edit User{% else %}Add New User{% endif %}
+      </h2>
+    </div>
+    <div class="card-body">
+      <form
+        id="user-profile-form"
+        method="post"
+        hx-post="{% if selected_user %}{% url 'update_user' selected_user.user_id %}{% else %}{% url 'add_user' %}{% endif %}"
+        hx-target="#user-form"
+        hx-swap="outerHTML"
+      >
+        {% csrf_token %} {% crispy form %}
+        <div class="form-group mt-3">
+          <button type="submit" class="btn btn-primary me-2">
+            {% if selected_user %}Update User{% else %}Add User{% endif %}
+          </button>
+          <button
+            type="button"
+            class="btn btn-secondary"
+            hx-get="{% url 'add_user' %}"
+            hx-target="#user-form"
+            hx-swap="outerHTML"
+            onclick="clearActiveUser()"
+          >
+            {% if selected_user %}Cancel{% else %}Clear{% endif %}
+          </button>
+          {% if selected_user %}
+          <button type="button" class="btn btn-danger"
+                  hx-delete="{% url 'delete_user' selected_user.user_id %}"
+                  hx-headers='{"X-CSRFToken": "{{ csrf_token }}"}'
+                  hx-confirm="Are you sure you want to delete this user?"
+                  hx-target="#user-form"
+                  hx-swap="outerHTML">
+            Delete User
+          </button>
+          {% endif %}
+        </div>
+      </form>
+      {% if messages %}
+      <div class="container mt-3">
+        {% for message in messages %}
+        <div class="alert {{ message.tags }}">{{ message }}</div>
+        {% endfor %}
+      </div>
+      {% endif %}
+    </div>
+  </div>
+</div>
