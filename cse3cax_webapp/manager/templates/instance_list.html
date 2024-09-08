@@ -1,0 +1,36 @@
+{% for instance in subject_instances %}
+<tr id="instance-{{ instance.instance_id }}" class="instance-row">
+  <td>{{instance.subject}} - {{instance.month}}/{{instance.year}}</td>
+  <td>{{instance.enrollments}}</td>
+  <td>{{instance.users}}</td>
+  <td>
+    <button
+      type="button"
+      class="btn btn-primary btn-sm"
+      hx-get="{% url 'edit_subject_instance' instance_id=instance.instance_id %}"
+      hx-target="#dialog"
+    >
+      Edit Instance
+    </button>
+    <button
+      type="button"
+      class="btn btn-danger btn-sm"
+      hx-get="{% url 'confirm_delete_instance' instance_id=instance.instance_id %}"
+      hx-target="#dialog"
+    >
+      Delete Instance
+    </button>
+    
+    {% comment %} {% if user.role.role_id == 'Lecturer' %}
+    <button
+      type="button"
+      class="btn btn-primary btn-sm"
+      hx-get="{% url 'set_expertise' user_id=user.user_id %}"
+      hx-target="#dialog"
+    >
+      Set Lecturer Expertise
+    </button>
+    {% endif %} {% endcomment %}
+  </td>
+</tr>
+{% endfor %}

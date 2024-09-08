@@ -1,0 +1,19 @@
+python manage.py dumpdata core.UserProfile > user_data.json
+
+
+
+python manage.py loaddata role_data.json
+python manage.py loaddata subject_data.json
+python manage.py loaddata user_data.json
+
+
+
+
+Remove Migration Files
+find . -path "*/migrations/*.py" -not -name "__init__.py" -delete
+find . -path "*/migrations/*.pyc"  -delete
+
+Recreate Database and Migrations
+
+python manage.py makemigrations
+python manage.py migrate

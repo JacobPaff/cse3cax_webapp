@@ -1,0 +1,63 @@
+<nav class="navbar navbar-expand-sm navbar-dark bg-dark sticky-top">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="{% url 'home' %}">University Name!</a>
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarNav"
+      aria-controls="navbarNav"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          {% comment %} <a class="nav-link" href="{% url 'subject_list' %}">Subject List</a> {% endcomment %}
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'user_management' %}">Manage Users</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'subject_instances' %}">Manage Subject Instances</a>
+        </li>
+      </ul>
+      <!-- Dropdown for selecting theme -->
+      <div class="d-flex align-items-center ms-auto text-light">
+        <span class="me-3">Jacob (Admin)</span>
+
+        <select id="theme-selector" class="form-select form-select-sm me-3" onchange="changeTheme()" style="width: auto;">
+          <option value="lux" selected>Lux</option>
+          <option value="cerulean">Cerulean</option>
+          <option value="cosmo">Cosmo</option>
+          <option value="cyborg">Cyborg</option>
+          <option value="darkly">Darkly</option>
+          <option value="flatly">Flatly</option>
+          <option value="journal">Journal</option>
+          <option value="litera">Litera</option>
+          <option value="lumen">Lumen</option>
+          <option value="materia">Materia</option>
+          <option value="minty">Minty</option>
+          <option value="morph">Morph</option>
+          <option value="pulse">Pulse</option>
+          <option value="quartz">Quartz</option>
+          <option value="sandstone">Sandstone</option>
+          <option value="simplex">Simplex</option>
+          <option value="sketchy">Sketchy</option>
+          <option value="slate">Slate</option>
+          <option value="solar">Solar</option>
+          <option value="spacelab">Spacelab</option>
+          <option value="superhero">Superhero</option>
+          <option value="united">United</option>
+          <option value="vapor">Vapor</option>
+          <option value="yeti">Yeti</option>
+          <option value="zephyr">Zephyr</option>
+        </select>
+
+        <a href="#" class="btn btn-outline-danger btn-sm">Logout</a>
+      </div>
+    </div>
+  </div>
+</nav>

@@ -1,1 +1,17 @@
-[{"model": "admin_user_input.role", "pk": "Administrator", "fields": {}}, {"model": "admin_user_input.role", "pk": "Lecturer", "fields": {}}, {"model": "admin_user_input.role", "pk": "Manager", "fields": {}}]
+[
+  {
+    "model": "core.role",
+    "pk": "Administrator",
+    "fields": {}
+  },
+  {
+    "model": "core.role",
+    "pk": "Lecturer",
+    "fields": {}
+  },
+  {
+    "model": "core.role",
+    "pk": "Manager",
+    "fields": {}
+  }
+]

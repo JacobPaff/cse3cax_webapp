@@ -1,0 +1,1 @@
+[{"model": "core.userprofile", "pk": 1, "fields": {"role": "Lecturer", "email": "jacob@paff.me", "fte_percentage": 1.0, "honorific": "Mr", "first_name": "Jacob", "last_name": "Paff"}}, {"model": "core.userprofile", "pk": 4, "fields": {"role": "Lecturer", "email": "AS3@as.co", "fte_percentage": 1.0, "honorific": "Dr", "first_name": "Jaconmm", "last_name": "LLoass"}}]
