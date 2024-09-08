@@ -1,0 +1,17 @@
+[
+  {
+    "model": "core.role",
+    "pk": "Administrator",
+    "fields": {}
+  },
+  {
+    "model": "core.role",
+    "pk": "Lecturer",
+    "fields": {}
+  },
+  {
+    "model": "core.role",
+    "pk": "Manager",
+    "fields": {}
+  }
+]

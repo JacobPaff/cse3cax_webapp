@@ -5,16 +5,9 @@ from .models import SubjectInstance, UserProfile, Subject
 from core.models import LecturerExpertise
 
 class SubjectInstanceForm(forms.ModelForm):
-    assigned_lecturers = forms.ModelMultipleChoiceField(
-        queryset=UserProfile.objects.none(),
-        label="Assigned Lecturers",
-        widget=forms.SelectMultiple(attrs={'class': 'select2'}),
-        required=False
-    )
-
     class Meta:
         model = SubjectInstance
-        fields = ['subject', 'month', 'year', 'assigned_lecturers', 'start_date', 'enrollments']
+        fields = ['subject', 'month', 'year', 'start_date', 'enrollments']
         widgets = {
             'start_date': forms.DateInput(attrs={'type': 'date'}),
         }
@@ -30,8 +23,7 @@ class SubjectInstanceForm(forms.ModelForm):
                 'month',
                 'year',
                 'start_date',
-                'enrollments',
-                'assigned_lecturers'
+                'enrollments'
             ),
             Div(
                 Submit('submit', 'Save', css_class='btn btn-primary'),
@@ -42,24 +34,52 @@ class SubjectInstanceForm(forms.ModelForm):
         for field in self.fields.values():
             field.widget.attrs.update({'class': 'form-control'})
 
-        self.fields['assigned_lecturers'].widget.attrs.update({'class': 'form-control select2'})
+    def save(self, commit=True):
+        instance = super().save(commit=False)
+        if commit:
+            instance.save()
+        return instance
+    
+class AssignedLecturersForm(forms.Form):
+    assigned_lecturers = forms.ModelMultipleChoiceField(
+        queryset=UserProfile.objects.none(),
+        label="Assigned Lecturers",
+        widget=forms.SelectMultiple(attrs={'class': 'select2'}),
+        required=False
+    )
+
+    def __init__(self, *args, **kwargs):
+        self.subject_instance = kwargs.pop('subject_instance', None)
+        super().__init__(*args, **kwargs)
         
-        if self.instance.pk and self.instance.subject:
+        self.helper = FormHelper()
+        self.helper.form_method = 'post'
+        self.helper.layout = Layout(
+            Fieldset(
+                'Assign Lecturers',
+                'assigned_lecturers'
+            ),
+            Div(
+                Submit('submit', 'Save Assignments', css_class='btn btn-primary'),
+                css_class='text-right'
+            )
+        )
+
+        if self.subject_instance and self.subject_instance.subject:
             self.fields['assigned_lecturers'].queryset = UserProfile.objects.filter(
-                lecturerexpertise__subject=self.instance.subject
+                lecturerexpertise__subject=self.subject_instance.subject
             ).distinct()
-            self.initial['assigned_lecturers'] = self.instance.users.all()
+            self.fields['assigned_lecturers'].initial = self.subject_instance.users.all()
         else:
             self.fields['assigned_lecturers'].queryset = UserProfile.objects.none()
 
     def clean(self):
         cleaned_data = super().clean()
-        subject = cleaned_data.get('subject')
         assigned_lecturers = cleaned_data.get('assigned_lecturers')
 
-        if subject and assigned_lecturers:
+        if self.subject_instance and self.subject_instance.subject and assigned_lecturers:
             valid_lecturers = UserProfile.objects.filter(
-                lecturerexpertise__subject=subject
+                lecturerexpertise__subject=self.subject_instance.subject
             )
             for lecturer in assigned_lecturers:
                 if lecturer not in valid_lecturers:
@@ -67,9 +87,7 @@ class SubjectInstanceForm(forms.ModelForm):
         
         return cleaned_data
 
-    def save(self, commit=True):
-        instance = super().save(commit=False)
-        if commit:
-            instance.save()
-            instance.users.set(self.cleaned_data['assigned_lecturers'])
-        return instance
+    def save(self):
+        if self.subject_instance:
+            self.subject_instance.users.set(self.cleaned_data['assigned_lecturers'])
+        return self.subject_instance

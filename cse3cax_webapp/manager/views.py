@@ -25,15 +25,15 @@ def add_subject_instance(request):
     form_string = 'Create Subject Instance'
     return render(request, 'modals/form_modal.html', {'form': form, 'form_string': form_string})
 
-def edit_subject_instance(request):
+def edit_subject_instance(request, instance_id):
     subject_instance = get_object_or_404(SubjectInstance, instance_id=instance_id)
     if request.method == "POST":
-        form = SubjectInstanceForm(request.POST, instance = subject_instance)
+        form = SubjectInstanceForm(request.POST, instance=subject_instance)
         if form.is_valid():
             form.save()
             return HttpResponse(status=204, headers={'Hx-Trigger': 'instanceListChanged'})
     else:
-        form = SubjectInstanceForm()
+        form = SubjectInstanceForm(instance=subject_instance)
     form_string = 'Edit Subject Instance'
     return render(request, 'modals/form_modal.html', {'form': form, 'form_string': form_string})
 

@@ -2,7 +2,13 @@
 <tr id="instance-{{ instance.instance_id }}" class="instance-row">
   <td>{{instance.subject}} - {{instance.month}}/{{instance.year}}</td>
   <td>{{instance.enrollments}}</td>
-  <td>{{instance.users}}</td>
+  <td>
+    {% if instance.users.exists %}
+      {{instance.users.all|join:", "}}
+    {% else %}
+      None assigned
+    {% endif %}
+  </td>
   <td>
     <button
       type="button"
@@ -20,17 +26,6 @@
     >
       Delete Instance
     </button>
-    
-    {% comment %} {% if user.role.role_id == 'Lecturer' %}
-    <button
-      type="button"
-      class="btn btn-primary btn-sm"
-      hx-get="{% url 'set_expertise' user_id=user.user_id %}"
-      hx-target="#dialog"
-    >
-      Set Lecturer Expertise
-    </button>
-    {% endif %} {% endcomment %}
   </td>
 </tr>
 {% endfor %}
