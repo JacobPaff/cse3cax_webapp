@@ -1,6 +1,6 @@
 {% for instance in subject_instances %}
 <tr id="instance-{{ instance.instance_id }}" class="instance-row">
-  <td>{{instance.subject}} - {{instance.month}}/{{instance.year}}</td>
+  <td>{{instance.subject}} - {{instance.start_date.month}}/{{instance.start_date.year}}</td>
   <td>{{instance.enrollments}}</td>
   <td>
     {% if instance.users.exists %}

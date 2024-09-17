@@ -1,0 +1,55 @@
+{% load crispy_forms_tags %}
+<div class="modal-dialog modal-xl">
+  <div class="modal-content">
+    <div class="modal-header">
+      <h5 class="modal-title" id="expertiseModalLabel">
+        Set Expertise for {{ user.first_name }} {{ user.last_name }}
+      </h5>
+      <button
+        type="button"
+        class="btn-close"
+        data-bs-dismiss="modal"
+        aria-label="Close"
+      ></button>
+    </div>
+    <div class="modal-body">
+      <form
+        id="expertise-form"
+        hx-post="{{ request.path }}"
+        hx-headers='{"X-CSRFToken": "{{ csrf_token }}"}'
+      >
+        {% csrf_token %} {{ form.non_field_errors }} {% for field in form %} {% if field.name != 'expertise' %} {{ field|crispy }} {% else %}
+        <div class="form-group">
+          <label for="{{ field.id_for_label }}">{{ field.label }}</label>
+          <div class="row">
+            {% for checkbox in field %}
+            <div class="col-md-4 col-sm-6">
+              <div class="form-check">
+                {{ checkbox.tag }}
+                <label
+                  class="form-check-label"
+                  for="{{ checkbox.id_for_label }}"
+                >
+                  {{ checkbox.choice_label }}
+                </label>
+              </div>
+            </div>
+            {% endfor %}
+          </div>
+        </div>
+        {% endif %} {% endfor %}
+        <div class="modal-footer">
+          <button
+            type="button"
+            class="btn btn-secondary"
+            data-bs-dismiss="modal"
+          >
+            Cancel
+          </button>
+          <button type="submit" class="btn btn-primary">Save Expertise</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+</div>

@@ -1,6 +1,7 @@
 from django import forms
 from django.core.validators import EmailValidator
 from django.core.exceptions import ValidationError
+from django.forms.widgets import CheckboxSelectMultiple
 from core.models import UserProfile, Role, Subject, LecturerExpertise
 
 class UserProfileForm(forms.ModelForm):
@@ -83,6 +84,37 @@ class UserProfileForm(forms.ModelForm):
             raise ValidationError("FTE percentage must be between 0.1 and 1.0. Please enter a valid value.")
         return fte
 
+# class LecturerExpertiseForm(forms.ModelForm):
+#     expertise = forms.ModelMultipleChoiceField(
+#         queryset=Subject.objects.all(),
+#         widget=forms.CheckboxSelectMultiple,
+#         required=False,
+#         label="Expertise"
+#     )
+
+#     class Meta:
+#         model = LecturerExpertise
+#         fields = []  # No direct model fields to use in this form; expertise is handled manually
+
+#     def __init__(self, *args, user=None, **kwargs):
+#         super().__init__(*args, **kwargs)
+#         self.user = user  # Store the user instance
+#         if user:
+#             # Pre-populate the form with the user's existing expertise
+#             self.fields['expertise'].initial = LecturerExpertise.objects.filter(user=user).values_list('subject', flat=True)
+
+#     def save(self, commit=True):
+#         # First, clear the existing expertise for this user
+#         LecturerExpertise.objects.filter(user=self.user).delete()
+
+#         # Now, add the new expertise from the form
+#         subjects = self.cleaned_data.get('expertise', [])
+#         for subject in subjects:
+#             LecturerExpertise.objects.create(user=self.user, subject=subject)
+
+#         return self.user  # Return the user for reference (optional)
+
+
 class LecturerExpertiseForm(forms.ModelForm):
     expertise = forms.ModelMultipleChoiceField(
         queryset=Subject.objects.all(),
@@ -112,5 +144,3 @@ class LecturerExpertiseForm(forms.ModelForm):
             LecturerExpertise.objects.create(user=self.user, subject=subject)
 
         return self.user  # Return the user for reference (optional)
-
-

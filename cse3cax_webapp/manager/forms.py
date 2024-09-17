@@ -7,7 +7,7 @@ from core.models import LecturerExpertise
 class SubjectInstanceForm(forms.ModelForm):
     class Meta:
         model = SubjectInstance
-        fields = ['subject', 'month', 'year', 'start_date', 'enrollments']
+        fields = ['subject', 'start_date', 'enrollments']
         widgets = {
             'start_date': forms.DateInput(attrs={'type': 'date'}),
         }
@@ -20,8 +20,6 @@ class SubjectInstanceForm(forms.ModelForm):
             Fieldset(
                 'Subject Instance Details',
                 'subject',
-                'month',
-                'year',
                 'start_date',
                 'enrollments'
             ),
