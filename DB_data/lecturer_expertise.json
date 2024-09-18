@@ -1,0 +1,470 @@
+[
+    {
+        "lecturer_name": "Acacia",
+        "subject_code": "CSE1ITX"
+    },
+    {
+        "lecturer_name": "Acacia",
+        "subject_code": "CSE1PGX"
+    },
+    {
+        "lecturer_name": "Acacia",
+        "subject_code": "CSE1CFX"
+    },
+    {
+        "lecturer_name": "Acacia",
+        "subject_code": "CSE1ISX"
+    },
+    {
+        "lecturer_name": "Acacia",
+        "subject_code": "CSE2DCX"
+    },
+    {
+        "lecturer_name": "Acacia",
+        "subject_code": "CSE1SIX"
+    },
+    {
+        "lecturer_name": "Acacia",
+        "subject_code": "CSE2ICX"
+    },
+    {
+        "lecturer_name": "Acacia",
+        "subject_code": "CSE2SDX"
+    },
+    {
+        "lecturer_name": "Acacia",
+        "subject_code": "CSE2VVX"
+    },
+    {
+        "lecturer_name": "Acacia",
+        "subject_code": "CSE2OSX"
+    },
+    {
+        "lecturer_name": "Acacia",
+        "subject_code": "CSE2MLX"
+    },
+    {
+        "lecturer_name": "Acacia",
+        "subject_code": "CSE3CIX"
+    },
+    {
+        "lecturer_name": "Acacia",
+        "subject_code": "CSE3WSX"
+    },
+    {
+        "lecturer_name": "Acacia",
+        "subject_code": "CSE3SOX"
+    },
+    {
+        "lecturer_name": "Beech",
+        "subject_code": "CSE1ITX"
+    },
+    {
+        "lecturer_name": "Beech",
+        "subject_code": "CSE1PGX"
+    },
+    {
+        "lecturer_name": "Beech",
+        "subject_code": "CSE1OFX"
+    },
+    {
+        "lecturer_name": "Beech",
+        "subject_code": "CSE2NFX"
+    },
+    {
+        "lecturer_name": "Beech",
+        "subject_code": "CSE1SIX"
+    },
+    {
+        "lecturer_name": "Beech",
+        "subject_code": "CSE1IOX"
+    },
+    {
+        "lecturer_name": "Beech",
+        "subject_code": "CSE2CNX"
+    },
+    {
+        "lecturer_name": "Beech",
+        "subject_code": "CSE2OSX"
+    },
+    {
+        "lecturer_name": "Beech",
+        "subject_code": "CSE2ADX"
+    },
+    {
+        "lecturer_name": "Beech",
+        "subject_code": "CSE2WDX"
+    },
+    {
+        "lecturer_name": "Beech",
+        "subject_code": "CSE3NWX"
+    },
+    {
+        "lecturer_name": "Beech",
+        "subject_code": "CSE3ACX"
+    },
+    {
+        "lecturer_name": "Beech",
+        "subject_code": "CSE3PCX"
+    },
+    {
+        "lecturer_name": "Cypress",
+        "subject_code": "CSE1ITX"
+    },
+    {
+        "lecturer_name": "Cypress",
+        "subject_code": "CSE1OFX"
+    },
+    {
+        "lecturer_name": "Cypress",
+        "subject_code": "CSE2NFX"
+    },
+    {
+        "lecturer_name": "Cypress",
+        "subject_code": "CSE1IOX"
+    },
+    {
+        "lecturer_name": "Cypress",
+        "subject_code": "CSE2ICX"
+    },
+    {
+        "lecturer_name": "Cypress",
+        "subject_code": "BUS2PMX"
+    },
+    {
+        "lecturer_name": "Cypress",
+        "subject_code": "CSE2MAX"
+    },
+    {
+        "lecturer_name": "Cypress",
+        "subject_code": "CSE2ANX"
+    },
+    {
+        "lecturer_name": "Cypress",
+        "subject_code": "CSE3BGX"
+    },
+    {
+        "lecturer_name": "Cypress",
+        "subject_code": "CSE3OTX"
+    },
+    {
+        "lecturer_name": "Cypress",
+        "subject_code": "CSE3PAX"
+    },
+    {
+        "lecturer_name": "Cypress",
+        "subject_code": "CSE3PBX"
+    },
+    {
+        "lecturer_name": "Cypress",
+        "subject_code": "CSE3CAX"
+    },
+    {
+        "lecturer_name": "Cypress",
+        "subject_code": "CSE3CBX"
+    },
+    {
+        "lecturer_name": "Douglas",
+        "subject_code": "CSE1PGX"
+    },
+    {
+        "lecturer_name": "Douglas",
+        "subject_code": "CSE1OFX"
+    },
+    {
+        "lecturer_name": "Douglas",
+        "subject_code": "CSE1ISX"
+    },
+    {
+        "lecturer_name": "Douglas",
+        "subject_code": "CSE2DCX"
+    },
+    {
+        "lecturer_name": "Douglas",
+        "subject_code": "CSE1IOX"
+    },
+    {
+        "lecturer_name": "Douglas",
+        "subject_code": "CSE2CNX"
+    },
+    {
+        "lecturer_name": "Douglas",
+        "subject_code": "CSE2SDX"
+    },
+    {
+        "lecturer_name": "Douglas",
+        "subject_code": "CSE2VVX"
+    },
+    {
+        "lecturer_name": "Douglas",
+        "subject_code": "CSE2CPX"
+    },
+    {
+        "lecturer_name": "Douglas",
+        "subject_code": "CSE2SAX"
+    },
+    {
+        "lecturer_name": "Douglas",
+        "subject_code": "CSE3OTX"
+    },
+    {
+        "lecturer_name": "Douglas",
+        "subject_code": "CSE3PEX"
+    },
+    {
+        "lecturer_name": "Douglas",
+        "subject_code": "CSE3BDX"
+    },
+    {
+        "lecturer_name": "Eucalypt",
+        "subject_code": "CSE1SPX"
+    },
+    {
+        "lecturer_name": "Flame",
+        "subject_code": "CSE1ITX"
+    },
+    {
+        "lecturer_name": "Flame",
+        "subject_code": "CSE1PGX"
+    },
+    {
+        "lecturer_name": "Flame",
+        "subject_code": "CSE1OFX"
+    },
+    {
+        "lecturer_name": "Flame",
+        "subject_code": "CSE2NFX"
+    },
+    {
+        "lecturer_name": "Flame",
+        "subject_code": "CSE1IOX"
+    },
+    {
+        "lecturer_name": "Guava",
+        "subject_code": "CSE1ITX"
+    },
+    {
+        "lecturer_name": "Guava",
+        "subject_code": "CSE1PGX"
+    },
+    {
+        "lecturer_name": "Guava",
+        "subject_code": "CSE1OFX"
+    },
+    {
+        "lecturer_name": "Guava",
+        "subject_code": "CSE2NFX"
+    },
+    {
+        "lecturer_name": "Guava",
+        "subject_code": "CSE1IOX"
+    },
+    {
+        "lecturer_name": "Guava",
+        "subject_code": "CSE2CNX"
+    },
+    {
+        "lecturer_name": "Hickory",
+        "subject_code": "CSE1ITX"
+    },
+    {
+        "lecturer_name": "Hickory",
+        "subject_code": "CSE1OFX"
+    },
+    {
+        "lecturer_name": "Hickory",
+        "subject_code": "CSE1ISX"
+    },
+    {
+        "lecturer_name": "Hickory",
+        "subject_code": "CSE2DCX"
+    },
+    {
+        "lecturer_name": "Hickory",
+        "subject_code": "CSE1IOX"
+    },
+    {
+        "lecturer_name": "Hickory",
+        "subject_code": "CSE2SDX"
+    },
+    {
+        "lecturer_name": "Ironbark",
+        "subject_code": "CSE1PGX"
+    },
+    {
+        "lecturer_name": "Ironbark",
+        "subject_code": "CSE1CFX"
+    },
+    {
+        "lecturer_name": "Ironbark",
+        "subject_code": "MAT2DMX"
+    },
+    {
+        "lecturer_name": "Ironbark",
+        "subject_code": "CSE2CPX"
+    },
+    {
+        "lecturer_name": "Ironbark",
+        "subject_code": "CSE3CSX"
+    },
+    {
+        "lecturer_name": "Ironbark",
+        "subject_code": "CSE3PEX"
+    },
+    {
+        "lecturer_name": "Jacaranda",
+        "subject_code": "CSE2OSX"
+    },
+    {
+        "lecturer_name": "Karri",
+        "subject_code": "CSE1ITX"
+    },
+    {
+        "lecturer_name": "Karri",
+        "subject_code": "CSE1PGX"
+    },
+    {
+        "lecturer_name": "Karri",
+        "subject_code": "CSE1OFX"
+    },
+    {
+        "lecturer_name": "Karri",
+        "subject_code": "CSE2NFX"
+    },
+    {
+        "lecturer_name": "Karri",
+        "subject_code": "CSE1SIX"
+    },
+    {
+        "lecturer_name": "Karri",
+        "subject_code": "CSE1IOX"
+    },
+    {
+        "lecturer_name": "Karri",
+        "subject_code": "CSE2CNX"
+    },
+    {
+        "lecturer_name": "Karri",
+        "subject_code": "BUS2PMX"
+    },
+    {
+        "lecturer_name": "Karri",
+        "subject_code": "CSE2ADX"
+    },
+    {
+        "lecturer_name": "Karri",
+        "subject_code": "CSE2WDX"
+    },
+    {
+        "lecturer_name": "Karri",
+        "subject_code": "CSE3CSX"
+    },
+    {
+        "lecturer_name": "Karri",
+        "subject_code": "CSE3PAX"
+    },
+    {
+        "lecturer_name": "Karri",
+        "subject_code": "CSE3PBX"
+    },
+    {
+        "lecturer_name": "Karri",
+        "subject_code": "CSE3BDX"
+    },
+    {
+        "lecturer_name": "Karri",
+        "subject_code": "CSE3CAX"
+    },
+    {
+        "lecturer_name": "Karri",
+        "subject_code": "CSE3CBX"
+    },
+    {
+        "lecturer_name": "Laurel",
+        "subject_code": "CSE1ITX"
+    },
+    {
+        "lecturer_name": "Laurel",
+        "subject_code": "CSE1PGX"
+    },
+    {
+        "lecturer_name": "Laurel",
+        "subject_code": "CSE1OFX"
+    },
+    {
+        "lecturer_name": "Laurel",
+        "subject_code": "CSE2NFX"
+    },
+    {
+        "lecturer_name": "Laurel",
+        "subject_code": "CSE1SIX"
+    },
+    {
+        "lecturer_name": "Laurel",
+        "subject_code": "CSE1IOX"
+    },
+    {
+        "lecturer_name": "Laurel",
+        "subject_code": "CSE2ICX"
+    },
+    {
+        "lecturer_name": "Laurel",
+        "subject_code": "CSE2MAX"
+    },
+    {
+        "lecturer_name": "Laurel",
+        "subject_code": "CSE2ADX"
+    },
+    {
+        "lecturer_name": "Laurel",
+        "subject_code": "CSE3CSX"
+    },
+    {
+        "lecturer_name": "Laurel",
+        "subject_code": "CSE3PCX"
+    },
+    {
+        "lecturer_name": "Maple",
+        "subject_code": "CSE1ITX"
+    },
+    {
+        "lecturer_name": "Maple",
+        "subject_code": "CSE1CFX"
+    },
+    {
+        "lecturer_name": "Maple",
+        "subject_code": "CSE1OFX"
+    },
+    {
+        "lecturer_name": "Maple",
+        "subject_code": "CSE1ISX"
+    },
+    {
+        "lecturer_name": "Maple",
+        "subject_code": "CSE2DCX"
+    },
+    {
+        "lecturer_name": "Maple",
+        "subject_code": "CSE1IOX"
+    },
+    {
+        "lecturer_name": "Maple",
+        "subject_code": "CSE2ICX"
+    },
+    {
+        "lecturer_name": "Maple",
+        "subject_code": "CSE2SDX"
+    },
+    {
+        "lecturer_name": "Maple",
+        "subject_code": "CSE2OSX"
+    },
+    {
+        "lecturer_name": "Maple",
+        "subject_code": "CSE3NWX"
+    },
+    {
+        "lecturer_name": "Maple",
+        "subject_code": "CSE3SOX"
+    }
+]

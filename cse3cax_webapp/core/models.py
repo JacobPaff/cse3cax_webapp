@@ -49,3 +49,20 @@ class LecturerExpertise(models.Model):
 
     def __str__(self):
         return f"{self.user.first_name} {self.user.last_name} - {self.subject.subject_name}"
+
+class SubjectInstance(models.Model):
+    instance_id = models.AutoField(primary_key=True)
+    subject = models.ForeignKey(Subject, on_delete=models.DO_NOTHING, blank=True, null=True)
+    lecturer = models.ManyToManyField(UserProfile, related_name='subject_instances', blank=True, through='SubjectInstanceLecturer')
+    start_date = models.DateField(blank=True, null=True)
+    enrollments = models.IntegerField(blank=True, null=True)
+
+    class Meta:
+        db_table = 'subject_instance'
+
+class SubjectInstanceLecturer(models.Model):
+    user = models.ForeignKey(UserProfile, on_delete=models.CASCADE)
+    subject_instance = models.ForeignKey(SubjectInstance, on_delete=models.CASCADE)
+
+    class Meta:
+        db_table = 'subject_instance_lecturer'

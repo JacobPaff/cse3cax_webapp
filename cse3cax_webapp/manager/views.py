@@ -1,5 +1,5 @@
 from django.shortcuts import render, get_object_or_404
-from .models import SubjectInstance
+from core.models import SubjectInstance
 from .forms import SubjectInstanceForm
 from django.http import HttpResponse
 from django.urls import reverse

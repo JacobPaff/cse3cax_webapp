@@ -5,6 +5,7 @@ python manage.py dumpdata core.UserProfile > user_data.json
 python manage.py loaddata role_data.json
 python manage.py loaddata subject_data.json
 python manage.py loaddata user_data.json
+python manage.py loaddata subject_instance.json
 
 
 

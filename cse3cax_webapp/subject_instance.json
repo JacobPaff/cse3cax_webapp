@@ -1,0 +1,2954 @@
+[
+    {
+        "model": "core.subjectinstance",
+        "pk": 1,
+        "fields": {
+            "subject": "CSE1ITX",
+            "start_date": "2021-01-04",
+            "enrollments": null
+        }
+    },
+    {
+        "model": "core.subjectinstance",
+        "pk": 2,
+        "fields": {
+            "subject": "CSE1ITX",
+            "start_date": "2021-02-01",
+            "enrollments": null
+        }
+    },
+    {
+        "model": "core.subjectinstance",
+        "pk": 3,
+        "fields": {
+            "subject": "CSE1ITX",
+            "start_date": "2021-03-01",
+            "enrollments": null
+        }
+    },
+    {
+        "model": "core.subjectinstance",
+        "pk": 4,
+        "fields": {
+            "subject": "CSE1ITX",
+            "start_date": "2021-04-05",
+            "enrollments": null
+        }
+    },
+    {
+        "model": "core.subjectinstance",
+        "pk": 5,
+        "fields": {
+            "subject": "CSE1ITX",
+            "start_date": "2021-05-03",
+            "enrollments": null
+        }
+    },
+    {
+        "model": "core.subjectinstance",
+        "pk": 6,
+        "fields": {
+            "subject": "CSE1ITX",
+            "start_date": "2021-06-07",
+            "enrollments": null
+        }
+    },
+    {
+        "model": "core.subjectinstance",
+        "pk": 7,
+        "fields": {
+            "subject": "CSE1ITX",
+            "start_date": "2021-07-05",
+            "enrollments": null
+        }
+    },
+    {
+        "model": "core.subjectinstance",
+        "pk": 8,
+        "fields": {
+            "subject": "CSE1ITX",
+            "start_date": "2021-08-02",
+            "enrollments": null
+        }
+    },
+    {
+        "model": "core.subjectinstance",
+        "pk": 9,
+        "fields": {
+            "subject": "CSE1ITX",
+            "start_date": "2021-09-06",
+            "enrollments": null
+        }
+    },
+    {
+        "model": "core.subjectinstance",
+        "pk": 10,
+        "fields": {
+            "subject": "CSE1ITX",
+            "start_date": "2021-10-04",
+            "enrollments": null
+        }
+    },
+    {
+        "model": "core.subjectinstance",
+        "pk": 11,
+        "fields": {
+            "subject": "CSE1ITX",
+            "start_date": "2021-11-01",
+            "enrollments": null
+        }
+    },
+    {
+        "model": "core.subjectinstance",
+        "pk": 12,
+        "fields": {
+            "subject": "CSE1ITX",
+            "start_date": "2021-12-06",
+            "enrollments": null
+        }
+    },
+    {
+        "model": "core.subjectinstance",
+        "pk": 13,
+        "fields": {
+            "subject": "CSE1ITX",
+            "start_date": "2022-01-03",
+            "enrollments": null
+        }
+    },
+    {
+        "model": "core.subjectinstance",
+        "pk": 14,
+        "fields": {
+            "subject": "CSE1ITX",
+            "start_date": "2022-02-07",
+            "enrollments": null
+        }
+    },
+    {
+        "model": "core.subjectinstance",
+        "pk": 15,
+        "fields": {
+            "subject": "CSE1ITX",
+            "start_date": "2022-03-07",
+            "enrollments": null
+        }
+    },
+    {
+        "model": "core.subjectinstance",
+        "pk": 16,
+        "fields": {
+            "subject": "CSE1ITX",
+            "start_date": "2022-04-04",
+            "enrollments": null
+        }
+    },
+    {
+        "model": "core.subjectinstance",
+        "pk": 17,
+        "fields": {
+            "subject": "CSE1ITX",
+            "start_date": "2022-05-02",
+            "enrollments": null
+        }
+    },
+    {
+        "model": "core.subjectinstance",
+        "pk": 18,
+        "fields": {
+            "subject": "CSE1ITX",
+            "start_date": "2022-06-06",
+            "enrollments": null
+        }
+    },
+    {
+        "model": "core.subjectinstance",
+        "pk": 19,
+        "fields": {
+            "subject": "CSE1ITX",
+            "start_date": "2022-07-04",
+            "enrollments": null
+        }
+    },
+    {
+        "model": "core.subjectinstance",
+        "pk": 20,
+        "fields": {
+            "subject": "CSE1ITX",
+            "start_date": "2022-08-01",
+            "enrollments": null
+        }
+    },
+    {
+        "model": "core.subjectinstance",
+        "pk": 21,
+        "fields": {
+            "subject": "CSE1ITX",
+            "start_date": "2022-09-05",
+            "enrollments": null
+        }
+    },
+    {
+        "model": "core.subjectinstance",
+        "pk": 22,
+        "fields": {
+            "subject": "CSE1ITX",
+            "start_date": "2022-10-03",
+            "enrollments": null
+        }
+    },
+    {
+        "model": "core.subjectinstance",
+        "pk": 23,
+        "fields": {
+            "subject": "CSE1ITX",
+            "start_date": "2022-11-07",
+            "enrollments": null
+        }
+    },
+    {
+        "model": "core.subjectinstance",
+        "pk": 24,
+        "fields": {
+            "subject": "CSE1ITX",
+            "start_date": "2022-12-05",
+            "enrollments": null
+        }
+    },
+    {
+        "model": "core.subjectinstance",
+        "pk": 25,
+        "fields": {
+            "subject": "CSE1PGX",
+            "start_date": "2021-01-04",
+            "enrollments": null
+        }
+    },
+    {
+        "model": "core.subjectinstance",
+        "pk": 26,
+        "fields": {
+            "subject": "CSE1PGX",
+            "start_date": "2021-02-01",
+            "enrollments": null
+        }
+    },
+    {
+        "model": "core.subjectinstance",
+        "pk": 27,
+        "fields": {
+            "subject": "CSE1PGX",
+            "start_date": "2021-03-01",
+            "enrollments": null
+        }
+    },
+    {
+        "model": "core.subjectinstance",
+        "pk": 28,
+        "fields": {
+            "subject": "CSE1PGX",
+            "start_date": "2021-07-05",
+            "enrollments": null
+        }
+    },
+    {
+        "model": "core.subjectinstance",
+        "pk": 29,
+        "fields": {
+            "subject": "CSE1PGX",
+            "start_date": "2021-08-02",
+            "enrollments": null
+        }
+    },
+    {
+        "model": "core.subjectinstance",
+        "pk": 30,
+        "fields": {
+            "subject": "CSE1PGX",
+            "start_date": "2021-09-06",
+            "enrollments": null
+        }
+    },
+    {
+        "model": "core.subjectinstance",
+        "pk": 31,
+        "fields": {
+            "subject": "CSE1PGX",
+            "start_date": "2022-01-03",
+            "enrollments": null
+        }
+    },
+    {
+        "model": "core.subjectinstance",
+        "pk": 32,
+        "fields": {
+            "subject": "CSE1PGX",
+            "start_date": "2022-02-07",
+            "enrollments": null
+        }
+    },
+    {
+        "model": "core.subjectinstance",
+        "pk": 33,
+        "fields": {
+            "subject": "CSE1PGX",
+            "start_date": "2022-03-07",
+            "enrollments": null
+        }
+    },
+    {
+        "model": "core.subjectinstance",
+        "pk": 34,
+        "fields": {
+            "subject": "CSE1PGX",
+            "start_date": "2022-07-04",
+            "enrollments": null
+        }
+    },
+    {
+        "model": "core.subjectinstance",
+        "pk": 35,
+        "fields": {
+            "subject": "CSE1PGX",
+            "start_date": "2022-08-01",
+            "enrollments": null
+        }
+    },
+    {
+        "model": "core.subjectinstance",
+        "pk": 36,
+        "fields": {
+            "subject": "CSE1PGX",
+            "start_date": "2022-09-05",
+            "enrollments": null
+        }
+    },
+    {
+        "model": "core.subjectinstance",
+        "pk": 37,
+        "fields": {
+            "subject": "CSE1CFX",
+            "start_date": "2021-01-04",
+            "enrollments": null
+        }
+    },
+    {
+        "model": "core.subjectinstance",
+        "pk": 38,
+        "fields": {
+            "subject": "CSE1CFX",
+            "start_date": "2021-02-01",
+            "enrollments": null
+        }
+    },
+    {
+        "model": "core.subjectinstance",
+        "pk": 39,
+        "fields": {
+            "subject": "CSE1CFX",
+            "start_date": "2021-03-01",
+            "enrollments": null
+        }
+    },
+    {
+        "model": "core.subjectinstance",
+        "pk": 40,
+        "fields": {
+            "subject": "CSE1CFX",
+            "start_date": "2021-04-05",
+            "enrollments": null
+        }
+    },
+    {
+        "model": "core.subjectinstance",
+        "pk": 41,
+        "fields": {
+            "subject": "CSE1CFX",
+            "start_date": "2021-05-03",
+            "enrollments": null
+        }
+    },
+    {
+        "model": "core.subjectinstance",
+        "pk": 42,
+        "fields": {
+            "subject": "CSE1CFX",
+            "start_date": "2021-06-07",
+            "enrollments": null
+        }
+    },
+    {
+        "model": "core.subjectinstance",
+        "pk": 43,
+        "fields": {
+            "subject": "CSE1CFX",
+            "start_date": "2021-07-05",
+            "enrollments": null
+        }
+    },
+    {
+        "model": "core.subjectinstance",
+        "pk": 44,
+        "fields": {
+            "subject": "CSE1CFX",
+            "start_date": "2021-08-02",
+            "enrollments": null
+        }
+    },
+    {
+        "model": "core.subjectinstance",
+        "pk": 45,
+        "fields": {
+            "subject": "CSE1CFX",
+            "start_date": "2021-09-06",
+            "enrollments": null
+        }
+    },
+    {
+        "model": "core.subjectinstance",
+        "pk": 46,
+        "fields": {
+            "subject": "CSE1CFX",
+            "start_date": "2021-10-04",
+            "enrollments": null
+        }
+    },
+    {
+        "model": "core.subjectinstance",
+        "pk": 47,
+        "fields": {
+            "subject": "CSE1CFX",
+            "start_date": "2021-11-01",
+            "enrollments": null
+        }
+    },
+    {
+        "model": "core.subjectinstance",
+        "pk": 48,
+        "fields": {
+            "subject": "CSE1CFX",
+            "start_date": "2021-12-06",
+            "enrollments": null
+        }
+    },
+    {
+        "model": "core.subjectinstance",
+        "pk": 49,
+        "fields": {
+            "subject": "CSE1CFX",
+            "start_date": "2022-01-03",
+            "enrollments": null
+        }
+    },
+    {
+        "model": "core.subjectinstance",
+        "pk": 50,
+        "fields": {
+            "subject": "CSE1CFX",
+            "start_date": "2022-02-07",
+            "enrollments": null
+        }
+    },
+    {
+        "model": "core.subjectinstance",
+        "pk": 51,
+        "fields": {
+            "subject": "CSE1CFX",
+            "start_date": "2022-03-07",
+            "enrollments": null
+        }
+    },
+    {
+        "model": "core.subjectinstance",
+        "pk": 52,
+        "fields": {
+            "subject": "CSE1CFX",
+            "start_date": "2022-04-04",
+            "enrollments": null
+        }
+    },
+    {
+        "model": "core.subjectinstance",
+        "pk": 53,
+        "fields": {
+            "subject": "CSE1CFX",
+            "start_date": "2022-05-02",
+            "enrollments": null
+        }
+    },
+    {
+        "model": "core.subjectinstance",
+        "pk": 54,
+        "fields": {
+            "subject": "CSE1CFX",
+            "start_date": "2022-06-06",
+            "enrollments": null
+        }
+    },
+    {
+        "model": "core.subjectinstance",
+        "pk": 55,
+        "fields": {
+            "subject": "CSE1CFX",
+            "start_date": "2022-07-04",
+            "enrollments": null
+        }
+    },
+    {
+        "model": "core.subjectinstance",
+        "pk": 56,
+        "fields": {
+            "subject": "CSE1CFX",
+            "start_date": "2022-08-01",
+            "enrollments": null
+        }
+    },
+    {
+        "model": "core.subjectinstance",
+        "pk": 57,
+        "fields": {
+            "subject": "CSE1CFX",
+            "start_date": "2022-09-05",
+            "enrollments": null
+        }
+    },
+    {
+        "model": "core.subjectinstance",
+        "pk": 58,
+        "fields": {
+            "subject": "CSE1CFX",
+            "start_date": "2022-10-03",
+            "enrollments": null
+        }
+    },
+    {
+        "model": "core.subjectinstance",
+        "pk": 59,
+        "fields": {
+            "subject": "CSE1CFX",
+            "start_date": "2022-11-07",
+            "enrollments": null
+        }
+    },
+    {
+        "model": "core.subjectinstance",
+        "pk": 60,
+        "fields": {
+            "subject": "CSE1CFX",
+            "start_date": "2022-12-05",
+            "enrollments": null
+        }
+    },
+    {
+        "model": "core.subjectinstance",
+        "pk": 61,
+        "fields": {
+            "subject": "CSE1OFX",
+            "start_date": "2021-01-04",
+            "enrollments": null
+        }
+    },
+    {
+        "model": "core.subjectinstance",
+        "pk": 62,
+        "fields": {
+            "subject": "CSE1OFX",
+            "start_date": "2021-02-01",
+            "enrollments": null
+        }
+    },
+    {
+        "model": "core.subjectinstance",
+        "pk": 63,
+        "fields": {
+            "subject": "CSE1OFX",
+            "start_date": "2021-03-01",
+            "enrollments": null
+        }
+    },
+    {
+        "model": "core.subjectinstance",
+        "pk": 64,
+        "fields": {
+            "subject": "CSE1OFX",
+            "start_date": "2021-07-05",
+            "enrollments": null
+        }
+    },
+    {
+        "model": "core.subjectinstance",
+        "pk": 65,
+        "fields": {
+            "subject": "CSE1OFX",
+            "start_date": "2021-08-02",
+            "enrollments": null
+        }
+    },
+    {
+        "model": "core.subjectinstance",
+        "pk": 66,
+        "fields": {
+            "subject": "CSE1OFX",
+            "start_date": "2021-09-06",
+            "enrollments": null
+        }
+    },
+    {
+        "model": "core.subjectinstance",
+        "pk": 67,
+        "fields": {
+            "subject": "CSE1OFX",
+            "start_date": "2022-01-03",
+            "enrollments": null
+        }
+    },
+    {
+        "model": "core.subjectinstance",
+        "pk": 68,
+        "fields": {
+            "subject": "CSE1OFX",
+            "start_date": "2022-02-07",
+            "enrollments": null
+        }
+    },
+    {
+        "model": "core.subjectinstance",
+        "pk": 69,
+        "fields": {
+            "subject": "CSE1OFX",
+            "start_date": "2022-03-07",
+            "enrollments": null
+        }
+    },
+    {
+        "model": "core.subjectinstance",
+        "pk": 70,
+        "fields": {
+            "subject": "CSE1OFX",
+            "start_date": "2022-07-04",
+            "enrollments": null
+        }
+    },
+    {
+        "model": "core.subjectinstance",
+        "pk": 71,
+        "fields": {
+            "subject": "CSE1OFX",
+            "start_date": "2022-08-01",
+            "enrollments": null
+        }
+    },
+    {
+        "model": "core.subjectinstance",
+        "pk": 72,
+        "fields": {
+            "subject": "CSE1OFX",
+            "start_date": "2022-09-05",
+            "enrollments": null
+        }
+    },
+    {
+        "model": "core.subjectinstance",
+        "pk": 73,
+        "fields": {
+            "subject": "CSE1ISX",
+            "start_date": "2021-01-04",
+            "enrollments": null
+        }
+    },
+    {
+        "model": "core.subjectinstance",
+        "pk": 74,
+        "fields": {
+            "subject": "CSE1ISX",
+            "start_date": "2021-04-05",
+            "enrollments": null
+        }
+    },
+    {
+        "model": "core.subjectinstance",
+        "pk": 75,
+        "fields": {
+            "subject": "CSE1ISX",
+            "start_date": "2021-05-03",
+            "enrollments": null
+        }
+    },
+    {
+        "model": "core.subjectinstance",
+        "pk": 76,
+        "fields": {
+            "subject": "CSE1ISX",
+            "start_date": "2021-06-07",
+            "enrollments": null
+        }
+    },
+    {
+        "model": "core.subjectinstance",
+        "pk": 77,
+        "fields": {
+            "subject": "CSE1ISX",
+            "start_date": "2021-10-04",
+            "enrollments": null
+        }
+    },
+    {
+        "model": "core.subjectinstance",
+        "pk": 78,
+        "fields": {
+            "subject": "CSE1ISX",
+            "start_date": "2021-11-01",
+            "enrollments": null
+        }
+    },
+    {
+        "model": "core.subjectinstance",
+        "pk": 79,
+        "fields": {
+            "subject": "CSE1ISX",
+            "start_date": "2021-12-06",
+            "enrollments": null
+        }
+    },
+    {
+        "model": "core.subjectinstance",
+        "pk": 80,
+        "fields": {
+            "subject": "CSE1ISX",
+            "start_date": "2022-04-04",
+            "enrollments": null
+        }
+    },
+    {
+        "model": "core.subjectinstance",
+        "pk": 81,
+        "fields": {
+            "subject": "CSE1ISX",
+            "start_date": "2022-05-02",
+            "enrollments": null
+        }
+    },
+    {
+        "model": "core.subjectinstance",
+        "pk": 82,
+        "fields": {
+            "subject": "CSE1ISX",
+            "start_date": "2022-06-06",
+            "enrollments": null
+        }
+    },
+    {
+        "model": "core.subjectinstance",
+        "pk": 83,
+        "fields": {
+            "subject": "CSE1ISX",
+            "start_date": "2022-10-03",
+            "enrollments": null
+        }
+    },
+    {
+        "model": "core.subjectinstance",
+        "pk": 84,
+        "fields": {
+            "subject": "CSE1ISX",
+            "start_date": "2022-11-07",
+            "enrollments": null
+        }
+    },
+    {
+        "model": "core.subjectinstance",
+        "pk": 85,
+        "fields": {
+            "subject": "CSE1ISX",
+            "start_date": "2022-12-05",
+            "enrollments": null
+        }
+    },
+    {
+        "model": "core.subjectinstance",
+        "pk": 86,
+        "fields": {
+            "subject": "CSE2NFX",
+            "start_date": "2021-01-04",
+            "enrollments": null
+        }
+    },
+    {
+        "model": "core.subjectinstance",
+        "pk": 87,
+        "fields": {
+            "subject": "CSE2NFX",
+            "start_date": "2021-02-01",
+            "enrollments": null
+        }
+    },
+    {
+        "model": "core.subjectinstance",
+        "pk": 88,
+        "fields": {
+            "subject": "CSE2NFX",
+            "start_date": "2021-03-01",
+            "enrollments": null
+        }
+    },
+    {
+        "model": "core.subjectinstance",
+        "pk": 89,
+        "fields": {
+            "subject": "CSE2NFX",
+            "start_date": "2021-04-05",
+            "enrollments": null
+        }
+    },
+    {
+        "model": "core.subjectinstance",
+        "pk": 90,
+        "fields": {
+            "subject": "CSE2NFX",
+            "start_date": "2021-05-03",
+            "enrollments": null
+        }
+    },
+    {
+        "model": "core.subjectinstance",
+        "pk": 91,
+        "fields": {
+            "subject": "CSE2NFX",
+            "start_date": "2021-06-07",
+            "enrollments": null
+        }
+    },
+    {
+        "model": "core.subjectinstance",
+        "pk": 92,
+        "fields": {
+            "subject": "CSE2NFX",
+            "start_date": "2021-07-05",
+            "enrollments": null
+        }
+    },
+    {
+        "model": "core.subjectinstance",
+        "pk": 93,
+        "fields": {
+            "subject": "CSE2NFX",
+            "start_date": "2021-08-02",
+            "enrollments": null
+        }
+    },
+    {
+        "model": "core.subjectinstance",
+        "pk": 94,
+        "fields": {
+            "subject": "CSE2NFX",
+            "start_date": "2021-09-06",
+            "enrollments": null
+        }
+    },
+    {
+        "model": "core.subjectinstance",
+        "pk": 95,
+        "fields": {
+            "subject": "CSE2NFX",
+            "start_date": "2021-10-04",
+            "enrollments": null
+        }
+    },
+    {
+        "model": "core.subjectinstance",
+        "pk": 96,
+        "fields": {
+            "subject": "CSE2NFX",
+            "start_date": "2021-11-01",
+            "enrollments": null
+        }
+    },
+    {
+        "model": "core.subjectinstance",
+        "pk": 97,
+        "fields": {
+            "subject": "CSE2NFX",
+            "start_date": "2021-12-06",
+            "enrollments": null
+        }
+    },
+    {
+        "model": "core.subjectinstance",
+        "pk": 98,
+        "fields": {
+            "subject": "CSE2NFX",
+            "start_date": "2022-01-03",
+            "enrollments": null
+        }
+    },
+    {
+        "model": "core.subjectinstance",
+        "pk": 99,
+        "fields": {
+            "subject": "CSE2NFX",
+            "start_date": "2022-02-07",
+            "enrollments": null
+        }
+    },
+    {
+        "model": "core.subjectinstance",
+        "pk": 100,
+        "fields": {
+            "subject": "CSE2NFX",
+            "start_date": "2022-03-07",
+            "enrollments": null
+        }
+    },
+    {
+        "model": "core.subjectinstance",
+        "pk": 101,
+        "fields": {
+            "subject": "CSE2NFX",
+            "start_date": "2022-04-04",
+            "enrollments": null
+        }
+    },
+    {
+        "model": "core.subjectinstance",
+        "pk": 102,
+        "fields": {
+            "subject": "CSE2NFX",
+            "start_date": "2022-05-02",
+            "enrollments": null
+        }
+    },
+    {
+        "model": "core.subjectinstance",
+        "pk": 103,
+        "fields": {
+            "subject": "CSE2NFX",
+            "start_date": "2022-06-06",
+            "enrollments": null
+        }
+    },
+    {
+        "model": "core.subjectinstance",
+        "pk": 104,
+        "fields": {
+            "subject": "CSE2NFX",
+            "start_date": "2022-07-04",
+            "enrollments": null
+        }
+    },
+    {
+        "model": "core.subjectinstance",
+        "pk": 105,
+        "fields": {
+            "subject": "CSE2NFX",
+            "start_date": "2022-08-01",
+            "enrollments": null
+        }
+    },
+    {
+        "model": "core.subjectinstance",
+        "pk": 106,
+        "fields": {
+            "subject": "CSE2NFX",
+            "start_date": "2022-09-05",
+            "enrollments": null
+        }
+    },
+    {
+        "model": "core.subjectinstance",
+        "pk": 107,
+        "fields": {
+            "subject": "CSE2NFX",
+            "start_date": "2022-10-03",
+            "enrollments": null
+        }
+    },
+    {
+        "model": "core.subjectinstance",
+        "pk": 108,
+        "fields": {
+            "subject": "CSE2NFX",
+            "start_date": "2022-11-07",
+            "enrollments": null
+        }
+    },
+    {
+        "model": "core.subjectinstance",
+        "pk": 109,
+        "fields": {
+            "subject": "CSE2NFX",
+            "start_date": "2022-12-05",
+            "enrollments": null
+        }
+    },
+    {
+        "model": "core.subjectinstance",
+        "pk": 110,
+        "fields": {
+            "subject": "CSE2DCX",
+            "start_date": "2021-02-01",
+            "enrollments": null
+        }
+    },
+    {
+        "model": "core.subjectinstance",
+        "pk": 111,
+        "fields": {
+            "subject": "CSE2DCX",
+            "start_date": "2021-04-05",
+            "enrollments": null
+        }
+    },
+    {
+        "model": "core.subjectinstance",
+        "pk": 112,
+        "fields": {
+            "subject": "CSE2DCX",
+            "start_date": "2021-05-03",
+            "enrollments": null
+        }
+    },
+    {
+        "model": "core.subjectinstance",
+        "pk": 113,
+        "fields": {
+            "subject": "CSE2DCX",
+            "start_date": "2021-06-07",
+            "enrollments": null
+        }
+    },
+    {
+        "model": "core.subjectinstance",
+        "pk": 114,
+        "fields": {
+            "subject": "CSE2DCX",
+            "start_date": "2021-10-04",
+            "enrollments": null
+        }
+    },
+    {
+        "model": "core.subjectinstance",
+        "pk": 115,
+        "fields": {
+            "subject": "CSE2DCX",
+            "start_date": "2021-11-01",
+            "enrollments": null
+        }
+    },
+    {
+        "model": "core.subjectinstance",
+        "pk": 116,
+        "fields": {
+            "subject": "CSE2DCX",
+            "start_date": "2021-12-06",
+            "enrollments": null
+        }
+    },
+    {
+        "model": "core.subjectinstance",
+        "pk": 117,
+        "fields": {
+            "subject": "CSE2DCX",
+            "start_date": "2022-04-04",
+            "enrollments": null
+        }
+    },
+    {
+        "model": "core.subjectinstance",
+        "pk": 118,
+        "fields": {
+            "subject": "CSE2DCX",
+            "start_date": "2022-05-02",
+            "enrollments": null
+        }
+    },
+    {
+        "model": "core.subjectinstance",
+        "pk": 119,
+        "fields": {
+            "subject": "CSE2DCX",
+            "start_date": "2022-06-06",
+            "enrollments": null
+        }
+    },
+    {
+        "model": "core.subjectinstance",
+        "pk": 120,
+        "fields": {
+            "subject": "CSE2DCX",
+            "start_date": "2022-10-03",
+            "enrollments": null
+        }
+    },
+    {
+        "model": "core.subjectinstance",
+        "pk": 121,
+        "fields": {
+            "subject": "CSE2DCX",
+            "start_date": "2022-11-07",
+            "enrollments": null
+        }
+    },
+    {
+        "model": "core.subjectinstance",
+        "pk": 122,
+        "fields": {
+            "subject": "CSE2DCX",
+            "start_date": "2022-12-05",
+            "enrollments": null
+        }
+    },
+    {
+        "model": "core.subjectinstance",
+        "pk": 123,
+        "fields": {
+            "subject": "CSE1SPX",
+            "start_date": "2021-01-04",
+            "enrollments": null
+        }
+    },
+    {
+        "model": "core.subjectinstance",
+        "pk": 124,
+        "fields": {
+            "subject": "CSE1SPX",
+            "start_date": "2021-02-01",
+            "enrollments": null
+        }
+    },
+    {
+        "model": "core.subjectinstance",
+        "pk": 125,
+        "fields": {
+            "subject": "CSE1SPX",
+            "start_date": "2021-03-01",
+            "enrollments": null
+        }
+    },
+    {
+        "model": "core.subjectinstance",
+        "pk": 126,
+        "fields": {
+            "subject": "CSE1SPX",
+            "start_date": "2021-04-05",
+            "enrollments": null
+        }
+    },
+    {
+        "model": "core.subjectinstance",
+        "pk": 127,
+        "fields": {
+            "subject": "CSE1SPX",
+            "start_date": "2021-05-03",
+            "enrollments": null
+        }
+    },
+    {
+        "model": "core.subjectinstance",
+        "pk": 128,
+        "fields": {
+            "subject": "CSE1SPX",
+            "start_date": "2021-06-07",
+            "enrollments": null
+        }
+    },
+    {
+        "model": "core.subjectinstance",
+        "pk": 129,
+        "fields": {
+            "subject": "CSE1SPX",
+            "start_date": "2021-07-05",
+            "enrollments": null
+        }
+    },
+    {
+        "model": "core.subjectinstance",
+        "pk": 130,
+        "fields": {
+            "subject": "CSE1SPX",
+            "start_date": "2021-08-02",
+            "enrollments": null
+        }
+    },
+    {
+        "model": "core.subjectinstance",
+        "pk": 131,
+        "fields": {
+            "subject": "CSE1SPX",
+            "start_date": "2021-09-06",
+            "enrollments": null
+        }
+    },
+    {
+        "model": "core.subjectinstance",
+        "pk": 132,
+        "fields": {
+            "subject": "CSE1SPX",
+            "start_date": "2021-10-04",
+            "enrollments": null
+        }
+    },
+    {
+        "model": "core.subjectinstance",
+        "pk": 133,
+        "fields": {
+            "subject": "CSE1SPX",
+            "start_date": "2021-11-01",
+            "enrollments": null
+        }
+    },
+    {
+        "model": "core.subjectinstance",
+        "pk": 134,
+        "fields": {
+            "subject": "CSE1SPX",
+            "start_date": "2021-12-06",
+            "enrollments": null
+        }
+    },
+    {
+        "model": "core.subjectinstance",
+        "pk": 135,
+        "fields": {
+            "subject": "CSE1SPX",
+            "start_date": "2022-01-03",
+            "enrollments": null
+        }
+    },
+    {
+        "model": "core.subjectinstance",
+        "pk": 136,
+        "fields": {
+            "subject": "CSE1SPX",
+            "start_date": "2022-02-07",
+            "enrollments": null
+        }
+    },
+    {
+        "model": "core.subjectinstance",
+        "pk": 137,
+        "fields": {
+            "subject": "CSE1SPX",
+            "start_date": "2022-03-07",
+            "enrollments": null
+        }
+    },
+    {
+        "model": "core.subjectinstance",
+        "pk": 138,
+        "fields": {
+            "subject": "CSE1SPX",
+            "start_date": "2022-04-04",
+            "enrollments": null
+        }
+    },
+    {
+        "model": "core.subjectinstance",
+        "pk": 139,
+        "fields": {
+            "subject": "CSE1SPX",
+            "start_date": "2022-05-02",
+            "enrollments": null
+        }
+    },
+    {
+        "model": "core.subjectinstance",
+        "pk": 140,
+        "fields": {
+            "subject": "CSE1SPX",
+            "start_date": "2022-06-06",
+            "enrollments": null
+        }
+    },
+    {
+        "model": "core.subjectinstance",
+        "pk": 141,
+        "fields": {
+            "subject": "CSE1SPX",
+            "start_date": "2022-07-04",
+            "enrollments": null
+        }
+    },
+    {
+        "model": "core.subjectinstance",
+        "pk": 142,
+        "fields": {
+            "subject": "CSE1SPX",
+            "start_date": "2022-08-01",
+            "enrollments": null
+        }
+    },
+    {
+        "model": "core.subjectinstance",
+        "pk": 143,
+        "fields": {
+            "subject": "CSE1SPX",
+            "start_date": "2022-09-05",
+            "enrollments": null
+        }
+    },
+    {
+        "model": "core.subjectinstance",
+        "pk": 144,
+        "fields": {
+            "subject": "CSE1SPX",
+            "start_date": "2022-10-03",
+            "enrollments": null
+        }
+    },
+    {
+        "model": "core.subjectinstance",
+        "pk": 145,
+        "fields": {
+            "subject": "CSE1SPX",
+            "start_date": "2022-11-07",
+            "enrollments": null
+        }
+    },
+    {
+        "model": "core.subjectinstance",
+        "pk": 146,
+        "fields": {
+            "subject": "CSE1SPX",
+            "start_date": "2022-12-05",
+            "enrollments": null
+        }
+    },
+    {
+        "model": "core.subjectinstance",
+        "pk": 147,
+        "fields": {
+            "subject": "CSE1SIX",
+            "start_date": "2021-01-04",
+            "enrollments": null
+        }
+    },
+    {
+        "model": "core.subjectinstance",
+        "pk": 148,
+        "fields": {
+            "subject": "CSE1SIX",
+            "start_date": "2021-02-01",
+            "enrollments": null
+        }
+    },
+    {
+        "model": "core.subjectinstance",
+        "pk": 149,
+        "fields": {
+            "subject": "CSE1SIX",
+            "start_date": "2021-03-01",
+            "enrollments": null
+        }
+    },
+    {
+        "model": "core.subjectinstance",
+        "pk": 150,
+        "fields": {
+            "subject": "CSE1SIX",
+            "start_date": "2021-04-05",
+            "enrollments": null
+        }
+    },
+    {
+        "model": "core.subjectinstance",
+        "pk": 151,
+        "fields": {
+            "subject": "CSE1SIX",
+            "start_date": "2021-05-03",
+            "enrollments": null
+        }
+    },
+    {
+        "model": "core.subjectinstance",
+        "pk": 152,
+        "fields": {
+            "subject": "CSE1SIX",
+            "start_date": "2021-06-07",
+            "enrollments": null
+        }
+    },
+    {
+        "model": "core.subjectinstance",
+        "pk": 153,
+        "fields": {
+            "subject": "CSE1SIX",
+            "start_date": "2021-07-05",
+            "enrollments": null
+        }
+    },
+    {
+        "model": "core.subjectinstance",
+        "pk": 154,
+        "fields": {
+            "subject": "CSE1SIX",
+            "start_date": "2021-08-02",
+            "enrollments": null
+        }
+    },
+    {
+        "model": "core.subjectinstance",
+        "pk": 155,
+        "fields": {
+            "subject": "CSE1SIX",
+            "start_date": "2021-09-06",
+            "enrollments": null
+        }
+    },
+    {
+        "model": "core.subjectinstance",
+        "pk": 156,
+        "fields": {
+            "subject": "CSE1SIX",
+            "start_date": "2021-10-04",
+            "enrollments": null
+        }
+    },
+    {
+        "model": "core.subjectinstance",
+        "pk": 157,
+        "fields": {
+            "subject": "CSE1SIX",
+            "start_date": "2021-11-01",
+            "enrollments": null
+        }
+    },
+    {
+        "model": "core.subjectinstance",
+        "pk": 158,
+        "fields": {
+            "subject": "CSE1SIX",
+            "start_date": "2021-12-06",
+            "enrollments": null
+        }
+    },
+    {
+        "model": "core.subjectinstance",
+        "pk": 159,
+        "fields": {
+            "subject": "CSE1SIX",
+            "start_date": "2022-01-03",
+            "enrollments": null
+        }
+    },
+    {
+        "model": "core.subjectinstance",
+        "pk": 160,
+        "fields": {
+            "subject": "CSE1SIX",
+            "start_date": "2022-02-07",
+            "enrollments": null
+        }
+    },
+    {
+        "model": "core.subjectinstance",
+        "pk": 161,
+        "fields": {
+            "subject": "CSE1SIX",
+            "start_date": "2022-03-07",
+            "enrollments": null
+        }
+    },
+    {
+        "model": "core.subjectinstance",
+        "pk": 162,
+        "fields": {
+            "subject": "CSE1SIX",
+            "start_date": "2022-04-04",
+            "enrollments": null
+        }
+    },
+    {
+        "model": "core.subjectinstance",
+        "pk": 163,
+        "fields": {
+            "subject": "CSE1SIX",
+            "start_date": "2022-05-02",
+            "enrollments": null
+        }
+    },
+    {
+        "model": "core.subjectinstance",
+        "pk": 164,
+        "fields": {
+            "subject": "CSE1SIX",
+            "start_date": "2022-06-06",
+            "enrollments": null
+        }
+    },
+    {
+        "model": "core.subjectinstance",
+        "pk": 165,
+        "fields": {
+            "subject": "CSE1SIX",
+            "start_date": "2022-07-04",
+            "enrollments": null
+        }
+    },
+    {
+        "model": "core.subjectinstance",
+        "pk": 166,
+        "fields": {
+            "subject": "CSE1SIX",
+            "start_date": "2022-08-01",
+            "enrollments": null
+        }
+    },
+    {
+        "model": "core.subjectinstance",
+        "pk": 167,
+        "fields": {
+            "subject": "CSE1SIX",
+            "start_date": "2022-09-05",
+            "enrollments": null
+        }
+    },
+    {
+        "model": "core.subjectinstance",
+        "pk": 168,
+        "fields": {
+            "subject": "CSE1SIX",
+            "start_date": "2022-10-03",
+            "enrollments": null
+        }
+    },
+    {
+        "model": "core.subjectinstance",
+        "pk": 169,
+        "fields": {
+            "subject": "CSE1SIX",
+            "start_date": "2022-11-07",
+            "enrollments": null
+        }
+    },
+    {
+        "model": "core.subjectinstance",
+        "pk": 170,
+        "fields": {
+            "subject": "CSE1SIX",
+            "start_date": "2022-12-05",
+            "enrollments": null
+        }
+    },
+    {
+        "model": "core.subjectinstance",
+        "pk": 171,
+        "fields": {
+            "subject": "CSE1IOX",
+            "start_date": "2021-01-04",
+            "enrollments": null
+        }
+    },
+    {
+        "model": "core.subjectinstance",
+        "pk": 172,
+        "fields": {
+            "subject": "CSE1IOX",
+            "start_date": "2021-02-01",
+            "enrollments": null
+        }
+    },
+    {
+        "model": "core.subjectinstance",
+        "pk": 173,
+        "fields": {
+            "subject": "CSE1IOX",
+            "start_date": "2021-03-01",
+            "enrollments": null
+        }
+    },
+    {
+        "model": "core.subjectinstance",
+        "pk": 174,
+        "fields": {
+            "subject": "CSE1IOX",
+            "start_date": "2021-07-05",
+            "enrollments": null
+        }
+    },
+    {
+        "model": "core.subjectinstance",
+        "pk": 175,
+        "fields": {
+            "subject": "CSE1IOX",
+            "start_date": "2021-08-02",
+            "enrollments": null
+        }
+    },
+    {
+        "model": "core.subjectinstance",
+        "pk": 176,
+        "fields": {
+            "subject": "CSE1IOX",
+            "start_date": "2021-09-06",
+            "enrollments": null
+        }
+    },
+    {
+        "model": "core.subjectinstance",
+        "pk": 177,
+        "fields": {
+            "subject": "CSE1IOX",
+            "start_date": "2022-01-03",
+            "enrollments": null
+        }
+    },
+    {
+        "model": "core.subjectinstance",
+        "pk": 178,
+        "fields": {
+            "subject": "CSE1IOX",
+            "start_date": "2022-02-07",
+            "enrollments": null
+        }
+    },
+    {
+        "model": "core.subjectinstance",
+        "pk": 179,
+        "fields": {
+            "subject": "CSE1IOX",
+            "start_date": "2022-03-07",
+            "enrollments": null
+        }
+    },
+    {
+        "model": "core.subjectinstance",
+        "pk": 180,
+        "fields": {
+            "subject": "CSE1IOX",
+            "start_date": "2022-07-04",
+            "enrollments": null
+        }
+    },
+    {
+        "model": "core.subjectinstance",
+        "pk": 181,
+        "fields": {
+            "subject": "CSE1IOX",
+            "start_date": "2022-08-01",
+            "enrollments": null
+        }
+    },
+    {
+        "model": "core.subjectinstance",
+        "pk": 182,
+        "fields": {
+            "subject": "CSE1IOX",
+            "start_date": "2022-09-05",
+            "enrollments": null
+        }
+    },
+    {
+        "model": "core.subjectinstance",
+        "pk": 183,
+        "fields": {
+            "subject": "CSE2ICX",
+            "start_date": "2021-02-01",
+            "enrollments": null
+        }
+    },
+    {
+        "model": "core.subjectinstance",
+        "pk": 184,
+        "fields": {
+            "subject": "CSE2ICX",
+            "start_date": "2021-03-01",
+            "enrollments": null
+        }
+    },
+    {
+        "model": "core.subjectinstance",
+        "pk": 185,
+        "fields": {
+            "subject": "CSE2ICX",
+            "start_date": "2021-08-02",
+            "enrollments": null
+        }
+    },
+    {
+        "model": "core.subjectinstance",
+        "pk": 186,
+        "fields": {
+            "subject": "CSE2ICX",
+            "start_date": "2022-02-07",
+            "enrollments": null
+        }
+    },
+    {
+        "model": "core.subjectinstance",
+        "pk": 187,
+        "fields": {
+            "subject": "CSE2ICX",
+            "start_date": "2022-08-01",
+            "enrollments": null
+        }
+    },
+    {
+        "model": "core.subjectinstance",
+        "pk": 188,
+        "fields": {
+            "subject": "CSE2CNX",
+            "start_date": "2021-05-03",
+            "enrollments": null
+        }
+    },
+    {
+        "model": "core.subjectinstance",
+        "pk": 189,
+        "fields": {
+            "subject": "CSE2CNX",
+            "start_date": "2021-08-02",
+            "enrollments": null
+        }
+    },
+    {
+        "model": "core.subjectinstance",
+        "pk": 190,
+        "fields": {
+            "subject": "CSE2CNX",
+            "start_date": "2021-11-01",
+            "enrollments": null
+        }
+    },
+    {
+        "model": "core.subjectinstance",
+        "pk": 191,
+        "fields": {
+            "subject": "CSE2CNX",
+            "start_date": "2022-02-07",
+            "enrollments": null
+        }
+    },
+    {
+        "model": "core.subjectinstance",
+        "pk": 192,
+        "fields": {
+            "subject": "CSE2CNX",
+            "start_date": "2022-05-02",
+            "enrollments": null
+        }
+    },
+    {
+        "model": "core.subjectinstance",
+        "pk": 193,
+        "fields": {
+            "subject": "CSE2CNX",
+            "start_date": "2022-08-01",
+            "enrollments": null
+        }
+    },
+    {
+        "model": "core.subjectinstance",
+        "pk": 194,
+        "fields": {
+            "subject": "CSE2CNX",
+            "start_date": "2022-11-07",
+            "enrollments": null
+        }
+    },
+    {
+        "model": "core.subjectinstance",
+        "pk": 195,
+        "fields": {
+            "subject": "CSE2SDX",
+            "start_date": "2021-05-03",
+            "enrollments": null
+        }
+    },
+    {
+        "model": "core.subjectinstance",
+        "pk": 196,
+        "fields": {
+            "subject": "CSE2SDX",
+            "start_date": "2021-08-02",
+            "enrollments": null
+        }
+    },
+    {
+        "model": "core.subjectinstance",
+        "pk": 197,
+        "fields": {
+            "subject": "CSE2SDX",
+            "start_date": "2021-11-01",
+            "enrollments": null
+        }
+    },
+    {
+        "model": "core.subjectinstance",
+        "pk": 198,
+        "fields": {
+            "subject": "CSE2SDX",
+            "start_date": "2022-05-02",
+            "enrollments": null
+        }
+    },
+    {
+        "model": "core.subjectinstance",
+        "pk": 199,
+        "fields": {
+            "subject": "CSE2SDX",
+            "start_date": "2022-11-07",
+            "enrollments": null
+        }
+    },
+    {
+        "model": "core.subjectinstance",
+        "pk": 200,
+        "fields": {
+            "subject": "BUS2PMX",
+            "start_date": "2021-02-01",
+            "enrollments": null
+        }
+    },
+    {
+        "model": "core.subjectinstance",
+        "pk": 201,
+        "fields": {
+            "subject": "BUS2PMX",
+            "start_date": "2021-03-01",
+            "enrollments": null
+        }
+    },
+    {
+        "model": "core.subjectinstance",
+        "pk": 202,
+        "fields": {
+            "subject": "BUS2PMX",
+            "start_date": "2021-04-05",
+            "enrollments": null
+        }
+    },
+    {
+        "model": "core.subjectinstance",
+        "pk": 203,
+        "fields": {
+            "subject": "BUS2PMX",
+            "start_date": "2021-05-03",
+            "enrollments": null
+        }
+    },
+    {
+        "model": "core.subjectinstance",
+        "pk": 204,
+        "fields": {
+            "subject": "BUS2PMX",
+            "start_date": "2021-08-02",
+            "enrollments": null
+        }
+    },
+    {
+        "model": "core.subjectinstance",
+        "pk": 205,
+        "fields": {
+            "subject": "BUS2PMX",
+            "start_date": "2021-11-01",
+            "enrollments": null
+        }
+    },
+    {
+        "model": "core.subjectinstance",
+        "pk": 206,
+        "fields": {
+            "subject": "BUS2PMX",
+            "start_date": "2021-12-06",
+            "enrollments": null
+        }
+    },
+    {
+        "model": "core.subjectinstance",
+        "pk": 207,
+        "fields": {
+            "subject": "BUS2PMX",
+            "start_date": "2022-01-03",
+            "enrollments": null
+        }
+    },
+    {
+        "model": "core.subjectinstance",
+        "pk": 208,
+        "fields": {
+            "subject": "BUS2PMX",
+            "start_date": "2022-05-02",
+            "enrollments": null
+        }
+    },
+    {
+        "model": "core.subjectinstance",
+        "pk": 209,
+        "fields": {
+            "subject": "BUS2PMX",
+            "start_date": "2022-09-05",
+            "enrollments": null
+        }
+    },
+    {
+        "model": "core.subjectinstance",
+        "pk": 210,
+        "fields": {
+            "subject": "BUS2PMX",
+            "start_date": "2022-10-03",
+            "enrollments": null
+        }
+    },
+    {
+        "model": "core.subjectinstance",
+        "pk": 211,
+        "fields": {
+            "subject": "BUS2PMX",
+            "start_date": "2022-11-07",
+            "enrollments": null
+        }
+    },
+    {
+        "model": "core.subjectinstance",
+        "pk": 212,
+        "fields": {
+            "subject": "CSE2VVX",
+            "start_date": "2021-02-01",
+            "enrollments": null
+        }
+    },
+    {
+        "model": "core.subjectinstance",
+        "pk": 213,
+        "fields": {
+            "subject": "CSE2VVX",
+            "start_date": "2021-05-03",
+            "enrollments": null
+        }
+    },
+    {
+        "model": "core.subjectinstance",
+        "pk": 214,
+        "fields": {
+            "subject": "CSE2VVX",
+            "start_date": "2021-11-01",
+            "enrollments": null
+        }
+    },
+    {
+        "model": "core.subjectinstance",
+        "pk": 215,
+        "fields": {
+            "subject": "CSE2VVX",
+            "start_date": "2022-05-02",
+            "enrollments": null
+        }
+    },
+    {
+        "model": "core.subjectinstance",
+        "pk": 216,
+        "fields": {
+            "subject": "CSE2VVX",
+            "start_date": "2022-11-07",
+            "enrollments": null
+        }
+    },
+    {
+        "model": "core.subjectinstance",
+        "pk": 217,
+        "fields": {
+            "subject": "MAT2DMX",
+            "start_date": "2021-02-01",
+            "enrollments": null
+        }
+    },
+    {
+        "model": "core.subjectinstance",
+        "pk": 218,
+        "fields": {
+            "subject": "MAT2DMX",
+            "start_date": "2021-05-03",
+            "enrollments": null
+        }
+    },
+    {
+        "model": "core.subjectinstance",
+        "pk": 219,
+        "fields": {
+            "subject": "MAT2DMX",
+            "start_date": "2021-08-02",
+            "enrollments": null
+        }
+    },
+    {
+        "model": "core.subjectinstance",
+        "pk": 220,
+        "fields": {
+            "subject": "MAT2DMX",
+            "start_date": "2022-02-07",
+            "enrollments": null
+        }
+    },
+    {
+        "model": "core.subjectinstance",
+        "pk": 221,
+        "fields": {
+            "subject": "MAT2DMX",
+            "start_date": "2022-08-01",
+            "enrollments": null
+        }
+    },
+    {
+        "model": "core.subjectinstance",
+        "pk": 222,
+        "fields": {
+            "subject": "CSE2MAX",
+            "start_date": "2021-02-01",
+            "enrollments": null
+        }
+    },
+    {
+        "model": "core.subjectinstance",
+        "pk": 223,
+        "fields": {
+            "subject": "CSE2MAX",
+            "start_date": "2021-05-03",
+            "enrollments": null
+        }
+    },
+    {
+        "model": "core.subjectinstance",
+        "pk": 224,
+        "fields": {
+            "subject": "CSE2MAX",
+            "start_date": "2021-11-01",
+            "enrollments": null
+        }
+    },
+    {
+        "model": "core.subjectinstance",
+        "pk": 225,
+        "fields": {
+            "subject": "CSE2MAX",
+            "start_date": "2022-05-02",
+            "enrollments": null
+        }
+    },
+    {
+        "model": "core.subjectinstance",
+        "pk": 226,
+        "fields": {
+            "subject": "CSE2MAX",
+            "start_date": "2022-11-07",
+            "enrollments": null
+        }
+    },
+    {
+        "model": "core.subjectinstance",
+        "pk": 227,
+        "fields": {
+            "subject": "CSE2OSX",
+            "start_date": "2021-02-01",
+            "enrollments": null
+        }
+    },
+    {
+        "model": "core.subjectinstance",
+        "pk": 228,
+        "fields": {
+            "subject": "CSE2OSX",
+            "start_date": "2021-05-03",
+            "enrollments": null
+        }
+    },
+    {
+        "model": "core.subjectinstance",
+        "pk": 229,
+        "fields": {
+            "subject": "CSE2OSX",
+            "start_date": "2021-11-01",
+            "enrollments": null
+        }
+    },
+    {
+        "model": "core.subjectinstance",
+        "pk": 230,
+        "fields": {
+            "subject": "CSE2OSX",
+            "start_date": "2022-05-02",
+            "enrollments": null
+        }
+    },
+    {
+        "model": "core.subjectinstance",
+        "pk": 231,
+        "fields": {
+            "subject": "CSE2OSX",
+            "start_date": "2022-11-07",
+            "enrollments": null
+        }
+    },
+    {
+        "model": "core.subjectinstance",
+        "pk": 232,
+        "fields": {
+            "subject": "CSE2ADX",
+            "start_date": "2021-05-03",
+            "enrollments": null
+        }
+    },
+    {
+        "model": "core.subjectinstance",
+        "pk": 233,
+        "fields": {
+            "subject": "CSE2ADX",
+            "start_date": "2021-11-01",
+            "enrollments": null
+        }
+    },
+    {
+        "model": "core.subjectinstance",
+        "pk": 234,
+        "fields": {
+            "subject": "CSE2ADX",
+            "start_date": "2022-05-02",
+            "enrollments": null
+        }
+    },
+    {
+        "model": "core.subjectinstance",
+        "pk": 235,
+        "fields": {
+            "subject": "CSE2ADX",
+            "start_date": "2022-11-07",
+            "enrollments": null
+        }
+    },
+    {
+        "model": "core.subjectinstance",
+        "pk": 236,
+        "fields": {
+            "subject": "CSE2CPX",
+            "start_date": "2021-02-01",
+            "enrollments": null
+        }
+    },
+    {
+        "model": "core.subjectinstance",
+        "pk": 237,
+        "fields": {
+            "subject": "CSE2CPX",
+            "start_date": "2021-10-04",
+            "enrollments": null
+        }
+    },
+    {
+        "model": "core.subjectinstance",
+        "pk": 238,
+        "fields": {
+            "subject": "CSE2CPX",
+            "start_date": "2022-02-07",
+            "enrollments": null
+        }
+    },
+    {
+        "model": "core.subjectinstance",
+        "pk": 239,
+        "fields": {
+            "subject": "CSE2CPX",
+            "start_date": "2022-07-04",
+            "enrollments": null
+        }
+    },
+    {
+        "model": "core.subjectinstance",
+        "pk": 240,
+        "fields": {
+            "subject": "CSE2MLX",
+            "start_date": "2021-02-01",
+            "enrollments": null
+        }
+    },
+    {
+        "model": "core.subjectinstance",
+        "pk": 241,
+        "fields": {
+            "subject": "CSE2MLX",
+            "start_date": "2021-05-03",
+            "enrollments": null
+        }
+    },
+    {
+        "model": "core.subjectinstance",
+        "pk": 242,
+        "fields": {
+            "subject": "CSE2MLX",
+            "start_date": "2022-02-07",
+            "enrollments": null
+        }
+    },
+    {
+        "model": "core.subjectinstance",
+        "pk": 243,
+        "fields": {
+            "subject": "CSE2MLX",
+            "start_date": "2022-05-02",
+            "enrollments": null
+        }
+    },
+    {
+        "model": "core.subjectinstance",
+        "pk": 244,
+        "fields": {
+            "subject": "CSE2SAX",
+            "start_date": "2021-02-01",
+            "enrollments": null
+        }
+    },
+    {
+        "model": "core.subjectinstance",
+        "pk": 245,
+        "fields": {
+            "subject": "CSE2SAX",
+            "start_date": "2021-05-03",
+            "enrollments": null
+        }
+    },
+    {
+        "model": "core.subjectinstance",
+        "pk": 246,
+        "fields": {
+            "subject": "CSE2SAX",
+            "start_date": "2021-08-02",
+            "enrollments": null
+        }
+    },
+    {
+        "model": "core.subjectinstance",
+        "pk": 247,
+        "fields": {
+            "subject": "CSE2SAX",
+            "start_date": "2021-11-01",
+            "enrollments": null
+        }
+    },
+    {
+        "model": "core.subjectinstance",
+        "pk": 248,
+        "fields": {
+            "subject": "CSE2SAX",
+            "start_date": "2022-02-07",
+            "enrollments": null
+        }
+    },
+    {
+        "model": "core.subjectinstance",
+        "pk": 249,
+        "fields": {
+            "subject": "CSE2SAX",
+            "start_date": "2022-05-02",
+            "enrollments": null
+        }
+    },
+    {
+        "model": "core.subjectinstance",
+        "pk": 250,
+        "fields": {
+            "subject": "CSE2SAX",
+            "start_date": "2022-08-01",
+            "enrollments": null
+        }
+    },
+    {
+        "model": "core.subjectinstance",
+        "pk": 251,
+        "fields": {
+            "subject": "CSE2SAX",
+            "start_date": "2022-11-07",
+            "enrollments": null
+        }
+    },
+    {
+        "model": "core.subjectinstance",
+        "pk": 252,
+        "fields": {
+            "subject": "CSE2ANX",
+            "start_date": "2021-02-01",
+            "enrollments": null
+        }
+    },
+    {
+        "model": "core.subjectinstance",
+        "pk": 253,
+        "fields": {
+            "subject": "CSE2ANX",
+            "start_date": "2021-05-03",
+            "enrollments": null
+        }
+    },
+    {
+        "model": "core.subjectinstance",
+        "pk": 254,
+        "fields": {
+            "subject": "CSE2ANX",
+            "start_date": "2021-08-02",
+            "enrollments": null
+        }
+    },
+    {
+        "model": "core.subjectinstance",
+        "pk": 255,
+        "fields": {
+            "subject": "CSE2ANX",
+            "start_date": "2021-11-01",
+            "enrollments": null
+        }
+    },
+    {
+        "model": "core.subjectinstance",
+        "pk": 256,
+        "fields": {
+            "subject": "CSE2ANX",
+            "start_date": "2022-02-07",
+            "enrollments": null
+        }
+    },
+    {
+        "model": "core.subjectinstance",
+        "pk": 257,
+        "fields": {
+            "subject": "CSE2ANX",
+            "start_date": "2022-05-02",
+            "enrollments": null
+        }
+    },
+    {
+        "model": "core.subjectinstance",
+        "pk": 258,
+        "fields": {
+            "subject": "CSE2ANX",
+            "start_date": "2022-08-01",
+            "enrollments": null
+        }
+    },
+    {
+        "model": "core.subjectinstance",
+        "pk": 259,
+        "fields": {
+            "subject": "CSE2ANX",
+            "start_date": "2022-11-07",
+            "enrollments": null
+        }
+    },
+    {
+        "model": "core.subjectinstance",
+        "pk": 260,
+        "fields": {
+            "subject": "CSE2WDX",
+            "start_date": "2021-02-01",
+            "enrollments": null
+        }
+    },
+    {
+        "model": "core.subjectinstance",
+        "pk": 261,
+        "fields": {
+            "subject": "CSE2WDX",
+            "start_date": "2021-05-03",
+            "enrollments": null
+        }
+    },
+    {
+        "model": "core.subjectinstance",
+        "pk": 262,
+        "fields": {
+            "subject": "CSE2WDX",
+            "start_date": "2021-08-02",
+            "enrollments": null
+        }
+    },
+    {
+        "model": "core.subjectinstance",
+        "pk": 263,
+        "fields": {
+            "subject": "CSE2WDX",
+            "start_date": "2021-11-01",
+            "enrollments": null
+        }
+    },
+    {
+        "model": "core.subjectinstance",
+        "pk": 264,
+        "fields": {
+            "subject": "CSE2WDX",
+            "start_date": "2022-02-07",
+            "enrollments": null
+        }
+    },
+    {
+        "model": "core.subjectinstance",
+        "pk": 265,
+        "fields": {
+            "subject": "CSE2WDX",
+            "start_date": "2022-05-02",
+            "enrollments": null
+        }
+    },
+    {
+        "model": "core.subjectinstance",
+        "pk": 266,
+        "fields": {
+            "subject": "CSE2WDX",
+            "start_date": "2022-08-01",
+            "enrollments": null
+        }
+    },
+    {
+        "model": "core.subjectinstance",
+        "pk": 267,
+        "fields": {
+            "subject": "CSE2WDX",
+            "start_date": "2022-11-07",
+            "enrollments": null
+        }
+    },
+    {
+        "model": "core.subjectinstance",
+        "pk": 268,
+        "fields": {
+            "subject": "CSE3BGX",
+            "start_date": "2021-02-01",
+            "enrollments": null
+        }
+    },
+    {
+        "model": "core.subjectinstance",
+        "pk": 269,
+        "fields": {
+            "subject": "CSE3BGX",
+            "start_date": "2021-08-02",
+            "enrollments": null
+        }
+    },
+    {
+        "model": "core.subjectinstance",
+        "pk": 270,
+        "fields": {
+            "subject": "CSE3BGX",
+            "start_date": "2022-02-07",
+            "enrollments": null
+        }
+    },
+    {
+        "model": "core.subjectinstance",
+        "pk": 271,
+        "fields": {
+            "subject": "CSE3BGX",
+            "start_date": "2022-08-01",
+            "enrollments": null
+        }
+    },
+    {
+        "model": "core.subjectinstance",
+        "pk": 272,
+        "fields": {
+            "subject": "CSE3CIX",
+            "start_date": "2021-08-02",
+            "enrollments": null
+        }
+    },
+    {
+        "model": "core.subjectinstance",
+        "pk": 273,
+        "fields": {
+            "subject": "CSE3CIX",
+            "start_date": "2022-05-02",
+            "enrollments": null
+        }
+    },
+    {
+        "model": "core.subjectinstance",
+        "pk": 274,
+        "fields": {
+            "subject": "CSE3CSX",
+            "start_date": "2021-02-01",
+            "enrollments": null
+        }
+    },
+    {
+        "model": "core.subjectinstance",
+        "pk": 275,
+        "fields": {
+            "subject": "CSE3CSX",
+            "start_date": "2021-11-01",
+            "enrollments": null
+        }
+    },
+    {
+        "model": "core.subjectinstance",
+        "pk": 276,
+        "fields": {
+            "subject": "CSE3CSX",
+            "start_date": "2022-05-02",
+            "enrollments": null
+        }
+    },
+    {
+        "model": "core.subjectinstance",
+        "pk": 277,
+        "fields": {
+            "subject": "CSE3CSX",
+            "start_date": "2022-11-07",
+            "enrollments": null
+        }
+    },
+    {
+        "model": "core.subjectinstance",
+        "pk": 278,
+        "fields": {
+            "subject": "CSE3NWX",
+            "start_date": "2021-05-03",
+            "enrollments": null
+        }
+    },
+    {
+        "model": "core.subjectinstance",
+        "pk": 279,
+        "fields": {
+            "subject": "CSE3NWX",
+            "start_date": "2021-11-01",
+            "enrollments": null
+        }
+    },
+    {
+        "model": "core.subjectinstance",
+        "pk": 280,
+        "fields": {
+            "subject": "CSE3NWX",
+            "start_date": "2022-08-01",
+            "enrollments": null
+        }
+    },
+    {
+        "model": "core.subjectinstance",
+        "pk": 281,
+        "fields": {
+            "subject": "CSE3OTX",
+            "start_date": "2021-02-01",
+            "enrollments": null
+        }
+    },
+    {
+        "model": "core.subjectinstance",
+        "pk": 282,
+        "fields": {
+            "subject": "CSE3OTX",
+            "start_date": "2021-08-02",
+            "enrollments": null
+        }
+    },
+    {
+        "model": "core.subjectinstance",
+        "pk": 283,
+        "fields": {
+            "subject": "CSE3OTX",
+            "start_date": "2022-02-07",
+            "enrollments": null
+        }
+    },
+    {
+        "model": "core.subjectinstance",
+        "pk": 284,
+        "fields": {
+            "subject": "CSE3OTX",
+            "start_date": "2022-08-01",
+            "enrollments": null
+        }
+    },
+    {
+        "model": "core.subjectinstance",
+        "pk": 285,
+        "fields": {
+            "subject": "CSE3WSX",
+            "start_date": "2021-05-03",
+            "enrollments": null
+        }
+    },
+    {
+        "model": "core.subjectinstance",
+        "pk": 286,
+        "fields": {
+            "subject": "CSE3WSX",
+            "start_date": "2022-02-07",
+            "enrollments": null
+        }
+    },
+    {
+        "model": "core.subjectinstance",
+        "pk": 287,
+        "fields": {
+            "subject": "CSE3WSX",
+            "start_date": "2022-11-07",
+            "enrollments": null
+        }
+    },
+    {
+        "model": "core.subjectinstance",
+        "pk": 288,
+        "fields": {
+            "subject": "CSE3PAX",
+            "start_date": "2021-02-01",
+            "enrollments": null
+        }
+    },
+    {
+        "model": "core.subjectinstance",
+        "pk": 289,
+        "fields": {
+            "subject": "CSE3PAX",
+            "start_date": "2021-05-03",
+            "enrollments": null
+        }
+    },
+    {
+        "model": "core.subjectinstance",
+        "pk": 290,
+        "fields": {
+            "subject": "CSE3PAX",
+            "start_date": "2021-08-02",
+            "enrollments": null
+        }
+    },
+    {
+        "model": "core.subjectinstance",
+        "pk": 291,
+        "fields": {
+            "subject": "CSE3PAX",
+            "start_date": "2021-11-01",
+            "enrollments": null
+        }
+    },
+    {
+        "model": "core.subjectinstance",
+        "pk": 292,
+        "fields": {
+            "subject": "CSE3PAX",
+            "start_date": "2022-02-07",
+            "enrollments": null
+        }
+    },
+    {
+        "model": "core.subjectinstance",
+        "pk": 293,
+        "fields": {
+            "subject": "CSE3PAX",
+            "start_date": "2022-05-02",
+            "enrollments": null
+        }
+    },
+    {
+        "model": "core.subjectinstance",
+        "pk": 294,
+        "fields": {
+            "subject": "CSE3PAX",
+            "start_date": "2022-08-01",
+            "enrollments": null
+        }
+    },
+    {
+        "model": "core.subjectinstance",
+        "pk": 295,
+        "fields": {
+            "subject": "CSE3PAX",
+            "start_date": "2022-11-07",
+            "enrollments": null
+        }
+    },
+    {
+        "model": "core.subjectinstance",
+        "pk": 296,
+        "fields": {
+            "subject": "CSE3PBX",
+            "start_date": "2021-02-01",
+            "enrollments": null
+        }
+    },
+    {
+        "model": "core.subjectinstance",
+        "pk": 297,
+        "fields": {
+            "subject": "CSE3PBX",
+            "start_date": "2021-05-03",
+            "enrollments": null
+        }
+    },
+    {
+        "model": "core.subjectinstance",
+        "pk": 298,
+        "fields": {
+            "subject": "CSE3PBX",
+            "start_date": "2021-08-02",
+            "enrollments": null
+        }
+    },
+    {
+        "model": "core.subjectinstance",
+        "pk": 299,
+        "fields": {
+            "subject": "CSE3PBX",
+            "start_date": "2021-11-01",
+            "enrollments": null
+        }
+    },
+    {
+        "model": "core.subjectinstance",
+        "pk": 300,
+        "fields": {
+            "subject": "CSE3PBX",
+            "start_date": "2022-02-07",
+            "enrollments": null
+        }
+    },
+    {
+        "model": "core.subjectinstance",
+        "pk": 301,
+        "fields": {
+            "subject": "CSE3PBX",
+            "start_date": "2022-05-02",
+            "enrollments": null
+        }
+    },
+    {
+        "model": "core.subjectinstance",
+        "pk": 302,
+        "fields": {
+            "subject": "CSE3PBX",
+            "start_date": "2022-08-01",
+            "enrollments": null
+        }
+    },
+    {
+        "model": "core.subjectinstance",
+        "pk": 303,
+        "fields": {
+            "subject": "CSE3PBX",
+            "start_date": "2022-11-07",
+            "enrollments": null
+        }
+    },
+    {
+        "model": "core.subjectinstance",
+        "pk": 304,
+        "fields": {
+            "subject": "CSE3PEX",
+            "start_date": "2021-05-03",
+            "enrollments": null
+        }
+    },
+    {
+        "model": "core.subjectinstance",
+        "pk": 305,
+        "fields": {
+            "subject": "CSE3PEX",
+            "start_date": "2021-11-01",
+            "enrollments": null
+        }
+    },
+    {
+        "model": "core.subjectinstance",
+        "pk": 306,
+        "fields": {
+            "subject": "CSE3PEX",
+            "start_date": "2022-05-02",
+            "enrollments": null
+        }
+    },
+    {
+        "model": "core.subjectinstance",
+        "pk": 307,
+        "fields": {
+            "subject": "CSE3PEX",
+            "start_date": "2022-11-07",
+            "enrollments": null
+        }
+    },
+    {
+        "model": "core.subjectinstance",
+        "pk": 308,
+        "fields": {
+            "subject": "CSE3ACX",
+            "start_date": "2021-08-02",
+            "enrollments": null
+        }
+    },
+    {
+        "model": "core.subjectinstance",
+        "pk": 309,
+        "fields": {
+            "subject": "CSE3ACX",
+            "start_date": "2022-02-07",
+            "enrollments": null
+        }
+    },
+    {
+        "model": "core.subjectinstance",
+        "pk": 310,
+        "fields": {
+            "subject": "CSE3ACX",
+            "start_date": "2022-08-01",
+            "enrollments": null
+        }
+    },
+    {
+        "model": "core.subjectinstance",
+        "pk": 311,
+        "fields": {
+            "subject": "CSE3SOX",
+            "start_date": "2021-04-05",
+            "enrollments": null
+        }
+    },
+    {
+        "model": "core.subjectinstance",
+        "pk": 312,
+        "fields": {
+            "subject": "CSE3SOX",
+            "start_date": "2021-11-01",
+            "enrollments": null
+        }
+    },
+    {
+        "model": "core.subjectinstance",
+        "pk": 313,
+        "fields": {
+            "subject": "CSE3SOX",
+            "start_date": "2022-01-03",
+            "enrollments": null
+        }
+    },
+    {
+        "model": "core.subjectinstance",
+        "pk": 314,
+        "fields": {
+            "subject": "CSE3SOX",
+            "start_date": "2022-05-02",
+            "enrollments": null
+        }
+    },
+    {
+        "model": "core.subjectinstance",
+        "pk": 315,
+        "fields": {
+            "subject": "CSE3SOX",
+            "start_date": "2022-10-03",
+            "enrollments": null
+        }
+    },
+    {
+        "model": "core.subjectinstance",
+        "pk": 316,
+        "fields": {
+            "subject": "CSE3SOX",
+            "start_date": "2022-11-07",
+            "enrollments": null
+        }
+    },
+    {
+        "model": "core.subjectinstance",
+        "pk": 317,
+        "fields": {
+            "subject": "CSE3BDX",
+            "start_date": "2021-08-02",
+            "enrollments": null
+        }
+    },
+    {
+        "model": "core.subjectinstance",
+        "pk": 318,
+        "fields": {
+            "subject": "CSE3BDX",
+            "start_date": "2022-02-07",
+            "enrollments": null
+        }
+    },
+    {
+        "model": "core.subjectinstance",
+        "pk": 319,
+        "fields": {
+            "subject": "CSE3BDX",
+            "start_date": "2022-08-01",
+            "enrollments": null
+        }
+    },
+    {
+        "model": "core.subjectinstance",
+        "pk": 320,
+        "fields": {
+            "subject": "CSE3PCX",
+            "start_date": "2022-02-07",
+            "enrollments": null
+        }
+    },
+    {
+        "model": "core.subjectinstance",
+        "pk": 321,
+        "fields": {
+            "subject": "CSE3PCX",
+            "start_date": "2022-08-01",
+            "enrollments": null
+        }
+    },
+    {
+        "model": "core.subjectinstance",
+        "pk": 322,
+        "fields": {
+            "subject": "CSE3CAX",
+            "start_date": "2022-02-07",
+            "enrollments": null
+        }
+    },
+    {
+        "model": "core.subjectinstance",
+        "pk": 323,
+        "fields": {
+            "subject": "CSE3CAX",
+            "start_date": "2022-05-02",
+            "enrollments": null
+        }
+    },
+    {
+        "model": "core.subjectinstance",
+        "pk": 324,
+        "fields": {
+            "subject": "CSE3CAX",
+            "start_date": "2022-08-01",
+            "enrollments": null
+        }
+    },
+    {
+        "model": "core.subjectinstance",
+        "pk": 325,
+        "fields": {
+            "subject": "CSE3CAX",
+            "start_date": "2022-11-07",
+            "enrollments": null
+        }
+    },
+    {
+        "model": "core.subjectinstance",
+        "pk": 326,
+        "fields": {
+            "subject": "CSE3CBX",
+            "start_date": "2022-05-02",
+            "enrollments": null
+        }
+    },
+    {
+        "model": "core.subjectinstance",
+        "pk": 327,
+        "fields": {
+            "subject": "CSE3CBX",
+            "start_date": "2022-08-01",
+            "enrollments": null
+        }
+    },
+    {
+        "model": "core.subjectinstance",
+        "pk": 328,
+        "fields": {
+            "subject": "CSE3CBX",
+            "start_date": "2022-11-07",
+            "enrollments": null
+        }
+    }
+]

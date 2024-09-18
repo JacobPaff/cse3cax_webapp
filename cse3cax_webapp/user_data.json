@@ -1,0 +1,158 @@
+[
+    {
+        "model": "core.userprofile",
+        "pk": 1,
+        "fields": {
+            "role": "Lecturer",
+            "email": "robin.acacia@fakeuniversity.edu",
+            "fte_percentage": 1.0,
+            "honorific": "Professor",
+            "first_name": "Robin",
+            "last_name": "Acacia"
+        }
+    },
+    {
+        "model": "core.userprofile",
+        "pk": 2,
+        "fields": {
+            "role": "Lecturer",
+            "email": "skyler.beech@fakeuniversity.edu",
+            "fte_percentage": 1.0,
+            "honorific": "Professor",
+            "first_name": "Skyler",
+            "last_name": "Beech"
+        }
+    },
+    {
+        "model": "core.userprofile",
+        "pk": 3,
+        "fields": {
+            "role": "Lecturer",
+            "email": "alex.cypress@fakeuniversity.edu",
+            "fte_percentage": 1.0,
+            "honorific": "Dr",
+            "first_name": "Alex",
+            "last_name": "Cypress"
+        }
+    },
+    {
+        "model": "core.userprofile",
+        "pk": 4,
+        "fields": {
+            "role": "Lecturer",
+            "email": "skyler.douglas@fakeuniversity.edu",
+            "fte_percentage": 1.0,
+            "honorific": "Professor",
+            "first_name": "Skyler",
+            "last_name": "Douglas"
+        }
+    },
+    {
+        "model": "core.userprofile",
+        "pk": 5,
+        "fields": {
+            "role": "Lecturer",
+            "email": "morgan.eucalypt@fakeuniversity.edu",
+            "fte_percentage": 1.0,
+            "honorific": "Professor",
+            "first_name": "Morgan",
+            "last_name": "Eucalypt"
+        }
+    },
+    {
+        "model": "core.userprofile",
+        "pk": 6,
+        "fields": {
+            "role": "Lecturer",
+            "email": "alex.flame@fakeuniversity.edu",
+            "fte_percentage": 1.0,
+            "honorific": "Professor",
+            "first_name": "Alex",
+            "last_name": "Flame"
+        }
+    },
+    {
+        "model": "core.userprofile",
+        "pk": 7,
+        "fields": {
+            "role": "Lecturer",
+            "email": "charlie.guava@fakeuniversity.edu",
+            "fte_percentage": 1.0,
+            "honorific": "Dr",
+            "first_name": "Charlie",
+            "last_name": "Guava"
+        }
+    },
+    {
+        "model": "core.userprofile",
+        "pk": 8,
+        "fields": {
+            "role": "Lecturer",
+            "email": "skyler.hickory@fakeuniversity.edu",
+            "fte_percentage": 1.0,
+            "honorific": "Dr",
+            "first_name": "Skyler",
+            "last_name": "Hickory"
+        }
+    },
+    {
+        "model": "core.userprofile",
+        "pk": 9,
+        "fields": {
+            "role": "Lecturer",
+            "email": "alex.ironbark@fakeuniversity.edu",
+            "fte_percentage": 1.0,
+            "honorific": "Professor",
+            "first_name": "Alex",
+            "last_name": "Ironbark"
+        }
+    },
+    {
+        "model": "core.userprofile",
+        "pk": 10,
+        "fields": {
+            "role": "Lecturer",
+            "email": "casey.jacaranda@fakeuniversity.edu",
+            "fte_percentage": 1.0,
+            "honorific": "Professor",
+            "first_name": "Casey",
+            "last_name": "Jacaranda"
+        }
+    },
+    {
+        "model": "core.userprofile",
+        "pk": 11,
+        "fields": {
+            "role": "Lecturer",
+            "email": "alex.karri@fakeuniversity.edu",
+            "fte_percentage": 1.0,
+            "honorific": "Dr",
+            "first_name": "Alex",
+            "last_name": "Karri"
+        }
+    },
+    {
+        "model": "core.userprofile",
+        "pk": 12,
+        "fields": {
+            "role": "Lecturer",
+            "email": "taylor.laurel@fakeuniversity.edu",
+            "fte_percentage": 1.0,
+            "honorific": "Dr",
+            "first_name": "Taylor",
+            "last_name": "Laurel"
+        }
+    },
+    {
+        "model": "core.userprofile",
+        "pk": 13,
+        "fields": {
+            "role": "Lecturer",
+            "email": "casey.maple@fakeuniversity.edu",
+            "fte_percentage": 1.0,
+            "honorific": "Dr",
+            "first_name": "Casey",
+            "last_name": "Maple"
+        }
+    }
+]

@@ -1,0 +1,1314 @@
+[
+    {
+        "subject": "CSE1ITX",
+        "start_date": "2021-01-01"
+    },
+    {
+        "subject": "CSE1ITX",
+        "start_date": "2021-02-01"
+    },
+    {
+        "subject": "CSE1ITX",
+        "start_date": "2021-03-01"
+    },
+    {
+        "subject": "CSE1ITX",
+        "start_date": "2021-04-01"
+    },
+    {
+        "subject": "CSE1ITX",
+        "start_date": "2021-05-01"
+    },
+    {
+        "subject": "CSE1ITX",
+        "start_date": "2021-06-01"
+    },
+    {
+        "subject": "CSE1ITX",
+        "start_date": "2021-07-01"
+    },
+    {
+        "subject": "CSE1ITX",
+        "start_date": "2021-08-01"
+    },
+    {
+        "subject": "CSE1ITX",
+        "start_date": "2021-09-01"
+    },
+    {
+        "subject": "CSE1ITX",
+        "start_date": "2021-10-01"
+    },
+    {
+        "subject": "CSE1ITX",
+        "start_date": "2021-11-01"
+    },
+    {
+        "subject": "CSE1ITX",
+        "start_date": "2021-12-01"
+    },
+    {
+        "subject": "CSE1ITX",
+        "start_date": "2022-01-01"
+    },
+    {
+        "subject": "CSE1ITX",
+        "start_date": "2022-02-01"
+    },
+    {
+        "subject": "CSE1ITX",
+        "start_date": "2022-03-01"
+    },
+    {
+        "subject": "CSE1ITX",
+        "start_date": "2022-04-01"
+    },
+    {
+        "subject": "CSE1ITX",
+        "start_date": "2022-05-01"
+    },
+    {
+        "subject": "CSE1ITX",
+        "start_date": "2022-06-01"
+    },
+    {
+        "subject": "CSE1ITX",
+        "start_date": "2022-07-01"
+    },
+    {
+        "subject": "CSE1ITX",
+        "start_date": "2022-08-01"
+    },
+    {
+        "subject": "CSE1ITX",
+        "start_date": "2022-09-01"
+    },
+    {
+        "subject": "CSE1ITX",
+        "start_date": "2022-10-01"
+    },
+    {
+        "subject": "CSE1ITX",
+        "start_date": "2022-11-01"
+    },
+    {
+        "subject": "CSE1ITX",
+        "start_date": "2022-12-01"
+    },
+    {
+        "subject": "CSE1PGX",
+        "start_date": "2021-01-01"
+    },
+    {
+        "subject": "CSE1PGX",
+        "start_date": "2021-02-01"
+    },
+    {
+        "subject": "CSE1PGX",
+        "start_date": "2021-03-01"
+    },
+    {
+        "subject": "CSE1PGX",
+        "start_date": "2021-07-01"
+    },
+    {
+        "subject": "CSE1PGX",
+        "start_date": "2021-08-01"
+    },
+    {
+        "subject": "CSE1PGX",
+        "start_date": "2021-09-01"
+    },
+    {
+        "subject": "CSE1PGX",
+        "start_date": "2022-01-01"
+    },
+    {
+        "subject": "CSE1PGX",
+        "start_date": "2022-02-01"
+    },
+    {
+        "subject": "CSE1PGX",
+        "start_date": "2022-03-01"
+    },
+    {
+        "subject": "CSE1PGX",
+        "start_date": "2022-07-01"
+    },
+    {
+        "subject": "CSE1PGX",
+        "start_date": "2022-08-01"
+    },
+    {
+        "subject": "CSE1PGX",
+        "start_date": "2022-09-01"
+    },
+    {
+        "subject": "CSE1CFX",
+        "start_date": "2021-01-01"
+    },
+    {
+        "subject": "CSE1CFX",
+        "start_date": "2021-02-01"
+    },
+    {
+        "subject": "CSE1CFX",
+        "start_date": "2021-03-01"
+    },
+    {
+        "subject": "CSE1CFX",
+        "start_date": "2021-04-01"
+    },
+    {
+        "subject": "CSE1CFX",
+        "start_date": "2021-05-01"
+    },
+    {
+        "subject": "CSE1CFX",
+        "start_date": "2021-06-01"
+    },
+    {
+        "subject": "CSE1CFX",
+        "start_date": "2021-07-01"
+    },
+    {
+        "subject": "CSE1CFX",
+        "start_date": "2021-08-01"
+    },
+    {
+        "subject": "CSE1CFX",
+        "start_date": "2021-09-01"
+    },
+    {
+        "subject": "CSE1CFX",
+        "start_date": "2021-10-01"
+    },
+    {
+        "subject": "CSE1CFX",
+        "start_date": "2021-11-01"
+    },
+    {
+        "subject": "CSE1CFX",
+        "start_date": "2021-12-01"
+    },
+    {
+        "subject": "CSE1CFX",
+        "start_date": "2022-01-01"
+    },
+    {
+        "subject": "CSE1CFX",
+        "start_date": "2022-02-01"
+    },
+    {
+        "subject": "CSE1CFX",
+        "start_date": "2022-03-01"
+    },
+    {
+        "subject": "CSE1CFX",
+        "start_date": "2022-04-01"
+    },
+    {
+        "subject": "CSE1CFX",
+        "start_date": "2022-05-01"
+    },
+    {
+        "subject": "CSE1CFX",
+        "start_date": "2022-06-01"
+    },
+    {
+        "subject": "CSE1CFX",
+        "start_date": "2022-07-01"
+    },
+    {
+        "subject": "CSE1CFX",
+        "start_date": "2022-08-01"
+    },
+    {
+        "subject": "CSE1CFX",
+        "start_date": "2022-09-01"
+    },
+    {
+        "subject": "CSE1CFX",
+        "start_date": "2022-10-01"
+    },
+    {
+        "subject": "CSE1CFX",
+        "start_date": "2022-11-01"
+    },
+    {
+        "subject": "CSE1CFX",
+        "start_date": "2022-12-01"
+    },
+    {
+        "subject": "CSE1OFX",
+        "start_date": "2021-01-01"
+    },
+    {
+        "subject": "CSE1OFX",
+        "start_date": "2021-02-01"
+    },
+    {
+        "subject": "CSE1OFX",
+        "start_date": "2021-03-01"
+    },
+    {
+        "subject": "CSE1OFX",
+        "start_date": "2021-07-01"
+    },
+    {
+        "subject": "CSE1OFX",
+        "start_date": "2021-08-01"
+    },
+    {
+        "subject": "CSE1OFX",
+        "start_date": "2021-09-01"
+    },
+    {
+        "subject": "CSE1OFX",
+        "start_date": "2022-01-01"
+    },
+    {
+        "subject": "CSE1OFX",
+        "start_date": "2022-02-01"
+    },
+    {
+        "subject": "CSE1OFX",
+        "start_date": "2022-03-01"
+    },
+    {
+        "subject": "CSE1OFX",
+        "start_date": "2022-07-01"
+    },
+    {
+        "subject": "CSE1OFX",
+        "start_date": "2022-08-01"
+    },
+    {
+        "subject": "CSE1OFX",
+        "start_date": "2022-09-01"
+    },
+    {
+        "subject": "CSE1ISX",
+        "start_date": "2021-01-01"
+    },
+    {
+        "subject": "CSE1ISX",
+        "start_date": "2021-04-01"
+    },
+    {
+        "subject": "CSE1ISX",
+        "start_date": "2021-05-01"
+    },
+    {
+        "subject": "CSE1ISX",
+        "start_date": "2021-06-01"
+    },
+    {
+        "subject": "CSE1ISX",
+        "start_date": "2021-10-01"
+    },
+    {
+        "subject": "CSE1ISX",
+        "start_date": "2021-11-01"
+    },
+    {
+        "subject": "CSE1ISX",
+        "start_date": "2021-12-01"
+    },
+    {
+        "subject": "CSE1ISX",
+        "start_date": "2022-04-01"
+    },
+    {
+        "subject": "CSE1ISX",
+        "start_date": "2022-05-01"
+    },
+    {
+        "subject": "CSE1ISX",
+        "start_date": "2022-06-01"
+    },
+    {
+        "subject": "CSE1ISX",
+        "start_date": "2022-10-01"
+    },
+    {
+        "subject": "CSE1ISX",
+        "start_date": "2022-11-01"
+    },
+    {
+        "subject": "CSE1ISX",
+        "start_date": "2022-12-01"
+    },
+    {
+        "subject": "CSE2NFX",
+        "start_date": "2021-01-01"
+    },
+    {
+        "subject": "CSE2NFX",
+        "start_date": "2021-02-01"
+    },
+    {
+        "subject": "CSE2NFX",
+        "start_date": "2021-03-01"
+    },
+    {
+        "subject": "CSE2NFX",
+        "start_date": "2021-04-01"
+    },
+    {
+        "subject": "CSE2NFX",
+        "start_date": "2021-05-01"
+    },
+    {
+        "subject": "CSE2NFX",
+        "start_date": "2021-06-01"
+    },
+    {
+        "subject": "CSE2NFX",
+        "start_date": "2021-07-01"
+    },
+    {
+        "subject": "CSE2NFX",
+        "start_date": "2021-08-01"
+    },
+    {
+        "subject": "CSE2NFX",
+        "start_date": "2021-09-01"
+    },
+    {
+        "subject": "CSE2NFX",
+        "start_date": "2021-10-01"
+    },
+    {
+        "subject": "CSE2NFX",
+        "start_date": "2021-11-01"
+    },
+    {
+        "subject": "CSE2NFX",
+        "start_date": "2021-12-01"
+    },
+    {
+        "subject": "CSE2NFX",
+        "start_date": "2022-01-01"
+    },
+    {
+        "subject": "CSE2NFX",
+        "start_date": "2022-02-01"
+    },
+    {
+        "subject": "CSE2NFX",
+        "start_date": "2022-03-01"
+    },
+    {
+        "subject": "CSE2NFX",
+        "start_date": "2022-04-01"
+    },
+    {
+        "subject": "CSE2NFX",
+        "start_date": "2022-05-01"
+    },
+    {
+        "subject": "CSE2NFX",
+        "start_date": "2022-06-01"
+    },
+    {
+        "subject": "CSE2NFX",
+        "start_date": "2022-07-01"
+    },
+    {
+        "subject": "CSE2NFX",
+        "start_date": "2022-08-01"
+    },
+    {
+        "subject": "CSE2NFX",
+        "start_date": "2022-09-01"
+    },
+    {
+        "subject": "CSE2NFX",
+        "start_date": "2022-10-01"
+    },
+    {
+        "subject": "CSE2NFX",
+        "start_date": "2022-11-01"
+    },
+    {
+        "subject": "CSE2NFX",
+        "start_date": "2022-12-01"
+    },
+    {
+        "subject": "CSE2DCX",
+        "start_date": "2021-02-01"
+    },
+    {
+        "subject": "CSE2DCX",
+        "start_date": "2021-04-01"
+    },
+    {
+        "subject": "CSE2DCX",
+        "start_date": "2021-05-01"
+    },
+    {
+        "subject": "CSE2DCX",
+        "start_date": "2021-06-01"
+    },
+    {
+        "subject": "CSE2DCX",
+        "start_date": "2021-10-01"
+    },
+    {
+        "subject": "CSE2DCX",
+        "start_date": "2021-11-01"
+    },
+    {
+        "subject": "CSE2DCX",
+        "start_date": "2021-12-01"
+    },
+    {
+        "subject": "CSE2DCX",
+        "start_date": "2022-04-01"
+    },
+    {
+        "subject": "CSE2DCX",
+        "start_date": "2022-05-01"
+    },
+    {
+        "subject": "CSE2DCX",
+        "start_date": "2022-06-01"
+    },
+    {
+        "subject": "CSE2DCX",
+        "start_date": "2022-10-01"
+    },
+    {
+        "subject": "CSE2DCX",
+        "start_date": "2022-11-01"
+    },
+    {
+        "subject": "CSE2DCX",
+        "start_date": "2022-12-01"
+    },
+    {
+        "subject": "CSE1SPX",
+        "start_date": "2021-01-01"
+    },
+    {
+        "subject": "CSE1SPX",
+        "start_date": "2021-02-01"
+    },
+    {
+        "subject": "CSE1SPX",
+        "start_date": "2021-03-01"
+    },
+    {
+        "subject": "CSE1SPX",
+        "start_date": "2021-04-01"
+    },
+    {
+        "subject": "CSE1SPX",
+        "start_date": "2021-05-01"
+    },
+    {
+        "subject": "CSE1SPX",
+        "start_date": "2021-06-01"
+    },
+    {
+        "subject": "CSE1SPX",
+        "start_date": "2021-07-01"
+    },
+    {
+        "subject": "CSE1SPX",
+        "start_date": "2021-08-01"
+    },
+    {
+        "subject": "CSE1SPX",
+        "start_date": "2021-09-01"
+    },
+    {
+        "subject": "CSE1SPX",
+        "start_date": "2021-10-01"
+    },
+    {
+        "subject": "CSE1SPX",
+        "start_date": "2021-11-01"
+    },
+    {
+        "subject": "CSE1SPX",
+        "start_date": "2021-12-01"
+    },
+    {
+        "subject": "CSE1SPX",
+        "start_date": "2022-01-01"
+    },
+    {
+        "subject": "CSE1SPX",
+        "start_date": "2022-02-01"
+    },
+    {
+        "subject": "CSE1SPX",
+        "start_date": "2022-03-01"
+    },
+    {
+        "subject": "CSE1SPX",
+        "start_date": "2022-04-01"
+    },
+    {
+        "subject": "CSE1SPX",
+        "start_date": "2022-05-01"
+    },
+    {
+        "subject": "CSE1SPX",
+        "start_date": "2022-06-01"
+    },
+    {
+        "subject": "CSE1SPX",
+        "start_date": "2022-07-01"
+    },
+    {
+        "subject": "CSE1SPX",
+        "start_date": "2022-08-01"
+    },
+    {
+        "subject": "CSE1SPX",
+        "start_date": "2022-09-01"
+    },
+    {
+        "subject": "CSE1SPX",
+        "start_date": "2022-10-01"
+    },
+    {
+        "subject": "CSE1SPX",
+        "start_date": "2022-11-01"
+    },
+    {
+        "subject": "CSE1SPX",
+        "start_date": "2022-12-01"
+    },
+    {
+        "subject": "CSE1SIX",
+        "start_date": "2021-01-01"
+    },
+    {
+        "subject": "CSE1SIX",
+        "start_date": "2021-02-01"
+    },
+    {
+        "subject": "CSE1SIX",
+        "start_date": "2021-03-01"
+    },
+    {
+        "subject": "CSE1SIX",
+        "start_date": "2021-04-01"
+    },
+    {
+        "subject": "CSE1SIX",
+        "start_date": "2021-05-01"
+    },
+    {
+        "subject": "CSE1SIX",
+        "start_date": "2021-06-01"
+    },
+    {
+        "subject": "CSE1SIX",
+        "start_date": "2021-07-01"
+    },
+    {
+        "subject": "CSE1SIX",
+        "start_date": "2021-08-01"
+    },
+    {
+        "subject": "CSE1SIX",
+        "start_date": "2021-09-01"
+    },
+    {
+        "subject": "CSE1SIX",
+        "start_date": "2021-10-01"
+    },
+    {
+        "subject": "CSE1SIX",
+        "start_date": "2021-11-01"
+    },
+    {
+        "subject": "CSE1SIX",
+        "start_date": "2021-12-01"
+    },
+    {
+        "subject": "CSE1SIX",
+        "start_date": "2022-01-01"
+    },
+    {
+        "subject": "CSE1SIX",
+        "start_date": "2022-02-01"
+    },
+    {
+        "subject": "CSE1SIX",
+        "start_date": "2022-03-01"
+    },
+    {
+        "subject": "CSE1SIX",
+        "start_date": "2022-04-01"
+    },
+    {
+        "subject": "CSE1SIX",
+        "start_date": "2022-05-01"
+    },
+    {
+        "subject": "CSE1SIX",
+        "start_date": "2022-06-01"
+    },
+    {
+        "subject": "CSE1SIX",
+        "start_date": "2022-07-01"
+    },
+    {
+        "subject": "CSE1SIX",
+        "start_date": "2022-08-01"
+    },
+    {
+        "subject": "CSE1SIX",
+        "start_date": "2022-09-01"
+    },
+    {
+        "subject": "CSE1SIX",
+        "start_date": "2022-10-01"
+    },
+    {
+        "subject": "CSE1SIX",
+        "start_date": "2022-11-01"
+    },
+    {
+        "subject": "CSE1SIX",
+        "start_date": "2022-12-01"
+    },
+    {
+        "subject": "CSE1IOX",
+        "start_date": "2021-01-01"
+    },
+    {
+        "subject": "CSE1IOX",
+        "start_date": "2021-02-01"
+    },
+    {
+        "subject": "CSE1IOX",
+        "start_date": "2021-03-01"
+    },
+    {
+        "subject": "CSE1IOX",
+        "start_date": "2021-07-01"
+    },
+    {
+        "subject": "CSE1IOX",
+        "start_date": "2021-08-01"
+    },
+    {
+        "subject": "CSE1IOX",
+        "start_date": "2021-09-01"
+    },
+    {
+        "subject": "CSE1IOX",
+        "start_date": "2022-01-01"
+    },
+    {
+        "subject": "CSE1IOX",
+        "start_date": "2022-02-01"
+    },
+    {
+        "subject": "CSE1IOX",
+        "start_date": "2022-03-01"
+    },
+    {
+        "subject": "CSE1IOX",
+        "start_date": "2022-07-01"
+    },
+    {
+        "subject": "CSE1IOX",
+        "start_date": "2022-08-01"
+    },
+    {
+        "subject": "CSE1IOX",
+        "start_date": "2022-09-01"
+    },
+    {
+        "subject": "CSE2ICX",
+        "start_date": "2021-02-01"
+    },
+    {
+        "subject": "CSE2ICX",
+        "start_date": "2021-03-01"
+    },
+    {
+        "subject": "CSE2ICX",
+        "start_date": "2021-08-01"
+    },
+    {
+        "subject": "CSE2ICX",
+        "start_date": "2022-02-01"
+    },
+    {
+        "subject": "CSE2ICX",
+        "start_date": "2022-08-01"
+    },
+    {
+        "subject": "CSE2CNX",
+        "start_date": "2021-05-01"
+    },
+    {
+        "subject": "CSE2CNX",
+        "start_date": "2021-08-01"
+    },
+    {
+        "subject": "CSE2CNX",
+        "start_date": "2021-11-01"
+    },
+    {
+        "subject": "CSE2CNX",
+        "start_date": "2022-02-01"
+    },
+    {
+        "subject": "CSE2CNX",
+        "start_date": "2022-05-01"
+    },
+    {
+        "subject": "CSE2CNX",
+        "start_date": "2022-08-01"
+    },
+    {
+        "subject": "CSE2CNX",
+        "start_date": "2022-11-01"
+    },
+    {
+        "subject": "CSE2SDX",
+        "start_date": "2021-05-01"
+    },
+    {
+        "subject": "CSE2SDX",
+        "start_date": "2021-08-01"
+    },
+    {
+        "subject": "CSE2SDX",
+        "start_date": "2021-11-01"
+    },
+    {
+        "subject": "CSE2SDX",
+        "start_date": "2022-05-01"
+    },
+    {
+        "subject": "CSE2SDX",
+        "start_date": "2022-11-01"
+    },
+    {
+        "subject": "BUS2PMX",
+        "start_date": "2021-02-01"
+    },
+    {
+        "subject": "BUS2PMX",
+        "start_date": "2021-03-01"
+    },
+    {
+        "subject": "BUS2PMX",
+        "start_date": "2021-04-01"
+    },
+    {
+        "subject": "BUS2PMX",
+        "start_date": "2021-05-01"
+    },
+    {
+        "subject": "BUS2PMX",
+        "start_date": "2021-08-01"
+    },
+    {
+        "subject": "BUS2PMX",
+        "start_date": "2021-11-01"
+    },
+    {
+        "subject": "BUS2PMX",
+        "start_date": "2021-12-01"
+    },
+    {
+        "subject": "BUS2PMX",
+        "start_date": "2022-01-01"
+    },
+    {
+        "subject": "BUS2PMX",
+        "start_date": "2022-05-01"
+    },
+    {
+        "subject": "BUS2PMX",
+        "start_date": "2022-09-01"
+    },
+    {
+        "subject": "BUS2PMX",
+        "start_date": "2022-10-01"
+    },
+    {
+        "subject": "BUS2PMX",
+        "start_date": "2022-11-01"
+    },
+    {
+        "subject": "CSE2VVX",
+        "start_date": "2021-02-01"
+    },
+    {
+        "subject": "CSE2VVX",
+        "start_date": "2021-05-01"
+    },
+    {
+        "subject": "CSE2VVX",
+        "start_date": "2021-11-01"
+    },
+    {
+        "subject": "CSE2VVX",
+        "start_date": "2022-05-01"
+    },
+    {
+        "subject": "CSE2VVX",
+        "start_date": "2022-11-01"
+    },
+    {
+        "subject": "MAT2DMX",
+        "start_date": "2021-02-01"
+    },
+    {
+        "subject": "MAT2DMX",
+        "start_date": "2021-05-01"
+    },
+    {
+        "subject": "MAT2DMX",
+        "start_date": "2021-08-01"
+    },
+    {
+        "subject": "MAT2DMX",
+        "start_date": "2022-02-01"
+    },
+    {
+        "subject": "MAT2DMX",
+        "start_date": "2022-08-01"
+    },
+    {
+        "subject": "CSE2MAX",
+        "start_date": "2021-02-01"
+    },
+    {
+        "subject": "CSE2MAX",
+        "start_date": "2021-05-01"
+    },
+    {
+        "subject": "CSE2MAX",
+        "start_date": "2021-11-01"
+    },
+    {
+        "subject": "CSE2MAX",
+        "start_date": "2022-05-01"
+    },
+    {
+        "subject": "CSE2MAX",
+        "start_date": "2022-11-01"
+    },
+    {
+        "subject": "CSE2OSX",
+        "start_date": "2021-02-01"
+    },
+    {
+        "subject": "CSE2OSX",
+        "start_date": "2021-05-01"
+    },
+    {
+        "subject": "CSE2OSX",
+        "start_date": "2021-11-01"
+    },
+    {
+        "subject": "CSE2OSX",
+        "start_date": "2022-05-01"
+    },
+    {
+        "subject": "CSE2OSX",
+        "start_date": "2022-11-01"
+    },
+    {
+        "subject": "CSE2ADX",
+        "start_date": "2021-05-01"
+    },
+    {
+        "subject": "CSE2ADX",
+        "start_date": "2021-11-01"
+    },
+    {
+        "subject": "CSE2ADX",
+        "start_date": "2022-05-01"
+    },
+    {
+        "subject": "CSE2ADX",
+        "start_date": "2022-11-01"
+    },
+    {
+        "subject": "CSE2CPX",
+        "start_date": "2021-02-01"
+    },
+    {
+        "subject": "CSE2CPX",
+        "start_date": "2021-10-01"
+    },
+    {
+        "subject": "CSE2CPX",
+        "start_date": "2022-02-01"
+    },
+    {
+        "subject": "CSE2CPX",
+        "start_date": "2022-07-01"
+    },
+    {
+        "subject": "CSE2MLX",
+        "start_date": "2021-02-01"
+    },
+    {
+        "subject": "CSE2MLX",
+        "start_date": "2021-05-01"
+    },
+    {
+        "subject": "CSE2MLX",
+        "start_date": "2022-02-01"
+    },
+    {
+        "subject": "CSE2MLX",
+        "start_date": "2022-05-01"
+    },
+    {
+        "subject": "CSE2SAX",
+        "start_date": "2021-02-01"
+    },
+    {
+        "subject": "CSE2SAX",
+        "start_date": "2021-05-01"
+    },
+    {
+        "subject": "CSE2SAX",
+        "start_date": "2021-08-01"
+    },
+    {
+        "subject": "CSE2SAX",
+        "start_date": "2021-11-01"
+    },
+    {
+        "subject": "CSE2SAX",
+        "start_date": "2022-02-01"
+    },
+    {
+        "subject": "CSE2SAX",
+        "start_date": "2022-05-01"
+    },
+    {
+        "subject": "CSE2SAX",
+        "start_date": "2022-08-01"
+    },
+    {
+        "subject": "CSE2SAX",
+        "start_date": "2022-11-01"
+    },
+    {
+        "subject": "CSE2ANX",
+        "start_date": "2021-02-01"
+    },
+    {
+        "subject": "CSE2ANX",
+        "start_date": "2021-05-01"
+    },
+    {
+        "subject": "CSE2ANX",
+        "start_date": "2021-08-01"
+    },
+    {
+        "subject": "CSE2ANX",
+        "start_date": "2021-11-01"
+    },
+    {
+        "subject": "CSE2ANX",
+        "start_date": "2022-02-01"
+    },
+    {
+        "subject": "CSE2ANX",
+        "start_date": "2022-05-01"
+    },
+    {
+        "subject": "CSE2ANX",
+        "start_date": "2022-08-01"
+    },
+    {
+        "subject": "CSE2ANX",
+        "start_date": "2022-11-01"
+    },
+    {
+        "subject": "CSE2WDX",
+        "start_date": "2021-02-01"
+    },
+    {
+        "subject": "CSE2WDX",
+        "start_date": "2021-05-01"
+    },
+    {
+        "subject": "CSE2WDX",
+        "start_date": "2021-08-01"
+    },
+    {
+        "subject": "CSE2WDX",
+        "start_date": "2021-11-01"
+    },
+    {
+        "subject": "CSE2WDX",
+        "start_date": "2022-02-01"
+    },
+    {
+        "subject": "CSE2WDX",
+        "start_date": "2022-05-01"
+    },
+    {
+        "subject": "CSE2WDX",
+        "start_date": "2022-08-01"
+    },
+    {
+        "subject": "CSE2WDX",
+        "start_date": "2022-11-01"
+    },
+    {
+        "subject": "CSE3BGX",
+        "start_date": "2021-02-01"
+    },
+    {
+        "subject": "CSE3BGX",
+        "start_date": "2021-08-01"
+    },
+    {
+        "subject": "CSE3BGX",
+        "start_date": "2022-02-01"
+    },
+    {
+        "subject": "CSE3BGX",
+        "start_date": "2022-08-01"
+    },
+    {
+        "subject": "CSE3CIX",
+        "start_date": "2021-08-01"
+    },
+    {
+        "subject": "CSE3CIX",
+        "start_date": "2022-05-01"
+    },
+    {
+        "subject": "CSE3CSX",
+        "start_date": "2021-02-01"
+    },
+    {
+        "subject": "CSE3CSX",
+        "start_date": "2021-11-01"
+    },
+    {
+        "subject": "CSE3CSX",
+        "start_date": "2022-05-01"
+    },
+    {
+        "subject": "CSE3CSX",
+        "start_date": "2022-11-01"
+    },
+    {
+        "subject": "CSE3NWX",
+        "start_date": "2021-05-01"
+    },
+    {
+        "subject": "CSE3NWX",
+        "start_date": "2021-11-01"
+    },
+    {
+        "subject": "CSE3NWX",
+        "start_date": "2022-08-01"
+    },
+    {
+        "subject": "CSE3OTX",
+        "start_date": "2021-02-01"
+    },
+    {
+        "subject": "CSE3OTX",
+        "start_date": "2021-08-01"
+    },
+    {
+        "subject": "CSE3OTX",
+        "start_date": "2022-02-01"
+    },
+    {
+        "subject": "CSE3OTX",
+        "start_date": "2022-08-01"
+    },
+    {
+        "subject": "CSE3WSX",
+        "start_date": "2021-05-01"
+    },
+    {
+        "subject": "CSE3WSX",
+        "start_date": "2022-02-01"
+    },
+    {
+        "subject": "CSE3WSX",
+        "start_date": "2022-11-01"
+    },
+    {
+        "subject": "CSE3PAX",
+        "start_date": "2021-02-01"
+    },
+    {
+        "subject": "CSE3PAX",
+        "start_date": "2021-05-01"
+    },
+    {
+        "subject": "CSE3PAX",
+        "start_date": "2021-08-01"
+    },
+    {
+        "subject": "CSE3PAX",
+        "start_date": "2021-11-01"
+    },
+    {
+        "subject": "CSE3PAX",
+        "start_date": "2022-02-01"
+    },
+    {
+        "subject": "CSE3PAX",
+        "start_date": "2022-05-01"
+    },
+    {
+        "subject": "CSE3PAX",
+        "start_date": "2022-08-01"
+    },
+    {
+        "subject": "CSE3PAX",
+        "start_date": "2022-11-01"
+    },
+    {
+        "subject": "CSE3PBX",
+        "start_date": "2021-02-01"
+    },
+    {
+        "subject": "CSE3PBX",
+        "start_date": "2021-05-01"
+    },
+    {
+        "subject": "CSE3PBX",
+        "start_date": "2021-08-01"
+    },
+    {
+        "subject": "CSE3PBX",
+        "start_date": "2021-11-01"
+    },
+    {
+        "subject": "CSE3PBX",
+        "start_date": "2022-02-01"
+    },
+    {
+        "subject": "CSE3PBX",
+        "start_date": "2022-05-01"
+    },
+    {
+        "subject": "CSE3PBX",
+        "start_date": "2022-08-01"
+    },
+    {
+        "subject": "CSE3PBX",
+        "start_date": "2022-11-01"
+    },
+    {
+        "subject": "CSE3PEX",
+        "start_date": "2021-05-01"
+    },
+    {
+        "subject": "CSE3PEX",
+        "start_date": "2021-11-01"
+    },
+    {
+        "subject": "CSE3PEX",
+        "start_date": "2022-05-01"
+    },
+    {
+        "subject": "CSE3PEX",
+        "start_date": "2022-11-01"
+    },
+    {
+        "subject": "CSE3ACX",
+        "start_date": "2021-08-01"
+    },
+    {
+        "subject": "CSE3ACX",
+        "start_date": "2022-02-01"
+    },
+    {
+        "subject": "CSE3ACX",
+        "start_date": "2022-08-01"
+    },
+    {
+        "subject": "CSE3SOX",
+        "start_date": "2021-04-01"
+    },
+    {
+        "subject": "CSE3SOX",
+        "start_date": "2021-11-01"
+    },
+    {
+        "subject": "CSE3SOX",
+        "start_date": "2022-01-01"
+    },
+    {
+        "subject": "CSE3SOX",
+        "start_date": "2022-05-01"
+    },
+    {
+        "subject": "CSE3SOX",
+        "start_date": "2022-10-01"
+    },
+    {
+        "subject": "CSE3SOX",
+        "start_date": "2022-11-01"
+    },
+    {
+        "subject": "CSE3BDX",
+        "start_date": "2021-08-01"
+    },
+    {
+        "subject": "CSE3BDX",
+        "start_date": "2022-02-01"
+    },
+    {
+        "subject": "CSE3BDX",
+        "start_date": "2022-08-01"
+    },
+    {
+        "subject": "CSE3PCX",
+        "start_date": "2022-02-01"
+    },
+    {
+        "subject": "CSE3PCX",
+        "start_date": "2022-08-01"
+    },
+    {
+        "subject": "CSE3CAX",
+        "start_date": "2022-02-01"
+    },
+    {
+        "subject": "CSE3CAX",
+        "start_date": "2022-05-01"
+    },
+    {
+        "subject": "CSE3CAX",
+        "start_date": "2022-08-01"
+    },
+    {
+        "subject": "CSE3CAX",
+        "start_date": "2022-11-01"
+    },
+    {
+        "subject": "CSE3CBX",
+        "start_date": "2022-05-01"
+    },
+    {
+        "subject": "CSE3CBX",
+        "start_date": "2022-08-01"
+    },
+    {
+        "subject": "CSE3CBX",
+        "start_date": "2022-11-01"
+    }
+]

@@ -1,7 +1,7 @@
 from django import forms
 from crispy_forms.helper import FormHelper
 from crispy_forms.layout import Layout, Fieldset, Submit, Div
-from .models import SubjectInstance, UserProfile, Subject
+from core.models import SubjectInstance, UserProfile, Subject
 from core.models import LecturerExpertise
 
 class SubjectInstanceForm(forms.ModelForm):
