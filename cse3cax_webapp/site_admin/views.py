@@ -1,7 +1,7 @@
 from django.shortcuts import render, get_object_or_404
 from django.views.decorators.http import require_http_methods
 from django.urls import reverse
-from core.models import UserProfile
+from core.models import UserProfile, Role
 from django.http import HttpResponse
 from site_admin.forms import UserProfileForm, LecturerExpertiseForm
 
@@ -11,7 +11,8 @@ def home(request):
 
 
 def user_management(request):
-    return render(request, 'user_management.html')
+    roles = Role.objects.all()
+    return render(request, 'user_management.html', {'roles': roles})
 
 
 def edit_user(request, user_id):
@@ -20,7 +21,8 @@ def edit_user(request, user_id):
         form = UserProfileForm(request.POST, instance=user)
         if form.is_valid():
             form.save()
-            return HttpResponse(status=204, headers={'Hx-Trigger':'userListChanged'})  # no content
+            # no content
+            return HttpResponse(status=204, headers={'Hx-Trigger': 'userListChanged'})
     else:
         # Load the form with the user's current data for editing
         form = UserProfileForm(instance=user)
@@ -33,7 +35,8 @@ def add_user(request):
         form = UserProfileForm(request.POST)
         if form.is_valid():
             form.save()
-            return HttpResponse(status=204, headers={'Hx-Trigger':'userListChanged'})  # no content
+            # no content
+            return HttpResponse(status=204, headers={'Hx-Trigger': 'userListChanged'})
     else:
         form = UserProfileForm()
     form_string = 'Add User'
@@ -51,14 +54,21 @@ def confirm_delete_user(request, user_id):
     }
     return render(request, 'modals/confirm_delete_modal.html', context)
 
+
 def user_list(request):
-    users = UserProfile.objects.all()
+    role = request.GET.get('role')
+    if role:
+        users = UserProfile.objects.filter(role__role_id=role)
+    else:
+        users = UserProfile.objects.all()
     return render(request, 'user_list.html', {'users': users})
+
 
 def delete_user(request, user_id):
     user = get_object_or_404(UserProfile, user_id=user_id)
     user.delete()
-    return HttpResponse(status=204, headers={'Hx-Trigger':'userListChanged'})  # No content response
+    # No content response
+    return HttpResponse(status=204, headers={'Hx-Trigger': 'userListChanged'})
 
 
 def message_modal(request):
@@ -73,7 +83,8 @@ def set_expertise(request, user_id):
         form = LecturerExpertiseForm(request.POST, user=user)
         if form.is_valid():
             form.save()
-            return HttpResponse(status=204, headers={'Hx-Trigger':'userListChanged'})  # no content
+            # no content
+            return HttpResponse(status=204, headers={'Hx-Trigger': 'userListChanged'})
     else:
         # Load the form with the user's current data for editing
         form = LecturerExpertiseForm(user=user)

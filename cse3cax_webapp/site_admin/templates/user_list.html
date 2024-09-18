@@ -1,9 +1,9 @@
 {% for user in users %}
 <tr id="user-{{ user.user_id }}" class="user-row">
-  <td>{{user.first_name}}</td>
-  <td>{{user.last_name}}</td>
-  <td>{{user.role}}</td>
-  <td>
+  <td>{{ user.first_name }}</td>
+  <td>{{ user.last_name }}</td>
+  <td>{{ user.role }}</td>
+  <td class="text-end">
     <button
       type="button"
       class="btn btn-primary btn-sm"
@@ -20,7 +20,7 @@
     >
       Delete User
     </button>
-    
+
     {% if user.role.role_id == 'Lecturer' %}
     <button
       type="button"

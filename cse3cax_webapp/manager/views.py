@@ -1,15 +1,20 @@
 from django.shortcuts import render, get_object_or_404
-from core.models import SubjectInstance
+from core.models import SubjectInstance,Subject
 from .forms import SubjectInstanceForm
 from django.http import HttpResponse
 from django.urls import reverse
 
 def subject_instances(request):
-    return render(request, 'subject_instances.html')
+    subjects = Subject.objects.all()
+    return render(request, 'subject_instances.html', {'subjects': subjects})
 
 
 def instance_list(request):
-    subject_instances = SubjectInstance.objects.all()
+    subject = request.GET.get('subject')
+    if subject:
+        subject_instances = SubjectInstance.objects.filter(subject__subject_id=subject)
+    else:
+        subject_instances = SubjectInstance.objects.all()
     return render(request, 'instance_list.html', {'subject_instances': subject_instances})
 
 
