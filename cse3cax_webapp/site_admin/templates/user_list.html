@@ -4,6 +4,16 @@
   <td>{{ user.last_name }}</td>
   <td>{{ user.role }}</td>
   <td class="text-end">
+    {% if user.role.role_id == 'Lecturer' %}
+    <button
+      type="button"
+      class="btn btn-primary btn-sm"
+      hx-get="{% url 'set_expertise' user_id=user.user_id %}"
+      hx-target="#dialog"
+    >
+      Set Lecturer Expertise
+    </button>
+    {% endif %}
     <button
       type="button"
       class="btn btn-primary btn-sm"
@@ -20,17 +30,6 @@
     >
       Delete User
     </button>
-
-    {% if user.role.role_id == 'Lecturer' %}
-    <button
-      type="button"
-      class="btn btn-primary btn-sm"
-      hx-get="{% url 'set_expertise' user_id=user.user_id %}"
-      hx-target="#dialog"
-    >
-      Set Lecturer Expertise
-    </button>
-    {% endif %}
   </td>
 </tr>
 {% endfor %}

@@ -24,6 +24,7 @@
       id="subject-filter"
       name="subject"
       class="form-select"
+      hx-trigger="change, load, instanceListChanged from:body"
       hx-get="{% url 'instance_list' %}"
       hx-target="#instance-list"
       hx-vals="{subject: this.value}"
@@ -45,8 +46,6 @@
   </thead>
   <tbody
     id="instance-list"
-    hx-get="{% url 'instance_list' %}"
-    hx-trigger="load, instanceListChanged from:body"
   >
     <tr>
       <td>Loading...</td>
