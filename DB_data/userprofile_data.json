@@ -1,0 +1,54 @@
+[
+    {
+        "last_name": "Acacia",
+        "user_id": 1
+    },
+    {
+        "last_name": "Beech",
+        "user_id": 2
+    },
+    {
+        "last_name": "Cypress",
+        "user_id": 3
+    },
+    {
+        "last_name": "Douglas",
+        "user_id": 4
+    },
+    {
+        "last_name": "Eucalypt",
+        "user_id": 5
+    },
+    {
+        "last_name": "Flame",
+        "user_id": 6
+    },
+    {
+        "last_name": "Guava",
+        "user_id": 7
+    },
+    {
+        "last_name": "Hickory",
+        "user_id": 8
+    },
+    {
+        "last_name": "Ironbark",
+        "user_id": 9
+    },
+    {
+        "last_name": "Jacaranda",
+        "user_id": 10
+    },
+    {
+        "last_name": "Karri",
+        "user_id": 11
+    },
+    {
+        "last_name": "Laurel",
+        "user_id": 12
+    },
+    {
+        "last_name": "Maple",
+        "user_id": 13
+    }
+]

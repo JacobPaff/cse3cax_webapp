@@ -6,7 +6,7 @@ python manage.py loaddata role_data.json
 python manage.py loaddata subject_data.json
 python manage.py loaddata user_data.json
 python manage.py loaddata subject_instance.json
-
+python manage.py loaddata lecturer_expertise.json
 
 
 
