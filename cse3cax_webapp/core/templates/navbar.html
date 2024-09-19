@@ -15,20 +15,32 @@
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
-          {% comment %} <a class="nav-link" href="{% url 'subject_list' %}">Subject List</a> {% endcomment %}
+          {% comment %}
+          <a class="nav-link" href="{% url 'subject_list' %}">Subject List</a>
+          {% endcomment %}
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="{% url 'user_management' %}">Admin: Manage Users</a>
+          <a class="nav-link" href="{% url 'user_management' %}"
+            >Admin: Manage Users</a
+          >
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="{% url 'subject_instances' %}">Manager: Subject Instances</a>
+          <a class="nav-link" href="{% url 'subject_instances' %}"
+            >Manager: Subject Instances</a
+          >
         </li>
       </ul>
       <!-- Dropdown for selecting theme -->
       <div class="d-flex align-items-center ms-auto text-light">
         <span class="me-3">Jacob (Admin)</span>
 
-        <select id="theme-selector" class="form-select form-select-sm me-3" onchange="changeTheme()" style="width: auto;">
+        {% comment %}
+        <select
+          id="theme-selector"
+          class="form-select form-select-sm me-3"
+          onchange="changeTheme()"
+          style="width: auto"
+        >
           <option value="lux" selected>Lux</option>
           <option value="cerulean">Cerulean</option>
           <option value="cosmo">Cosmo</option>
@@ -55,6 +67,7 @@
           <option value="yeti">Yeti</option>
           <option value="zephyr">Zephyr</option>
         </select>
+        {% endcomment %}
 
         <a href="#" class="btn btn-outline-danger btn-sm">Logout</a>
       </div>

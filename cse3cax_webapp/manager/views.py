@@ -12,12 +12,14 @@ def subject_instances(request):
 
 
 def instance_list(request):
-    subject = request.GET.get('subject')
-    if subject:
-        subject_instances = SubjectInstance.objects.filter(
-            subject__subject_id=subject)
-    else:
-        subject_instances = SubjectInstance.objects.all()
+    # subject = request.GET.get('subject')
+    query = request.GET.get('search', '')
+    subject_instances = SubjectInstance.objects.all()
+    if query:
+        subject_instances = subject_instances.filter(
+            Q(subject__subject_name__icontains=query) |
+            Q(subject__subject_id__icontains=query)
+        )
     return render(request, 'instance_list.html', {'subject_instances': subject_instances})
 
 

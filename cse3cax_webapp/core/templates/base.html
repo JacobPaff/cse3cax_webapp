@@ -32,15 +32,17 @@
     <script src="https://unpkg.com/htmx.org@2.0.2"></script>
     
     <!-- Custom JS for changing theme -->
-    <script>
+    {% comment %} <script>
       function changeTheme() {
         var selectedTheme = document.getElementById("theme-selector").value;
         var themeLink = document.getElementById("theme-link");
         themeLink.href = "https://cdn.jsdelivr.net/npm/bootswatch@5.3.3/dist/" + selectedTheme + "/bootstrap.min.css";
       }
-    </script>
+    </script> {% endcomment %}
+    <link id="theme-link" rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootswatch@5.3.3/dist/lux/bootstrap.min.css">
 
-    <!-- Load your custom JavaScript last -->
+    <script src="https://kit.fontawesome.com/7b1bfab025.js" crossorigin="anonymous"></script>
+    <!-- Load custom JavaScript -->
     <script src="{% static 'js/modal.js' %}"></script>
   </body>
 </html>

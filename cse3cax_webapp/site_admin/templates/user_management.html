@@ -14,10 +14,10 @@
       id="role-filter"
       name="role"
       class="form-select"
-      hx-trigger="change, load, userListChanged"
+      hx-trigger="change, load, userListChanged from:body""
       hx-get="{% url 'user_list' %}"
       hx-target="#user-list"
-      hx-vals="{role: this.value}"
+      hx-include="#role-filter"
     >
       <option value="">All Roles</option>
       {% for role in roles %}
@@ -42,3 +42,9 @@
   </table>
   {% endblock %}
 </div>
+<script>
+  document.addEventListener('userListChanged', function(event) {
+      console.log('userListChanged event fired!', event);
+      // Add logic to update or refresh the user list
+  });
+</script>

@@ -2,6 +2,12 @@
 <tr id="user-{{ user.user_id }}" class="user-row">
   <td>{{ user.first_name }}</td>
   <td>{{ user.last_name }}</td>
+  <td class="text-center align-middle">
+    <i
+      class="fa-solid fa-circle"
+      style="color: #34b71a; margin-left: -55px"
+    ></i>
+  </td>
   <td class="text-end">
     {% if user in assigned_lecturers %}
     <button
