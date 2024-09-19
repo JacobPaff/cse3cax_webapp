@@ -79,24 +79,18 @@ def assign_lecturer_instance(request):
 def lecturer_list(request):
     query = request.GET.get('search', '')
     instance_id = request.GET.get('instance_id')
-
     # Get the subject instance
     subject_instance = SubjectInstance.objects.get(pk=instance_id)
-
     # Get lecturers assigned to the subject instance
     assigned_lecturers = UserProfile.objects.filter(
         subjectinstancelecturer__subject_instance=instance_id)
-    # assigned_lecturers = UserProfile.objects.all()
     # Get lecturers who have expertise in the subject of this instance
     expertised_lecturers = UserProfile.objects.filter(
         lecturerexpertise__subject=subject_instance.subject
     )
-    # expertised_lecturers = UserProfile.objects.all()
-
     # Combine both filters: lecturers with expertise and assigned to the subject instance
     user_list = expertised_lecturers
 
-    # Can this .... for now
     # Apply the search query to filter by first or last name
     if query:
         user_list = user_list.filter(
@@ -106,22 +100,29 @@ def lecturer_list(request):
 
     return render(request, 'lecturer_list.html', {
         'user_list': user_list,
-        'assigned_lecturers': assigned_lecturers
+        'assigned_lecturers': assigned_lecturers,
+        'instance_id': instance_id
     })
 
-# def confirm_delete_modal(request, user_id):
-#     user = get_object_or_404(UserProfile, user_id=user_id)
-#     return render(request, 'modals/confirm_delete_modal.html', {'user': user})
 
-# def edit_user(request, user_id):
-#     user = get_object_or_404(UserProfile, user_id=user_id)
-#     if request.method == "POST":
-#         form = UserProfileForm(request.POST, instance=user)
-#         if form.is_valid():
-#             form.save()
-#             return HttpResponse(status=204, headers={'Hx-Trigger':'userListChanged'})  # no content
-#     else:
-#         # Load the form with the user's current data for editing
-#         form = UserProfileForm(instance=user)
-#     form_string = f'Edit {user.first_name } { user.last_name}'
-#     return render(request, 'modals/form_modal.html', {'form': form, 'form_string': form_string})
+def add_lecturer_instance(request):
+    instance_id = request.GET.get('instance_id')
+    subject_instance = get_object_or_404(
+        SubjectInstance, instance_id=instance_id)
+    lecturer_id = request.GET.get('lecturer_id')
+    lecturer = get_object_or_404(UserProfile, user_id=lecturer_id)
+    # Add the lecturer to the subject instance lecturer
+    print('working here')
+    SubjectInstanceLecturer.objects.create(
+        subject_instance=subject_instance, user=lecturer)
+    return HttpResponse(status=201, headers={'Hx-Trigger': 'instanceLecturerChanged'})
+
+def remove_lecturer_instance(request):
+    instance_id = request.GET.get('instance_id')
+    subject_instance = get_object_or_404(
+        SubjectInstance, instance_id=instance_id)
+    lecturer_id = request.GET.get('lecturer_id')
+    lecturer = get_object_or_404(UserProfile, user_id=lecturer_id)
+    # Remove the lecturer to the subject instance lecturer
+    SubjectInstanceLecturer.objects.filter(subject_instance=subject_instance, user=lecturer).delete()
+    return HttpResponse(status=201, headers={'Hx-Trigger': 'instanceLecturerChanged'})

@@ -15,7 +15,7 @@
         class="form-control form-control-lg"
         placeholder="Search Lecturers..."
         hx-get="{% url 'lecturer_list' %}?instance_id={{ instance_id }}"
-        hx-trigger="keyup changed delay:500ms, change, load"
+        hx-trigger="keyup changed delay:500ms, change, load, instanceLecturerChanged from:body"
         hx-target="#lecturer-list"
         hx-indicator=".htmx-indicator"
       />

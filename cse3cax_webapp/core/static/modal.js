@@ -12,7 +12,7 @@
         });
 
         htmx.on('htmx:beforeSwap', (e) => {
-            if (e.detail.target.id === "dialog" && !e.detail.xhr.response) {
+            if (e.detail.target.id === "dialog" && !e.detail.xhr.status === 204) {
                 modal.hide();
             }
         });

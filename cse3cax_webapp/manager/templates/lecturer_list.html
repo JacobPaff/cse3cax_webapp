@@ -13,7 +13,7 @@
     <button
       type="button"
       class="btn btn-danger btn-sm"
-      hx-get="#"
+      hx-get="{% url 'remove_lecturer_instance' %}?instance_id={{ instance_id }}&lecturer_id={{user.user_id}} "
       hx-target="#dialog"
     >
       Remove Lecturer
@@ -22,7 +22,7 @@
     <button
       type="button"
       class="btn btn-primary btn-sm"
-      hx-get="#"
+      hx-get="{% url 'add_lecturer_instance' %}?instance_id={{ instance_id }}&lecturer_id={{user.user_id}} "
       hx-target="#dialog"
     >
       Add Lecturer
