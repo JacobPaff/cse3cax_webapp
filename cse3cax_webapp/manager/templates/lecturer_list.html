@@ -1,0 +1,27 @@
+{% for user in user_list %}
+<tr id="user-{{ user.user_id }}" class="user-row">
+  <td>{{ user.first_name }}</td>
+  <td>{{ user.last_name }}</td>
+  <td class="text-end">
+    {% if user in assigned_lecturers %}
+    <button
+      type="button"
+      class="btn btn-danger btn-sm"
+      hx-get="#"
+      hx-target="#dialog"
+    >
+      Remove Lecturer
+    </button>
+    {% else %}
+    <button
+      type="button"
+      class="btn btn-primary btn-sm"
+      hx-get="#"
+      hx-target="#dialog"
+    >
+      Add Lecturer
+    </button>
+    {% endif %}
+  </td>
+</tr>
+{% endfor %}

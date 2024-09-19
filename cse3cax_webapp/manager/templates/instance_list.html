@@ -1,19 +1,43 @@
 {% for instance in subject_instances %}
 <tr id="instance-{{ instance.instance_id }}" class="instance-row">
-  <td>{{instance.subject}} - {{instance.start_date.month}}/{{instance.start_date.year}}</td>
+  <td>
+    {{instance.subject}} -
+    {{instance.start_date.month}}/{{instance.start_date.year}}
+  </td>
   <td>{{instance.enrollments}}</td>
   <td>
-    {% if instance.users.exists %}
-      {{instance.users.all|join:", "}}
-    {% else %}
-      None assigned
-    {% endif %}
+    {% if instance.users.exists %} {{instance.users.all|join:", "}} {% else %}
+    None assigned {% endif %}
   </td>
   <td class="text-end">
     <button
       type="button"
       class="btn btn-primary btn-sm"
+      hx-get="{% url 'assign_lecturer_instance' %}?instance_id={{instance.instance_id}} "
+      hx-target="#dialog"
+    >
+      Assign Lecturers
+    </button>
+
+    <button
+      type="button"
+      class="btn btn-primary btn-sm"
       hx-get="{% url 'edit_subject_instance' instance_id=instance.instance_id %}"
+      {%
+      comment
+      %}
+      This
+      can
+      be
+      changed
+      to
+      be
+      in
+      the
+      request
+      {%
+      endcomment
+      %}
       hx-target="#dialog"
     >
       Edit Instance

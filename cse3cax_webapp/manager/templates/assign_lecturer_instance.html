@@ -1,0 +1,29 @@
+<div class="modal-content">
+  <div class="modal-header">
+    <h5 class="modal-title" id="userModalLabel">
+      <input
+        type="text"
+        id="search-box"
+        name="search"
+        placeholder="Search Lecturers..."
+        hx-get="{% url 'lecturer_list' %}?instance_id={{ instance_id }}"
+        hx-trigger="keyup changed delay:500ms, change, load"
+        hx-target="#lecturer-list"
+        hx-indicator=".htmx-indicator"
+      />
+      <tr class="htmx-indicator"></tr>
+
+      <table class="table">
+        <thead>
+          <tr>
+            <th>First Name</th>
+            <th>Last Name</th>
+          </tr>
+        </thead>
+        <tbody id="lecturer-list">
+          <td>Loading...</td>
+        </tbody>
+      </table>
+    </h5>
+  </div>
+</div>
