@@ -12,12 +12,14 @@ from .models import UserProfile, Role
 from jwt.algorithms import RSAAlgorithm
 import json
 from django.contrib.auth import authenticate
-
+from django.http import HttpResponse
 
 @login_required(login_url='login_redirect')
 def home(request):
     return render(request, 'core/home.html')
-
+    
+def health_check(request):
+    return HttpResponse("OK", status=200)
 
 def login_redirect(request):
     login_url = (
