@@ -2,8 +2,12 @@ from django.shortcuts import get_object_or_404, render
 from datetime import timedelta
 from core.models import SubjectInstanceLecturer, SubjectInstance, Subject
 from collections import defaultdict
+from django.contrib.auth.decorators import user_passes_test
 
+def is_lecturer(user):
+    return user.is_authenticated and (user.role.role_id == 'Lecturer' or user.role.role_id == 'Testing') 
 
+@user_passes_test(is_lecturer, login_url='login_redirect')
 def lecturer_instance_list(request):
     # Define years and months for the table
     years = set()

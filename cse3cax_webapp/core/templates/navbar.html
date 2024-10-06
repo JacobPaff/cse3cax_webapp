@@ -14,10 +14,8 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        {% if user.is_authenticated and user.role_id == 'Testing' %}
         <li class="nav-item">
-          {% comment %}
-          <a class="nav-link" href="{% url 'subject_list' %}">Subject List</a>
-          {% endcomment %}
         </li>
         <li class="nav-item">
           <a class="nav-link" href="{% url 'user_management' %}"
@@ -34,6 +32,11 @@
             >Lecturer: Roster</a
           >
         </li>
+        {% elif user.is_authenticated and user.email == 'testing@fakeuniversity.edu' %}
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'set_testing_role' %}">Set Testing Role</a>
+          </li>
+        {% endif %}
       </ul>
       <!-- Dropdown for selecting theme -->
       <div class="d-flex align-items-center ms-auto text-light">

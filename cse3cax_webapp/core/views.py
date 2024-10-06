@@ -8,7 +8,7 @@ from django.contrib.auth.models import User
 from django.conf import settings
 import jwt
 from django.conf import settings
-from .models import UserProfile
+from .models import UserProfile, Role
 from jwt.algorithms import RSAAlgorithm
 import json
 from django.contrib.auth import authenticate
@@ -30,17 +30,15 @@ def login_redirect(request):
 
 
 def role_redirect(request, user):
-    # for testing change for inteded page
-    return redirect('user_management')
-    # if not user.is_authenticated:
-    #     return redirect('login')
-    # if user.role.role_id == 'Administrator':
-    #     return redirect('user_management')
-    # elif user.role.role_id == 'Manager':
-    #     return redirect('subject_instances')
-    # elif user.role.role_id == 'Lecturer':
-    #     return redirect('instance_list')
-    # return redirect('home')
+    if not user.is_authenticated:
+        return redirect('login')
+    if user.role.role_id == 'Administrator':
+        return redirect('user_management')
+    elif user.role.role_id == 'Manager':
+        return redirect('subject_instances')
+    elif user.role.role_id == 'Lecturer':
+        return redirect('instance_list')
+    return redirect('home')
 
 
 def cognito_callback(request):
@@ -127,3 +125,12 @@ def logout_view(request):
 
 def is_lecturer(user):
     return user.is_authenticated and user.role.role_id == 'Lecturer'
+
+
+def set_testing_role(request):
+    if request.user.email == 'testing@fakeuniversity.edu':
+        testing_role = Role.objects.get(role_id='Testing')
+        request.user.role = testing_role
+        request.user.save()
+    print(request.user.role.role_id)
+    return redirect('home')

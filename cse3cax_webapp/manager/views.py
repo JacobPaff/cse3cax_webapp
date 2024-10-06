@@ -8,9 +8,7 @@ from django.contrib.auth.decorators import user_passes_test
 
 
 def is_manager(user):
-    return True
-    # commented for testing
-    # return user.is_authenticated and user.role.role_id == 'Manager'
+    return user.is_authenticated and (user.role.role_id == 'Manager' or user.role.role_id == 'Testing')
 
 
 @user_passes_test(is_manager, login_url='login_redirect')
