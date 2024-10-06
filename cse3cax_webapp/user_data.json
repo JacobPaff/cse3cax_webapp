@@ -154,5 +154,29 @@
             "first_name": "Casey",
             "last_name": "Maple"
         }
+    },
+    {
+        "model": "core.userprofile",
+        "pk": 14,
+        "fields": {
+            "role": "Administrator",
+            "email": "jacob.paff@fakeuniversity.edu",
+            "fte_percentage": 1.0,
+            "honorific": "Mr",
+            "first_name": "Jacob",
+            "last_name": "Paff"
+        }
+    },
+    {
+        "model": "core.userprofile",
+        "pk": 15,
+        "fields": {
+            "role": "Manager",
+            "email": "pacob.jaff@fakeuniversity.edu",
+            "fte_percentage": 1.0,
+            "honorific": "Mr",
+            "first_name": "Pacob",
+            "last_name": "Jaff"
+        }
     }
 ]
