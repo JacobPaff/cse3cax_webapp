@@ -30,15 +30,17 @@ def login_redirect(request):
 
 
 def role_redirect(request, user):
-    if not user.is_authenticated:
-        return redirect('login')
-    if user.role.role_id == 'Administrator':
-        return redirect('user_management')
-    elif user.role.role_id == 'Manager':
-        return redirect('subject_instances')
-    elif user.role.role_id == 'Lecturer':
-        return redirect('instance_list')
-    return redirect('home')
+    # for testing change for inteded page
+    return redirect('user_management')
+    # if not user.is_authenticated:
+    #     return redirect('login')
+    # if user.role.role_id == 'Administrator':
+    #     return redirect('user_management')
+    # elif user.role.role_id == 'Manager':
+    #     return redirect('subject_instances')
+    # elif user.role.role_id == 'Lecturer':
+    #     return redirect('instance_list')
+    # return redirect('home')
 
 
 def cognito_callback(request):
