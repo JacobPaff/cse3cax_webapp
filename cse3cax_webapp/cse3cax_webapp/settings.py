@@ -104,7 +104,8 @@ COGNITO_DOMAIN = 'djangotestunione.auth.ap-southeast-2.amazoncognito.com'
 COGNITO_USER_POOL_ID = 'ap-southeast-2_KSJHJw714'  # Replace with your User Pool ID
 COGNITO_CLIENT_ID = '4vs2np87ek29a3a5r5ertjdjuq'
 COGNITO_CLIENT_SECRET = '9n0hkdcp0ihgc3ljlmb3qni6uuuqr198bo0uee96fmm26rn1kct'
-COGNITO_REDIRECT_URI = 'http://localhost:8000/cognito_callback/'
+# COGNITO_REDIRECT_URI = 'http://localhost:8000/cognito_callback/'
+COGNITO_REDIRECT_URI = 'https://rostering.paff.me/cognito_callback/'
 COGNITO_REGION = 'ap-southeast-2'
 
 AUTH_USER_MODEL = 'core.UserProfile'
