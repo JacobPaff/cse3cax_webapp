@@ -99,6 +99,22 @@ DATABASES = {
     }
 }
 
+# Cognito Details
+COGNITO_DOMAIN = 'djangotestunione.auth.ap-southeast-2.amazoncognito.com'
+COGNITO_USER_POOL_ID = 'ap-southeast-2_KSJHJw714'  # Replace with your User Pool ID
+COGNITO_CLIENT_ID = '4vs2np87ek29a3a5r5ertjdjuq'
+COGNITO_CLIENT_SECRET = '9n0hkdcp0ihgc3ljlmb3qni6uuuqr198bo0uee96fmm26rn1kct'
+COGNITO_REDIRECT_URI = 'http://localhost:8000/cognito_callback/'
+COGNITO_REGION = 'ap-southeast-2'
+
+AUTH_USER_MODEL = 'core.UserProfile'
+
+AUTHENTICATION_BACKENDS = [
+    'cse3cax_webapp.backends.CognitoBackend',  # Add your custom backend
+    'django.contrib.auth.backends.ModelBackend',  # Keep the default for admin access
+]
+
+
 # Password validation
 # https://docs.djangoproject.com/en/4.1/ref/settings/#auth-password-validators
 

@@ -4,6 +4,7 @@ from django.core.exceptions import ValidationError
 from django.forms.widgets import CheckboxSelectMultiple
 from core.models import UserProfile, Role, Subject, LecturerExpertise
 
+
 class UserProfileForm(forms.ModelForm):
     role = forms.ModelChoiceField(
         queryset=Role.objects.all(),
@@ -46,7 +47,8 @@ class UserProfileForm(forms.ModelForm):
     )
 
     honorific = forms.ChoiceField(
-        choices=[('', 'Select Honorific'), ('Mr', 'Mr'), ('Mrs', 'Mrs'), ('Ms', 'Ms'), ('Dr', 'Dr'), ('Prof', 'Prof')],
+        choices=[('', 'Select Honorific'), ('Mr', 'Mr'), ('Mrs', 'Mrs'),
+                 ('Ms', 'Ms'), ('Dr', 'Dr'), ('Prof', 'Prof')],
         required=False,
         widget=forms.Select(attrs={'class': 'form-select'}),
         error_messages={
@@ -56,7 +58,8 @@ class UserProfileForm(forms.ModelForm):
 
     class Meta:
         model = UserProfile
-        fields = ['role', 'email', 'fte_percentage', 'honorific', 'first_name', 'last_name']
+        fields = ['role', 'email', 'fte_percentage',
+                  'honorific', 'first_name', 'last_name']
         widgets = {
             'first_name': forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'First Name'}),
             'last_name': forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'Surname'}),
@@ -72,47 +75,41 @@ class UserProfileForm(forms.ModelForm):
             if self.instance.pk:  # This is an existing user
                 if email != self.instance.email:
                     if UserProfile.objects.filter(email=email).exists():
-                        raise ValidationError("This email is already in use. Please use a different email address.")
+                        raise ValidationError(
+                            "This email is already in use. Please use a different email address.")
             else:  # This is a new user
                 if UserProfile.objects.filter(email=email).exists():
-                    raise ValidationError("This email is already in use. Please use a different email address.")
+                    raise ValidationError(
+                        "This email is already in use. Please use a different email address.")
         return email
 
     def clean_fte_percentage(self):
         fte = self.cleaned_data.get('fte_percentage')
-        if fte is not None and (fte < 0.1 or fte > 1.0):
-            raise ValidationError("FTE percentage must be between 0.1 and 1.0. Please enter a valid value.")
+        # allow for staff on leave
+        if fte is not None and (fte < 0.0 or fte > 1.0):
+            raise ValidationError(
+                "FTE percentage must be between 0.0 and 1.0. Please enter a valid value.")
         return fte
 
-# class LecturerExpertiseForm(forms.ModelForm):
-#     expertise = forms.ModelMultipleChoiceField(
-#         queryset=Subject.objects.all(),
-#         widget=forms.CheckboxSelectMultiple,
-#         required=False,
-#         label="Expertise"
-#     )
+    def save(self, commit=True):
+        # Calls the form's save method to return an unsaved instance
+        user = super(UserProfileForm, self).save(commit=False)
 
-#     class Meta:
-#         model = LecturerExpertise
-#         fields = []  # No direct model fields to use in this form; expertise is handled manually
+        # If the user does not already exist (new user)
+        if not self.instance.pk:
+            user = UserProfile.objects.create_user(  # Calls the custom create_user method from the manager
+                email=self.cleaned_data['email'],
+                role=self.cleaned_data['role'],
+                fte_percentage=self.cleaned_data['fte_percentage'],
+                honorific=self.cleaned_data['honorific'],
+                first_name=self.cleaned_data['first_name'],
+                last_name=self.cleaned_data['last_name']
+            )
+        else:  # If the user already exists (editing)
+            if commit:
+                user.save()  # Calls the model's save method to update the user in the database
 
-#     def __init__(self, *args, user=None, **kwargs):
-#         super().__init__(*args, **kwargs)
-#         self.user = user  # Store the user instance
-#         if user:
-#             # Pre-populate the form with the user's existing expertise
-#             self.fields['expertise'].initial = LecturerExpertise.objects.filter(user=user).values_list('subject', flat=True)
-
-#     def save(self, commit=True):
-#         # First, clear the existing expertise for this user
-#         LecturerExpertise.objects.filter(user=self.user).delete()
-
-#         # Now, add the new expertise from the form
-#         subjects = self.cleaned_data.get('expertise', [])
-#         for subject in subjects:
-#             LecturerExpertise.objects.create(user=self.user, subject=subject)
-
-#         return self.user  # Return the user for reference (optional)
+        return user  # Returns the user instance
 
 
 class LecturerExpertiseForm(forms.ModelForm):
@@ -132,7 +129,8 @@ class LecturerExpertiseForm(forms.ModelForm):
         self.user = user  # Store the user instance
         if user:
             # Pre-populate the form with the user's existing expertise
-            self.fields['expertise'].initial = LecturerExpertise.objects.filter(user=user).values_list('subject', flat=True)
+            self.fields['expertise'].initial = LecturerExpertise.objects.filter(
+                user=user).values_list('subject', flat=True)
 
     def save(self, commit=True):
         # First, clear the existing expertise for this user

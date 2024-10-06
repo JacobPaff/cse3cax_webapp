@@ -4,13 +4,20 @@ from .forms import SubjectInstanceForm
 from django.http import HttpResponse
 from django.urls import reverse
 from django.db.models import Q
+from django.contrib.auth.decorators import user_passes_test
 
 
+def is_manager(user):
+    return user.is_authenticated and user.role.role_id == 'Manager'
+
+
+@user_passes_test(is_manager, login_url='login_redirect')
 def subject_instances(request):
     subjects = Subject.objects.all()
     return render(request, 'subject_instances.html', {'subjects': subjects})
 
 
+@user_passes_test(is_manager, login_url='login_redirect')
 def instance_list(request):
     # subject = request.GET.get('subject')
     query = request.GET.get('search', '')
@@ -23,6 +30,7 @@ def instance_list(request):
     return render(request, 'instance_list.html', {'subject_instances': subject_instances})
 
 
+@user_passes_test(is_manager, login_url='login_redirect')
 def add_subject_instance(request):
     if request.method == "POST":
         form = SubjectInstanceForm(request.POST)
@@ -36,6 +44,7 @@ def add_subject_instance(request):
     return render(request, 'modals/form_modal.html', {'form': form, 'form_string': form_string})
 
 
+@user_passes_test(is_manager, login_url='login_redirect')
 def edit_subject_instance(request, instance_id):
     subject_instance = get_object_or_404(
         SubjectInstance, instance_id=instance_id)
@@ -50,6 +59,7 @@ def edit_subject_instance(request, instance_id):
     return render(request, 'modals/form_modal.html', {'form': form, 'form_string': form_string})
 
 
+@user_passes_test(is_manager, login_url='login_redirect')
 def confirm_delete_instance(request, instance_id):
     instance = get_object_or_404(SubjectInstance, instance_id=instance_id)
     form_string = f'Are you sure you want to delete instance {instance.subject}-{instance.month}/{instance.year}?'
@@ -63,6 +73,7 @@ def confirm_delete_instance(request, instance_id):
     return render(request, 'modals/confirm_delete_modal.html', context)
 
 
+@user_passes_test(is_manager, login_url='login_redirect')
 def delete_instance(request, instance_id):
     subject_instance = get_object_or_404(
         SubjectInstance, instance_id=instance_id)
@@ -71,11 +82,13 @@ def delete_instance(request, instance_id):
     return HttpResponse(status=204, headers={'Hx-Trigger': 'instanceListChanged'})
 
 
+@user_passes_test(is_manager, login_url='login_redirect')
 def assign_lecturer_instance(request):
     instance_id = request.GET.get('instance_id')
     return render(request, 'assign_lecturer_instance.html', {'instance_id': instance_id})
 
 
+@user_passes_test(is_manager, login_url='login_redirect')
 def lecturer_list(request):
     query = request.GET.get('search', '')
     instance_id = request.GET.get('instance_id')
@@ -105,6 +118,7 @@ def lecturer_list(request):
     })
 
 
+@user_passes_test(is_manager, login_url='login_redirect')
 def add_lecturer_instance(request):
     instance_id = request.GET.get('instance_id')
     subject_instance = get_object_or_404(
@@ -117,6 +131,8 @@ def add_lecturer_instance(request):
         subject_instance=subject_instance, user=lecturer)
     return HttpResponse(status=201, headers={'Hx-Trigger': 'instanceLecturerChanged'})
 
+
+@user_passes_test(is_manager, login_url='login_redirect')
 def remove_lecturer_instance(request):
     instance_id = request.GET.get('instance_id')
     subject_instance = get_object_or_404(
@@ -124,5 +140,6 @@ def remove_lecturer_instance(request):
     lecturer_id = request.GET.get('lecturer_id')
     lecturer = get_object_or_404(UserProfile, user_id=lecturer_id)
     # Remove the lecturer to the subject instance lecturer
-    SubjectInstanceLecturer.objects.filter(subject_instance=subject_instance, user=lecturer).delete()
+    SubjectInstanceLecturer.objects.filter(
+        subject_instance=subject_instance, user=lecturer).delete()
     return HttpResponse(status=201, headers={'Hx-Trigger': 'instanceLecturerChanged'})
