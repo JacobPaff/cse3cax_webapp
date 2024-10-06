@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block content %}
+<!-- Trigger the request on load, change, or when userListChanged event is triggered -->
+<a hx-trigger="change, load"
+   hx-get="{% url 'lecturer_instance_list' %}"
+   hx-target="#lecturer_instance_list"
+   hx-swap="innerHTML">
+</a>
+
+<!-- Target for the dynamically loaded content -->
+<div id="lecturer_instance_list">
+   Loading...
+</div>
+
+{% endblock %}

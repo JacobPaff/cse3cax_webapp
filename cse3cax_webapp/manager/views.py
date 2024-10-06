@@ -128,7 +128,6 @@ def add_lecturer_instance(request):
     lecturer_id = request.GET.get('lecturer_id')
     lecturer = get_object_or_404(UserProfile, user_id=lecturer_id)
     # Add the lecturer to the subject instance lecturer
-    print('working here')
     SubjectInstanceLecturer.objects.create(
         subject_instance=subject_instance, user=lecturer)
     return HttpResponse(status=201, headers={'Hx-Trigger': 'instanceLecturerChanged'})

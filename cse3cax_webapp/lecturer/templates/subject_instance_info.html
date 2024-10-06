@@ -1,0 +1,60 @@
+<div class="modal-content">
+    <div class="modal-header">
+      <h4 class="modal-title" id="userModalLabel">
+        <strong>Subject Details</strong>
+      </h4>
+      <button
+        type="button"
+        class="btn-close"
+        data-bs-dismiss="modal"
+        aria-label="Close"
+      ></button>
+    </div>
+    <div class="modal-body">
+      <div class="container-fluid">
+        <table class="table w-100">
+          <tbody>
+            <tr>
+              <th scope="row" class="text-end">Subject Code:</th>
+              <td class="text-end">{{ subject_instance.subject.subject_id }}</td>
+            </tr>
+            <tr>
+              <th scope="row" class="text-end">Subject Name:</th>
+              <td class="text-end">{{ subject_name }}</td>
+            </tr>
+            <tr>
+              <th scope="row" class="text-end">Start Date:</th>
+              <td class="text-end">{{ subject_instance.start_date }}</td>
+            </tr>
+            <tr>
+              <th scope="row" class="text-end">End Date:</th>
+              <td class="text-end">{{ end_date }}</td>
+            </tr>
+            <tr>
+              <th scope="row" class="text-end">Enrollments:</th>
+              <td class="text-end">{{ subject_instance.enrollments.count|default:"None" }}</td>
+            </tr>
+            <tr>
+              <th scope="row" class="text-end">Lecturers:</th>
+              <td>
+                {% if lecturers %}
+                  <table class="table w-100">
+                    <tbody>
+                      {% for lecturer in lecturers %}
+                        <tr>
+                          <td class="text-end">{{ lecturer.first_name }} {{ lecturer.last_name }}</td>
+                          <td class="text-end">{{ lecturer.email }}</td>
+                        </tr>
+                      {% endfor %}
+                    </tbody>
+                  </table>
+                {% else %}
+                  None
+                {% endif %}
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
