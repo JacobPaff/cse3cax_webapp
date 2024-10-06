@@ -10,11 +10,6 @@ from django.contrib.auth.decorators import user_passes_test
 def is_admin(user):
     return user.is_authenticated and (user.role.role_id == 'Administrator' or user.role.role_id == 'Testing')
 
-
-def home(request):
-    return render(request, 'home.html')
-
-
 @user_passes_test(is_admin, login_url='login_redirect')
 def user_management(request):
     roles = Role.objects.all()
