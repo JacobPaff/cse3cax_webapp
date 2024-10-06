@@ -13,5 +13,10 @@
     "model": "core.role",
     "pk": "Manager",
     "fields": {}
+  },
+  {
+    "model": "core.role",
+    "pk": "Testing",
+    "fields": {}
   }
 ]

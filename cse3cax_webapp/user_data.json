@@ -178,5 +178,17 @@
             "first_name": "Pacob",
             "last_name": "Jaff"
         }
+    },
+    {
+        "model": "core.userprofile",
+        "pk": 16,
+        "fields": {
+            "role": "Testing",
+            "email": "testing@fakeuniversity.edu",
+            "fte_percentage": 1.0,
+            "honorific": "Dr",
+            "first_name": "Test",
+            "last_name": "Tester"
+        }
     }
 ]

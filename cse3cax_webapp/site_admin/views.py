@@ -8,9 +8,7 @@ from django.contrib.auth.decorators import user_passes_test
 
 
 def is_admin(user):
-    return True
-    # commented for testing
-    # return user.is_authenticated and user.role.role_id == 'Administrator' 
+    return user.is_authenticated and (user.role.role_id == 'Administrator' or user.role.role_id == 'Testing')
 
 
 def home(request):
