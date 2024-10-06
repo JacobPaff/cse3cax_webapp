@@ -16,7 +16,7 @@ from django.http import HttpResponse
 
 @login_required(login_url='login_redirect')
 def home(request):
-    return render(request, 'core/home.html')
+    return render(request, 'home.html')
     
 def health_check(request):
     return HttpResponse("OK", status=200)
