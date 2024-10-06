@@ -8,4 +8,5 @@ urlpatterns = [
     path('cognito_callback/', views.cognito_callback, name='cognito_callback'),
     path('logout/', views.logout_view, name='logout'),
     path('set_testing_role/', views.set_testing_role, name='set_testing_role'),
+    path('health/', views.health_check, name='health_check'),
 ]
