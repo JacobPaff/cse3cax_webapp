@@ -4,7 +4,6 @@ from . import views
 # app_name = 'site_admin'
 
 urlpatterns = [
-    path('', views.home, name='home'),
     # path('subjects/', views.subject_list, name='subject_list'),
     path('user_management/', views.user_management, name='user_management'),
     path('edit_user/<int:user_id>/', views.edit_user, name='edit_user'),
