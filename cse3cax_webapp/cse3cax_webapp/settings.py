@@ -13,6 +13,13 @@ https://docs.djangoproject.com/en/4.1/ref/settings/
 from pathlib import Path
 import os
 
+
+
+TESTING = True
+LOCALLY_HOSTED = True
+LOCAL_DB = True
+
+
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -78,35 +85,40 @@ TEMPLATES = [
 
 WSGI_APPLICATION = "cse3cax_webapp.wsgi.application"
 
-
+if LOCAL_DB:
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.sqlite3',
+            'NAME': BASE_DIR / 'db.sqlite3',
+        }
+    }
+else:
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.postgresql',
+            'NAME': 'cse3cax_webapp',
+            'USER': 'postgres',
+            'PASSWORD': 'postgres',
+            'HOST': '3.106.202.172',
+            'PORT': '5432',
+        }
+    }
 # Database
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
 
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.postgresql',
-#         'NAME': 'cse3cax_webapp',
-#         'USER': 'postgres',
-#         'PASSWORD': 'postgres',
-#         'HOST': '3.106.202.172',
-#         'PORT': '5432',
-#     }
-# }
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
-    }
-}
+
 
 # Cognito Details
 COGNITO_DOMAIN = 'djangotestunione.auth.ap-southeast-2.amazoncognito.com'
 COGNITO_USER_POOL_ID = 'ap-southeast-2_KSJHJw714'  # Replace with your User Pool ID
 COGNITO_CLIENT_ID = '4vs2np87ek29a3a5r5ertjdjuq'
 COGNITO_CLIENT_SECRET = '9n0hkdcp0ihgc3ljlmb3qni6uuuqr198bo0uee96fmm26rn1kct'
-# COGNITO_REDIRECT_URI = 'http://localhost:8000/cognito_callback/'
-COGNITO_REDIRECT_URI = 'https://rostering.paff.me/cognito_callback/'
 COGNITO_REGION = 'ap-southeast-2'
+
+if LOCALLY_HOSTED:
+    COGNITO_REDIRECT_URI = 'http://localhost:8000/cognito_callback/'
+else:
+    COGNITO_REDIRECT_URI = 'https://rostering.paff.me/cognito_callback/'
 
 AUTH_USER_MODEL = 'core.UserProfile'
 

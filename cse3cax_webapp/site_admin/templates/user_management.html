@@ -14,7 +14,7 @@
       id="role-filter"
       name="role"
       class="form-select"
-      hx-trigger="change, load, userListChanged from:body""
+      hx-trigger="change, load, userListChanged from:body"
       hx-get="{% url 'user_list' %}"
       hx-target="#user-list"
       hx-include="#role-filter"
@@ -26,6 +26,7 @@
     </select>
   </div>
 </div>
+  <div class="table-container">
   <table class="table">
     <thead>
       <tr>
@@ -40,6 +41,7 @@
       </tr>
     </tbody>
   </table>
+</div>
   {% endblock %}
 </div>
 <script>
