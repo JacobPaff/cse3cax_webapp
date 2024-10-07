@@ -1,0 +1,27 @@
+
+<tbody>
+    {% for subject_instance in subject_instances_list %}
+        <tr>
+            <th class="sticky-col" style="width: 100px;">{{ subject_instance.subject_id }} {{ subject_instance.start_month }}/{{ subject_instance.start_year }}</th>
+            {% for year in years %}
+                {% for month_number, month_name in months.items %}
+                    {% if year == subject_instance.start_year and month_number == subject_instance.start_month %}
+                    <td colspan="3" class="position-relative table-success">
+                      <button class="btn btn-full"
+                              hx-get="{% url 'subject_instance_info' %}?instance_id={{ subject_instance.instance_id }}"
+                              hx-trigger="click"
+                              hx-target="#dialog"
+                              hx-swap="innerHTML">
+                          {{ subject_instance.subject_name }} {{ subject_instance.start_month }}/{{ subject_instance.start_year }}
+                      </button>
+                  </td>
+                    {% elif year == subject_instance.start_year and month_number > subject_instance.start_month and month_number < subject_instance.end_month %}
+                        <!-- Skip rendering for months covered by colspan -->
+                    {% else %}
+                        <td></td>
+                    {% endif %}
+                {% endfor %}
+            {% endfor %}
+        </tr>
+    {% endfor %}
+</tbody>

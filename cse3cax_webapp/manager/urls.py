@@ -21,4 +21,7 @@ urlpatterns = [
          name='add_lecturer_instance'),
     path('remove_lecturer_instance/', views.remove_lecturer_instance,
          name='remove_lecturer_instance'),
+    path('instance_calendar/', views.instance_calendar,
+         name='instance_calendar'),
+    path('assign_roster/', views.assign_roster, name='assign_roster'),    
 ]
