@@ -16,7 +16,7 @@ import os
 
 
 TESTING = True
-LOCALLY_HOSTED = True
+LOCALLY_HOSTED = False
 LOCAL_DB = True
 
 
