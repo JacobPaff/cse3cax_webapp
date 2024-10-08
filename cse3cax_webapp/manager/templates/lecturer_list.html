@@ -1,19 +1,14 @@
-{% for user in user_list %}
-<tr id="user-{{ user.user_id }}" class="user-row">
-  <td>{{ user.first_name }}</td>
-  <td>{{ user.last_name }}</td>
-  <td class="text-center align-middle">
-    <i
-      class="fa-solid fa-circle"
-      style="color: #34b71a; margin-left: -55px"
-    ></i>
-  </td>
+{% for lecturer in lecturer_list %}
+<tr id="lecturer-{{ lecturer.user_id }}" class="user-row">
+  <td>{{ lecturer.first_name }}</td>
+  <td>{{ lecturer.last_name }}</td>
+  <td>{{ lecturer.max_workload_percent }}%</td>
   <td class="text-end">
-    {% if user in assigned_lecturers %}
+    {% if lecturer in assigned_lecturers %}
     <button
       type="button"
       class="btn btn-danger btn-sm"
-      hx-get="{% url 'remove_lecturer_instance' %}?instance_id={{ instance_id }}&lecturer_id={{user.user_id}} "
+      hx-get="{% url 'remove_lecturer_instance' %}?instance_id={{ instance_id }}&lecturer_id={{lecturer.user_id}} "
       hx-target="#dialog"
     >
       Remove Lecturer
@@ -22,7 +17,7 @@
     <button
       type="button"
       class="btn btn-primary btn-sm"
-      hx-get="{% url 'add_lecturer_instance' %}?instance_id={{ instance_id }}&lecturer_id={{user.user_id}} "
+      hx-get="{% url 'add_lecturer_instance' %}?instance_id={{ instance_id }}&lecturer_id={{lecturer.user_id}} "
       hx-target="#dialog"
     >
       Add Lecturer

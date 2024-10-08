@@ -1,6 +1,6 @@
 from datetime import timedelta
 from django.shortcuts import render, get_object_or_404
-from core.models import SubjectInstance, Subject, SubjectInstanceLecturer, UserProfile
+from core.models import SubjectInstance, Subject, SubjectInstanceLecturer, UserProfile, WorkloadManager, LecturerExpertise
 from .forms import SubjectInstanceForm
 from django.http import HttpResponse
 from django.urls import reverse
@@ -48,17 +48,28 @@ def add_subject_instance(request):
 
 @user_passes_test(is_manager, login_url='login_redirect')
 def edit_subject_instance(request, instance_id):
-    subject_instance = get_object_or_404(
-        SubjectInstance, instance_id=instance_id)
+    subject_instance = get_object_or_404(SubjectInstance, instance_id=instance_id)
     if request.method == "POST":
         form = SubjectInstanceForm(request.POST, instance=subject_instance)
         if form.is_valid():
+            # Get the student threshold
+            student_threshold = WorkloadManager.STUDENT_THRESHOLD
+            # Get the current enrollment count before saving the form
+            current_enrollments = subject_instance.enrollments or 0  # Default to 0 if None         
+            # Save the form to update the SubjectInstance
             form.save()
+            # Get the updated enrollment count from the form data
+            new_enrollments = form.cleaned_data.get('enrollments', 0)
+            # Check if enrollments have changed and call update workload
+            if current_enrollments > student_threshold or new_enrollments > student_threshold:
+                subject_instance.update_lecturer_workload()                                                 #TODO: Deal with too much workload
+
             return HttpResponse(status=204, headers={'Hx-Trigger': 'instanceListChanged'})
     else:
         form = SubjectInstanceForm(instance=subject_instance)
     form_string = 'Edit Subject Instance'
     return render(request, 'modals/form_modal.html', {'form': form, 'form_string': form_string})
+
 
 
 @user_passes_test(is_manager, login_url='login_redirect')
@@ -79,11 +90,12 @@ def confirm_delete_instance(request, instance_id):
 def delete_instance(request, instance_id):
     subject_instance = get_object_or_404(
         SubjectInstance, instance_id=instance_id)
-    subject_instance.delete()
+    # ensure workload is recalculated on delete
+    subject_instance.delete_and_update_workload()
     # No content response
     return HttpResponse(status=204, headers={'Hx-Trigger': 'instanceListChanged'})
 
-
+# Assign Lecturers to Subject Instance Modal
 @user_passes_test(is_manager, login_url='login_redirect')
 def assign_lecturer_instance(request):
     instance_id = request.GET.get('instance_id')
@@ -91,32 +103,74 @@ def assign_lecturer_instance(request):
 
 
 @user_passes_test(is_manager, login_url='login_redirect')
+@user_passes_test(is_manager, login_url='login_redirect')
 def lecturer_list(request):
     query = request.GET.get('search', '')
     instance_id = request.GET.get('instance_id')
+
     # Get the subject instance
     subject_instance = SubjectInstance.objects.get(pk=instance_id)
+    start_month = subject_instance.start_date.month
+    year = subject_instance.start_date.year
+
     # Get lecturers assigned to the subject instance
     assigned_lecturers = UserProfile.objects.filter(
-        subjectinstancelecturer__subject_instance=instance_id)
+        subjectinstancelecturer__subject_instance=instance_id
+    )
+
     # Get lecturers who have expertise in the subject of this instance
     expertised_lecturers = UserProfile.objects.filter(
         lecturerexpertise__subject=subject_instance.subject
     )
+
     # Combine both filters: lecturers with expertise and assigned to the subject instance
-    user_list = expertised_lecturers
+    lecturer_list = expertised_lecturers
 
     # Apply the search query to filter by first or last name
     if query:
-        user_list = user_list.filter(
-            Q(first_name__icontains=query) | Q(
-                last_name__icontains=query)
+        lecturer_list = lecturer_list.filter(
+            Q(first_name__icontains=query) | Q(last_name__icontains=query)
         )
 
+    # Create a list to store lecturers with their metadata for sorting
+    lecturer_data = []
+
+    # For each lecturer, find the maximum workload for the 3 months the instance is active
+    for lecturer in lecturer_list:
+        workload_percentages = [
+            lecturer.workload_percentage_for_month(start_month, year),
+            lecturer.workload_percentage_for_month(start_month + 1, year),
+            lecturer.workload_percentage_for_month(start_month + 2, year)
+        ]
+
+        # Add max workload percentage to the lecturer object
+        lecturer.max_workload_percent = max(workload_percentages)
+
+        # Check if the lecturer is assigned to the instance
+        is_assigned = assigned_lecturers.filter(pk=lecturer.pk).exists()
+
+        # Count how many subjects this lecturer has expertise in
+        expertise_count = LecturerExpertise.objects.filter(user=lecturer).count()
+
+        # Store the lecturer and sorting info
+        lecturer_data.append({
+            'lecturer': lecturer,
+            'is_assigned': is_assigned,
+            'max_workload_percent': lecturer.max_workload_percent,
+            'expertise_count': expertise_count,
+        })
+
+    # Sort the lecturers first by assigned (True first), then by max_workload_percent, then by expertise_count
+    sorted_lecturers = sorted(
+        lecturer_data,
+        key=lambda x: (not x['is_assigned'], -x['max_workload_percent'], -x['expertise_count'])
+    )
+
+    # Pass only the sorted lecturers back to the template
     return render(request, 'lecturer_list.html', {
-        'user_list': user_list,
+        'lecturer_list': [item['lecturer'] for item in sorted_lecturers],
         'assigned_lecturers': assigned_lecturers,
-        'instance_id': instance_id
+        'instance_id': instance_id,
     })
 
 
@@ -127,9 +181,10 @@ def add_lecturer_instance(request):
         SubjectInstance, instance_id=instance_id)
     lecturer_id = request.GET.get('lecturer_id')
     lecturer = get_object_or_404(UserProfile, user_id=lecturer_id)
-    # Add the lecturer to the subject instance lecturer
-    SubjectInstanceLecturer.objects.create(
-        subject_instance=subject_instance, user=lecturer)
+    # Add the lecturer to the subject instance lecturer and upates workload << Will return overworked lecturers TODO: Warn Overworked Lecturers
+    subject_instance.add_lecturer(lecturer)
+    # SubjectInstanceLecturer.objects.create(
+    #     subject_instance=subject_instance, user=lecturer)
     return HttpResponse(status=201, headers={'Hx-Trigger': 'instanceLecturerChanged'})
 
 
@@ -140,14 +195,15 @@ def remove_lecturer_instance(request):
         SubjectInstance, instance_id=instance_id)
     lecturer_id = request.GET.get('lecturer_id')
     lecturer = get_object_or_404(UserProfile, user_id=lecturer_id)
-    # Remove the lecturer to the subject instance lecturer
-    SubjectInstanceLecturer.objects.filter(
-        subject_instance=subject_instance, user=lecturer).delete()
+    # Remove the lecturer from the subject instance lecturer
+    subject_instance.remove_lecturer(lecturer)                                              #TODO: Deal with too much workload
+    # SubjectInstanceLecturer.objects.filter(
+    #     subject_instance=subject_instance, user=lecturer).delete()
     return HttpResponse(status=201, headers={'Hx-Trigger': 'instanceLecturerChanged'})
 
 def instance_calendar(request):
     years, months, subject_instances_list = all_instances_info()
-    # Pass the necessary context to the template
+    print(len(subject_instances_list))
     context = {
         'years': years,
         'months': months,
@@ -157,6 +213,7 @@ def instance_calendar(request):
     # lecturers' : subject_instance.lecturer.all(),
     return render(request, 'instance_calendar.html', context)
 
+@user_passes_test(is_manager, login_url='login_redirect')
 def assign_roster(request):
     years = set()
     for subject_instance in SubjectInstance.objects.all():
@@ -165,8 +222,7 @@ def assign_roster(request):
     return render(request, 'assign_roster.html', {'years': years, 'months': months})
 
 
-def all_instances_info():
-    
+def all_instances_info():    
     # Check if the data is already cached for this user
     cached_data = cache.get('instance_data')
     if cached_data:
@@ -196,11 +252,11 @@ def all_instances_info():
     for subject_instance in subject_instances_objects:
         subject = subject_instance.subject
         start_date = subject_instance.start_date
-        end_date = subject_instance.start_date + timedelta(weeks=12)
+        end_date = subject_instance.start_date + timedelta(weeks=12) + timedelta(days=-2)
         end_month = end_date.month
 
         years.add(subject_instance.start_date.year)
-        if end_date.month > start_date.month:
+        if end_date.year > start_date.year:
             years.add(end_date.year)
 
         # Add the subject instance to the list
@@ -223,17 +279,3 @@ def all_instances_info():
     cache.set('instance_data', (years, months, subject_instances_list), 600)
 
     return years, months, subject_instances_list
-
-
-# @user_passes_test(is_lecturer, login_url='login_redirect')
-# def lecturer_instance_list(request):
-#     current_user = request.user
-#     years, months, subject_instances_list = lecturer_instances_info(current_user)
-#     # Pass the necessary context to the template
-#     context = {
-#         'years': years,
-#         'months': months,
-#         # A dictionary with subjects and their active months
-#         'subject_instances_list': subject_instances_list,
-#     }
-#     return render(request, 'lecturer_instance_list.html', context)

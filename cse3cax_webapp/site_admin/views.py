@@ -17,7 +17,7 @@ def user_management(request):
 
 
 @user_passes_test(is_admin, login_url='login_redirect')
-def edit_user(request, user_id):
+def edit_user(request, user_id):                                                                #TODO: Add if was lecturer workload calc
     user = get_object_or_404(UserProfile, user_id=user_id)
     if request.method == "POST":
         form = UserProfileForm(request.POST, instance=user)
@@ -72,7 +72,8 @@ def user_list(request):
 @user_passes_test(is_admin, login_url='login_redirect')
 def delete_user(request, user_id):
     user = get_object_or_404(UserProfile, user_id=user_id)
-    user.delete()
+    # will update workload if needed - no warning for admins
+    user.delete_user()
     # No content response
     return HttpResponse(status=204, headers={'Hx-Trigger': 'userListChanged'})
 

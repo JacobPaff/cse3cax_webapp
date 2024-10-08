@@ -8,7 +8,7 @@
                     {% if year == subject_instance.start_year and month_number == subject_instance.start_month %}
                     <td colspan="3" class="position-relative table-success">
                       <button class="btn btn-full"
-                              hx-get="{% url 'subject_instance_info' %}?instance_id={{ subject_instance.instance_id }}"
+                              hx-get="{% url 'assign_lecturer_instance' %}?instance_id={{subject_instance.instance_id}}"
                               hx-trigger="click"
                               hx-target="#dialog"
                               hx-swap="innerHTML">
@@ -16,7 +16,7 @@
                       </button>
                   </td>
                     {% elif year == subject_instance.start_year and month_number > subject_instance.start_month and month_number < subject_instance.end_month %}
-                        <!-- Skip rendering for months covered by colspan -->
+                        <!-- Skip rendering for months covered by colspan NOT WORKING AS INTENDED year == subject_instance.start_year plus something else?? -->
                     {% else %}
                         <td></td>
                     {% endif %}

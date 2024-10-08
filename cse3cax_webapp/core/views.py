@@ -1,5 +1,4 @@
 from django.contrib.auth import logout
-from django.contrib.auth.decorators import login_required
 from django.shortcuts import redirect, render
 import requests
 from django.shortcuts import redirect
@@ -14,12 +13,16 @@ import json
 from django.contrib.auth import authenticate
 from django.http import HttpResponse
 
-@login_required(login_url='login_redirect')
+# @login_required(login_url='login_redirect')
+
+
 def home(request):
     return render(request, 'home.html')
-    
+
+
 def health_check(request):
     return HttpResponse("OK", status=200)
+
 
 def login_redirect(request):
     login_url = (
@@ -31,16 +34,20 @@ def login_redirect(request):
     return redirect(login_url)
 
 
-def role_redirect(request, user):
+def role_redirect(request):
+    user = request.user
     if not user.is_authenticated:
         return redirect('login')
-    if user.role.role_id == 'Administrator':
+    if user.role_id == 'Testing':
         return redirect('user_management')
-    elif user.role.role_id == 'Manager':
+    if user.role_id == 'Administrator':
+        return redirect('user_management')
+    elif user.role_id == 'Manager':
         return redirect('subject_instances')
-    elif user.role.role_id == 'Lecturer':
+    elif user.role_id == 'Lecturer':
         return redirect('instance_list')
-    return redirect('home')
+    print('loser')
+    return redirect('login')
 
 
 def cognito_callback(request):

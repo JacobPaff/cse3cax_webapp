@@ -46,7 +46,7 @@ def lecturer_instances_info(user):
         subject_instance = subject_instances_object.subject_instance
         subject = subject_instance.subject
         start_date = subject_instance.start_date
-        end_month = (subject_instance.start_date + timedelta(weeks=12)).month
+        end_month = (subject_instance.start_date + timedelta(weeks=12) + timedelta(days=-2)).month
         years.add(subject_instance.start_date.year)
 
 
@@ -102,7 +102,7 @@ def subject_instance_info(request):
         SubjectInstance, instance_id=instance_id)
     context = {
         'subject_instance': subject_instance,
-        'end_date': subject_instance.start_date + timedelta(weeks=12),
+        'end_date': subject_instance.start_date + timedelta(weeks=12) + timedelta(days=-2),
         'lecturers' : subject_instance.lecturer.all(),
         'subject_name': subject_instance.subject.subject_name
     }

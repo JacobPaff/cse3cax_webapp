@@ -8,8 +8,8 @@
 >
 </a>
 <div class="container-fluid my-4">
-  <div class = "scrollable-container">
-    <table class="table table-bordered text-center">
+  <div class="scrollable-container">
+    <table class="table table-bordered text-center dataTable">
       <thead class="sticky-row">
         <tr>
           <th style="width: 100px"></th>
@@ -48,7 +48,7 @@
   .scrollable-container {
     overflow-x: auto;
     overflow-y: auto;
-    max-height: 900px; /* Set a max-height to trigger vertical scrolling */
+    max-height: 55%; /* Set a max-height to trigger vertical scrolling */
     position: relative;
   }
 
@@ -71,5 +71,16 @@
     background-color: #d4eefa;
   }
 </style>
-
+<!-- Include DataTables initialization script -->
+<script>
+  $(document).ready(function () {
+    $(".dataTable").DataTable({
+      paging: true, // Enable pagination
+      pageLength: 2, // Set default rows per page
+      lengthMenu: [5, 10, 25, 50, 100], // Options for rows per page
+      ordering: true, // Enable sorting
+      searching: true, // Enable search
+    });
+  });
+</script>
 {% endblock %}
