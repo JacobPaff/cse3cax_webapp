@@ -37,7 +37,7 @@ def login_redirect(request):
 def role_redirect(request):
     user = request.user
     if not user.is_authenticated:
-        return redirect('login')
+        return redirect('login_redirect')
     if user.role_id == 'Testing':
         return redirect('user_management')
     if user.role_id == 'Administrator':
