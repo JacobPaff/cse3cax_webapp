@@ -62,7 +62,7 @@ def cognito_callback(request):
                 user = authenticate_cognito_user(user_info)
                 if user:
                     login(request, user)
-                    return role_redirect(request, user)
+                    return role_redirect(request)
     return redirect('home')  # Redirect to home on failure
 
 
