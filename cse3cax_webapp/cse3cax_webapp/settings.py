@@ -17,7 +17,7 @@ import os
 
 TESTING = True
 LOCALLY_HOSTED = False
-LOCAL_DB = False
+LOCAL_DB = True
 
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -97,9 +97,9 @@ else:
         'default': {
             'ENGINE': 'django.db.backends.postgresql',
             'NAME': 'cse3cax_webapp',
-            'USER': 'cbx_group01',
-            'PASSWORD': 'cbxG1@AWS',
-            'HOST': 'cbx01.ch4y4k20w4ht.us-east-1.rds.amazonaws.com',
+            'USER': 'postgres',
+            'PASSWORD': 'postgres',
+            'HOST': '3.106.202.172',
             'PORT': '5432',
         }
     }
