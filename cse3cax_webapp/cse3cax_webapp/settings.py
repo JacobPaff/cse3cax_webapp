@@ -17,7 +17,7 @@ import os
 
 TESTING = True
 LOCALLY_HOSTED = False
-LOCAL_DB = True
+LOCAL_DB = False
 
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
