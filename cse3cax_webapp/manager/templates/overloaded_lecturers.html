@@ -1,0 +1,43 @@
+<div class="modal-dialog" role="document">
+  <div class="modal-content">
+    <div class="modal-header">
+      <h5 class="modal-title">Overloaded Lecturers</h5>
+      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+    </div>
+    <div class="modal-body">
+      {% if lecturer_workload_dict %}
+      <ul class="list-group">
+        {% for lecturer, workloads in lecturer_workload_dict.items %}
+        <li class="list-group-item">
+          <strong>{{ lecturer.first_name }} {{ lecturer.last_name }}</strong>
+          <ul class="list-unstyled ms-3">
+            {% for month_year, data in workloads.items %}
+            <li>
+              Overloaded {{ data.workload_percentage }}% for <strong>{{ month_year }}</strong>
+              <ul class="list-unstyled ms-3">
+                <li>Assigned Subjects:</li>
+                <ul class="list-group ms-3">
+                  {% for instance in data.subject_instances %}
+                  <li class="list-group-item">
+                    {{ instance.subject.subject_id }} - {{ instance.start_date.month }}/{{ instance.start_date.year }}
+                  </li>
+                  {% endfor %}
+                </ul>
+              </ul>
+            </li>
+            {% endfor %}
+          </ul>
+        </li>
+        {% endfor %}
+      </ul>
+      {% else %}
+      <p>No overloaded lecturers at the moment.</p>
+      {% endif %}
+    </div>
+    <div class="modal-footer">
+      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+        Close
+      </button>
+    </div>
+  </div>
+</div>

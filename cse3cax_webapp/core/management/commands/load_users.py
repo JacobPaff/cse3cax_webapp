@@ -1,10 +1,20 @@
+"""
+Load user data from JSON file into UserProfile
+
+Author: Jacob Paff
+"""
 from django.core.management.base import BaseCommand
 from core.models import UserProfile, Role
 import json
 
 
-class Command(BaseCommand):  # Make sure this class is named "Command"
-    help = 'Load user data from JSON file into UserProfile'
+class Command(BaseCommand):
+    """
+    This command loads user data from a JSON file into the UserProfile model.
+    It reads the JSON data from the 'user_data.json' file and creates or updates user profiles accordingly.
+
+    Author: Jacob Paff
+    """
 
     def handle(self, *args, **kwargs):
         # Load your JSON data

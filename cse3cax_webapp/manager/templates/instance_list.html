@@ -30,15 +30,6 @@
       type="button"
       class="btn btn-primary btn-sm"
       hx-get="{% url 'edit_subject_instance' instance_id=instance.instance_id %}"
-      {%comment%}This
-      can
-      be
-      changed
-      to
-      be
-      in
-      the
-      request{%endcomment%}
       hx-target="#dialog"
     >
       Edit Instance

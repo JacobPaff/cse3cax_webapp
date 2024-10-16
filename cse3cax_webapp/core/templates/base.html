@@ -5,52 +5,115 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Rostering Demo</title>
-    
+    <title>Rostering</title>
 
+    <!-- Bootswatch Lux Theme -->
     <link
       id="theme-link"
       href="https://cdn.jsdelivr.net/npm/bootswatch@5.3.3/dist/lux/bootstrap.min.css"
       rel="stylesheet"
     />
 
+    <!-- DataTables Stylesheet -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css"
+    />
   </head>
-  <body >
-    {% include "navbar.html" %}
-    <div >
-      <br />
 
-      {% block content %} {% endblock %}
+  <body>
+    <style>
+      html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
 
-    <!-- Modal -->
-    <div id="modal" class="modal fade" tabindex="-1">
-      <div id="dialog" class="modal-dialog  modal-lg" hx-target="this"></div>
+      /* Ensure the content area takes the full available height minus the navbar */
+      .content-wrapper {
+        padding-top: 110px; /* This ensures space for the navbar */
+        height: 100vh; /* Height minus the navbar's height */
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+      }
+
+      /* Make the content area scrollable and avoid unnecessary vertical space */
+      .content-scrollable {
+        flex-grow: 1;
+        overflow-x: auto; /* Add horizontal scrolling */
+        overflow-y: auto; /* Allow vertical scrolling if needed */
+        max-height: 100vh; /* Ensure the content doesn't grow taller than the viewport */
+      }
+
+      /* Ensure elements within content don't create excess vertical space */
+      .content-scrollable > * {
+        max-width: 100%;
+        overflow-x: auto;
+      }
+
+      /* Ensure the modal z-index and modal container stacking are correct */
+      #overloadedLecturersModalContainer {
+        padding-top: 150px;
+        z-index: 1060; /* Bootstrap default is 1050, this will make it appear on top */
+      }
+
+      #modal {
+        z-index: 1059; /* Ensure the backdrop is beneath the top modal */
+      }
+      
+    </style>
+
+    <!-- Include the Navigation Bar with .fixed-top class to make it stick to the top -->
+
+      <nav class="navbar navbar-expand-sm navbar-dark bg-dark fixed-top">
+      {% include "navbar.html" %}
+    </nav>
+
+    <!-- Main Content Area -->
+    <div class="content-wrapper">
+      <div class="content-scrollable">
+        <!-- Block for dynamic content -->
+        {% block content %} {% endblock %}
+      </div>
     </div>
 
+    <!-- Modal Section -->
+    <div id="modal" class="modal fade" tabindex="-1">
+      <div
+        id="dialog"
+        class="modal-dialog modal-lg"
+        hx-target="this"
+      ></div>
+    </div>
+    <div id="overloadedLecturersModalContainer" class="modal" tabindex="-1">
+      <div
+        id="overloadedLecturers"
+        class="modal-dialog"
+        hx-target="this"
+      ></div>
+    </div>
+    <!-- Scripts: Bootstrap, HTMX, FontAwesome, Custom modal.js, DataTables -->
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
       crossorigin="anonymous"
     ></script>
-    <script src="https://unpkg.com/htmx.org@2.0.2"></script>
     
-    <!-- Custom JS for changing theme -->
-    {% comment %} <script>
-      function changeTheme() {
-        var selectedTheme = document.getElementById("theme-selector").value;
-        var themeLink = document.getElementById("theme-link");
-        themeLink.href = "https://cdn.jsdelivr.net/npm/bootswatch@5.3.3/dist/" + selectedTheme + "/bootstrap.min.css";
-      }
-    </script> {% endcomment %}
-    <link id="theme-link" rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootswatch@5.3.3/dist/lux/bootstrap.min.css">
+    <!-- HTMX for handling AJAX content loading -->
+    <script src="https://unpkg.com/htmx.org@2.0.2"></script>
 
+    <!-- FontAwesome icons for additional UI elements -->
     <script src="https://kit.fontawesome.com/7b1bfab025.js" crossorigin="anonymous"></script>
-    <!-- Load custom JavaScript -->
+
+    <!-- Custom JavaScript for Modal functionality -->
     <script src="{% static 'js/modal.js' %}"></script>
-    <!-- DataTables CSS and JS -->
-    <link rel="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css">
+
+    <!-- DataTables JavaScript for handling tables -->
     <script src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js"></script>
     <script src="https://cdn.datatables.net/1.11.5/js/dataTables.bootstrap5.min.js"></script>
+
+    <!-- Block for page-specific JavaScript -->
     {% block js %} {% endblock %}
   </body>
 </html>

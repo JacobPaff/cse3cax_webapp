@@ -1,22 +1,54 @@
-
+<thead class="sticky-row">
+    <tr>
+      <th style="width: 300px !important"></th>
+      {% for year in years %}
+      <th colspan="12">{{ year }}</th>
+      {% endfor %}
+    </tr>
+    <tr>
+      <th style="width: 300px !important"></th>
+      {% for year in years %} {% for month_name in months.values %}
+      <th style="width: 100px">{{ month_name }}</th>
+      {% endfor %} {% endfor %}
+    </tr>
+  </thead>
 <tbody>
     {% for subject_instance in subject_instances_list %}
         <tr>
-            <th class="sticky-col" style="width: 100px;">{{ subject_instance.subject_id }} {{ subject_instance.start_month }}/{{ subject_instance.start_year }}</th>
+            <th class="sticky-col" style="width: 300px !important;">
+                {{ subject_instance.subject }} {{ subject_instance.start_date.month }}/{{ subject_instance.start_date.year }}
+            </th>
             {% for year in years %}
                 {% for month_number, month_name in months.items %}
-                    {% if year == subject_instance.start_year and month_number == subject_instance.start_month %}
-                    <td colspan="3" class="position-relative table-success">
-                      <button class="btn btn-full"
-                              hx-get="{% url 'assign_lecturer_instance' %}?instance_id={{subject_instance.instance_id}}"
-                              hx-trigger="click"
-                              hx-target="#dialog"
-                              hx-swap="innerHTML">
-                          {{ subject_instance.subject_name }} {{ subject_instance.start_month }}/{{ subject_instance.start_year }}
-                      </button>
-                  </td>
-                    {% elif year == subject_instance.start_year and month_number > subject_instance.start_month and month_number < subject_instance.end_month %}
-                        <!-- Skip rendering for months covered by colspan NOT WORKING AS INTENDED year == subject_instance.start_year plus something else?? -->
+                    {% if year == subject_instance.start_date.year and month_number == subject_instance.start_date.month %}
+                        {% if subject_instance.is_lecturer_overloaded %}
+                            <!-- Add a red background if the lecturer is overloaded -->
+                            <td colspan="3" class="position-relative table-danger">
+                        {% else %}
+                            <!-- Add a green background if the lecturer is not overloaded -->
+                            <td colspan="3" class="position-relative table-success">
+                        {% endif %}
+                          <button class="btn btn-full"
+                                  hx-get="{% url 'assign_lecturer_instance' %}?instance_id={{subject_instance.instance_id}}"
+                                  hx-trigger="click"
+                                  hx-target="#dialog"
+                                  hx-swap="innerHTML">
+                                  
+                                  {% if subject_instance.lecturer.all %}
+                                  <ul>
+                                      {% for lecturer in subject_instance.lecturer.all %}
+                                          <li>{{ lecturer.first_name }} {{ lecturer.last_name }}</li>
+                                      {% endfor %}
+                                  </ul>
+                              {% else %}
+                                  <p>Unassigned</p>
+                              {% endif %}
+                                
+                              </button>
+                          </button>
+                      </td>
+                      {% elif year == subject_instance.start_date.year and month_number > subject_instance.start_date.month and month_number < subject_instance.end_month %}
+                        <!-- Skip rendering for months covered by colspan -->
                     {% else %}
                         <td></td>
                     {% endif %}
@@ -25,3 +57,41 @@
         </tr>
     {% endfor %}
 </tbody>
+
+{% comment %} <tbody>
+    {% for subject_instance in subject_instance_list %}
+        <tr>
+            <th class="sticky-col" style="width: 300px !important;">
+                {{ subject_instance.subject_id }} {{ subject_instance.start_date.month }}/{{ subject_instance.start_date.year }}
+            </th>
+            {% for year in years %}
+                {% for month_number, month_name in months.items %}
+                    {% if year == subject_instance.start_date.year and month_number == subject_instance.start_date.month %}
+                        {% if subject_instance.is_lecturer_overloaded %}
+                            <!-- Add a red background if the lecturer is overloaded -->
+                            <td colspan="3" class="position-relative table-danger">
+                        {% else %}
+                            <!-- Add a green background if the lecturer is not overloaded -->
+                            <td colspan="3" class="position-relative table-success">
+                        {% endif %}
+                          <button class="btn btn-full"
+                                  hx-get="{% url 'assign_lecturer_instance' %}?instance_id={{subject_instance.instance_id}}"
+                                  hx-trigger="click"
+                                  hx-target="#dialog"
+                                  hx-swap="innerHTML">
+                              {{ subject_instance.subject.subject_name }} (Lecturers: 
+                              {% for lecturer in subject_instance.lecturer.all %}
+                                  {{ lecturer.first_name }} {{ lecturer.last_name }}{% if not forloop.last %}, {% endif %}
+                              {% endfor %})
+                          </button>
+                      </td>
+                    {% elif year == subject_instance.start_date.year and month_number > subject_instance.start_date.month and month_number < subject_instance.end_month %}
+                        <!-- Skip rendering for months covered by colspan -->
+                    {% else %}
+                        <td></td>
+                    {% endif %}
+                {% endfor %}
+            {% endfor %}
+        </tr>
+    {% endfor %}
+</tbody> {% endcomment %}

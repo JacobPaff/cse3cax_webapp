@@ -1,10 +1,22 @@
+# 
+# Forms for Managing User Profiles and Lecturer Expertise
+# ========================================================
+# This file defines the forms for managing user profiles (creating or editing users) and lecturer expertise.
+# The forms utilize Django's ModelForm and handle validation for fields like email and FTE percentage.
+# Custom save methods ensure proper handling of user creation and expertise assignments.
+#
+# File: forms.py
+# Author: Jacob Paff
+# Revisions:
+#   - 17-09-24: Initial file created by Jacob Paff. Added user profile form with role, FTE, and honorific fields.
+#   - 25-09-24: Added LecturerExpertise form for managing multiple subjects a lecturer has expertise in.
+#
+
 from django import forms
-from django.core.validators import EmailValidator
 from django.core.exceptions import ValidationError
-from django.forms.widgets import CheckboxSelectMultiple
 from core.models import UserProfile, Role, Subject, LecturerExpertise
 
-
+# Form for managing User Profiles (create/edit)
 class UserProfileForm(forms.ModelForm):
     role = forms.ModelChoiceField(
         queryset=Role.objects.all(),
@@ -72,32 +84,25 @@ class UserProfileForm(forms.ModelForm):
     def clean_email(self):
         email = self.cleaned_data.get('email')
         if email:
-            if self.instance.pk:  # This is an existing user
-                if email != self.instance.email:
-                    if UserProfile.objects.filter(email=email).exists():
-                        raise ValidationError(
-                            "This email is already in use. Please use a different email address.")
-            else:  # This is a new user
+            # Ensure the email is unique for new users or edited users with changed email
+            if self.instance.pk:  # Editing existing user
+                if email != self.instance.email and UserProfile.objects.filter(email=email).exists():
+                    raise ValidationError("This email is already in use. Please use a different email address.")
+            else:  # Creating new user
                 if UserProfile.objects.filter(email=email).exists():
-                    raise ValidationError(
-                        "This email is already in use. Please use a different email address.")
+                    raise ValidationError("This email is already in use. Please use a different email address.")
         return email
 
     def clean_fte_percentage(self):
         fte = self.cleaned_data.get('fte_percentage')
-        # allow for staff on leave
         if fte is not None and (fte < 0.0 or fte > 1.0):
-            raise ValidationError(
-                "FTE percentage must be between 0.0 and 1.0. Please enter a valid value.")
+            raise ValidationError("FTE percentage must be between 0.0 and 1.0. Please enter a valid value.")
         return fte
 
     def save(self, commit=True):
-        # Calls the form's save method to return an unsaved instance
         user = super(UserProfileForm, self).save(commit=False)
-
-        # If the user does not already exist (new user)
-        if not self.instance.pk:
-            user = UserProfile.objects.create_user(  # Calls the custom create_user method from the manager
+        if not self.instance.pk:  # Creating new user
+            user = UserProfile.objects.create_user(
                 email=self.cleaned_data['email'],
                 role=self.cleaned_data['role'],
                 fte_percentage=self.cleaned_data['fte_percentage'],
@@ -105,13 +110,11 @@ class UserProfileForm(forms.ModelForm):
                 first_name=self.cleaned_data['first_name'],
                 last_name=self.cleaned_data['last_name']
             )
-        else:  # If the user already exists (editing)
-            if commit:
-                user.save()  # Calls the model's save method to update the user in the database
+        elif commit:  # Editing existing user
+            user.save()
+        return user
 
-        return user  # Returns the user instance
-
-
+# Form for managing Lecturer Expertise in multiple subjects
 class LecturerExpertiseForm(forms.ModelForm):
     expertise = forms.ModelMultipleChoiceField(
         queryset=Subject.objects.all(),
@@ -122,23 +125,18 @@ class LecturerExpertiseForm(forms.ModelForm):
 
     class Meta:
         model = LecturerExpertise
-        fields = []  # No direct model fields to use in this form; expertise is handled manually
+        fields = []  # Expertise handled manually with ModelMultipleChoiceField
 
     def __init__(self, *args, user=None, **kwargs):
         super().__init__(*args, **kwargs)
-        self.user = user  # Store the user instance
+        self.user = user
         if user:
-            # Pre-populate the form with the user's existing expertise
-            self.fields['expertise'].initial = LecturerExpertise.objects.filter(
-                user=user).values_list('subject', flat=True)
+            # Pre-populate expertise with user's current subjects
+            self.fields['expertise'].initial = LecturerExpertise.objects.filter(user=user).values_list('subject', flat=True)
 
     def save(self, commit=True):
-        # First, clear the existing expertise for this user
-        LecturerExpertise.objects.filter(user=self.user).delete()
-
-        # Now, add the new expertise from the form
+        LecturerExpertise.objects.filter(user=self.user).delete()  # Clear existing expertise
         subjects = self.cleaned_data.get('expertise', [])
-        for subject in subjects:
+        for subject in subjects:  # Assign new expertise
             LecturerExpertise.objects.create(user=self.user, subject=subject)
-
-        return self.user  # Return the user for reference (optional)
+        return self.user

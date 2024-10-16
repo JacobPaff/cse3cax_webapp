@@ -1,4 +1,18 @@
-{% extends "base.html" %} {% block content %}
+
+<!--
+  Lecturer Roster Template
+  =============
+  This template dynamically loads the lecturer instance list into a scrollable table layout.
+  The table contains a sticky header for the years and months and a sticky column for the subject details.
+  It uses HTMX to load the lecturer instance data asynchronously and updates the table without a full page refresh.
+  
+  File: lecturer_roster.html
+  Author: Jacob Paff
+-->
+
+{% extends "base.html" %} 
+
+{% block content %}
 <!-- Trigger the request on load, change, or when userListChanged event is triggered -->
 <a
   hx-trigger="change, load"
@@ -7,8 +21,11 @@
   hx-swap="outerHTML"
 >
 </a>
+
+<!-- Container for the lecturer instance list table -->
 <div class="container-fluid my-4">
-  <div class = "scrollable-container">
+  <div class="scrollable-container">
+    <!-- Table with a sticky header and sticky column for subject details -->
     <table class="table table-bordered text-center">
       <thead class="sticky-row">
         <tr>
@@ -19,11 +36,14 @@
         </tr>
         <tr>
           <th style="width: 100px"></th>
-          {% for year in years %} {% for month_name in months.values %}
-          <th style="width: 100px">{{ month_name }}</th>
-          {% endfor %} {% endfor %}
+          {% for year in years %}
+            {% for month_name in months.values %}
+              <th style="width: 100px">{{ month_name }}</th>
+            {% endfor %}
+          {% endfor %}
         </tr>
       </thead>
+      
       <!-- Target for the dynamically loaded content -->
       <tbody id="lecturer_instance_list">
         <tr>
@@ -33,8 +53,10 @@
     </table>
   </div>
 </div>
+
+<!-- CSS for table layout and scrollable container -->
 <style>
-  /* Make the button cover the whole cell */
+  /* Button that covers the entire table cell */
   .btn-full {
     width: 100%;
     height: 100%;
@@ -44,32 +66,31 @@
     left: 0;
   }
 
-  /* Scrollable container for horizontal and vertical scrolling */
+  /* Scrollable container for both horizontal and vertical scrolling */
   .scrollable-container {
     overflow-x: auto;
     overflow-y: auto;
-    max-height: 900px; /* Set a max-height to trigger vertical scrolling */
+    max-height: 900px; /* Set a maximum height to allow vertical scrolling */
     position: relative;
   }
 
-  /* Sticky Column */
+  /* Sticky Column for subject info */
   .sticky-col {
     position: sticky;
     left: 0;
-    z-index: 8; /* Ensure it's above other table content */
+    z-index: 8; /* Ensure the sticky column is above other table content */
   }
 
-  /* Sticky Row */
+  /* Sticky Row for table header */
   .sticky-row {
     position: sticky;
-    top: -10px;
-    z-index: 10; /* Ensure it's above other table content */
+    top: -10px; /* Adjust position to ensure proper alignment */
+    z-index: 10; /* Ensure the sticky row is above the table content */
   }
 
-  /* Add hover effect on the parent table cell */
+  /* Change background color on hover for table rows with success status */
   .table-success:hover {
     background-color: #d4eefa;
   }
 </style>
-
 {% endblock %}

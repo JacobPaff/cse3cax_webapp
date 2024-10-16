@@ -1,35 +1,58 @@
 {% extends "base.html" %} {% block content %}
 
 <a
-  hx-trigger="change, load"
-  hx-get="{% url 'instance_calendar' %}"
-  hx-target="#cal_instance_list"
-  hx-swap="outerHTML"
+  hx-trigger="overloadedLecturers"
+  hx-get="{% url 'overloaded_lecturers' %}"
+  hx-target="#overloadedLecturers"
 >
 </a>
 <div class="container-fluid my-4">
+  <div class="d-flex align-items-center mb-3 gap-2">
+
+
+  <input
+    type="text"
+    id="search-box"
+    name="search"
+    placeholder="Search Subjects or Lecturers..."
+    hx-get="{% url 'instance_calendar' %}"
+    hx-target="#cal_instance_list"
+    hx-swap="innerHTML"
+    hx-trigger="keyup changed delay:500ms, change, load"
+    class="form-control form-control-lg" 
+  />
+  {% comment %} <label>
+    <input
+      type="checkbox"
+      id="unassigned-checkbox"
+      class="form-check-input"
+      hx-trigger="change"
+      hx-get="{% url 'instance_calendar' %}"
+      hx-target="#cal_instance_list"
+      hx-swap="innerHTML"
+      name="unassigned"
+    />
+    Unassigned Only
+  </label> {% endcomment %}
+  <!-- Clear Button -->
+  <button class="btn btn-outline-secondary" type="button" id="clear-search" onclick="clearSearch()">Clear</button>
+
+  <!-- Month Selector -->
+  <input
+    type="month"
+    id="month-selector"
+    name="month"
+    class="form-control form-control-lg"
+    hx-trigger="change"
+    hx-get="{% url 'instance_calendar' %}"
+    hx-target="#cal_instance_list"
+    hx-swap="innerHTML"
+  />
+
+
+</div>
   <div class="scrollable-container">
-    <table class="table table-bordered text-center dataTable">
-      <thead class="sticky-row">
-        <tr>
-          <th style="width: 100px"></th>
-          {% for year in years %}
-          <th colspan="12">{{ year }}</th>
-          {% endfor %}
-        </tr>
-        <tr>
-          <th style="width: 100px"></th>
-          {% for year in years %} {% for month_name in months.values %}
-          <th style="width: 100px">{{ month_name }}</th>
-          {% endfor %} {% endfor %}
-        </tr>
-      </thead>
-      <!-- Target for the dynamically loaded content -->
-      <tbody id="cal_instance_list">
-        <tr>
-          <td>Loading...</td>
-        </tr>
-      </tbody>
+    <table class="table table-bordered text-center dataTable" id="cal_instance_list">
     </table>
   </div>
 </div>
@@ -56,13 +79,14 @@
   .sticky-col {
     position: sticky;
     left: 0;
-    z-index: 8; /* Ensure it's above other table content */
+    z-index: 8;
+    width: 300px !important;
   }
 
   /* Sticky Row */
   .sticky-row {
     position: sticky;
-    top: -10px;
+    top: -100px;
     z-index: 10; /* Ensure it's above other table content */
   }
 
@@ -70,9 +94,13 @@
   .table-success:hover {
     background-color: #d4eefa;
   }
+  /* Add hover effect on the parent table cell */
+  .table-danger:hover {
+    background-color: #f5b1b5;
+  }
 </style>
 <!-- Include DataTables initialization script -->
-<script>
+{% comment %} <script>
   $(document).ready(function () {
     $(".dataTable").DataTable({
       paging: true, // Enable pagination
@@ -82,5 +110,5 @@
       searching: true, // Enable search
     });
   });
-</script>
+</script> {% endcomment %}
 {% endblock %}

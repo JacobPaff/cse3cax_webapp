@@ -1,8 +1,21 @@
 {% load crispy_forms_tags %}
 
+<!-- 
+  Modal Content Template
+  =======================
+  This template defines the content of a modal window for user interaction.
+
+  Author: Jacob Paff
+  Revisions:
+    - v1.0 (19-09-24): Initial implementation
+    - v1.1 (24-09-24): Added CSRF token to form headers
+-->
+
 <div class="modal-content">
+  <!-- Modal Header -->
   <div class="modal-header">
     <h5 class="modal-title" id="userModalLabel">
+      <!-- Display form title string -->
       {{ form_string }}
     </h5>
     <button
@@ -12,9 +25,15 @@
       aria-label="Close"
     ></button>
   </div>
+
+  <!-- Modal Body -->
   <div class="modal-body">
+    <!-- User Form -->
     <form id="user-form" hx-post="{{ request.path }}" hx-headers='{"X-CSRFToken": "{{ csrf_token }}"}'>
+      <!-- Render form fields using crispy forms -->
       {{ form|crispy }} 
+
+      <!-- Modal Footer -->
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
           Cancel

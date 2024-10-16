@@ -1,12 +1,7 @@
 <div class="modal-content">
   <div class="modal-header">
     <h5 class="modal-title" id="userModalLabel">Assign Lecturers to Subject Instance</h5>
-    <button
-    type="button"
-    class="btn-close"
-    data-bs-dismiss="modal"
-    aria-label="Close"
-  ></button>
+    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
   </div>
       <input
         type="text"
@@ -15,11 +10,11 @@
         class="form-control form-control-lg"
         placeholder="Search Lecturers..."
         hx-get="{% url 'lecturer_list' %}?instance_id={{ instance_id }}"
-        hx-trigger="keyup changed delay:500ms, change, load, instanceLecturerChanged from:body"
+        hx-trigger="keyup changed delay:500ms, change, load, instanceListChanged from:body"
         hx-target="#lecturer-list"
-        hx-indicator=".htmx-indicator"
+
       />
-      <tr class="htmx-indicator"></tr>
+
 
       <table class="table">
         <thead>
@@ -36,3 +31,13 @@
     </h5>
 
 </div>
+<a
+  hx-trigger="overloadedLecturers from:body"
+  hx-get="{% url 'overloaded_lecturers' %}"
+  hx-target="#overloadedLecturers"
+>
+</a>
+
+
+
+

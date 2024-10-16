@@ -1,3 +1,12 @@
+# URL Configuration for Lecturer Roster Management
+# ================================================
+# This file defines the URL patterns for managing the lecturer roster and subject instances.
+# It includes paths for viewing the lecturer roster, fetching lecturer instance lists, 
+# and retrieving detailed subject instance information.
+#
+# File: urls.py
+# Author: Jacob Paff
+
 from django.urls import path
 from . import views
 

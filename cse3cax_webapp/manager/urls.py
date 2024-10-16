@@ -1,7 +1,15 @@
+# 
+# URL Configuration for Subject Instance and Lecturer Management
+# ===============================================================
+# This file defines the URL patterns for managing subject instances and assigning lecturers.
+# It includes paths for adding, editing, deleting subject instances, assigning lecturers to instances, 
+# and viewing the roster in a calendar format.
+#
+# File: urls.py
+# Author: Jacob Paff
+
 from django.urls import path
 from . import views
-
-# app_name = 'manager'
 
 urlpatterns = [
     path('subject_instances/', views.subject_instances, name='subject_instances'),
@@ -23,5 +31,6 @@ urlpatterns = [
          name='remove_lecturer_instance'),
     path('instance_calendar/', views.instance_calendar,
          name='instance_calendar'),
-    path('assign_roster/', views.assign_roster, name='assign_roster'),    
+    path('assign_roster/', views.assign_roster, name='assign_roster'),
+    path('overloaded_lecturers/', views.overloaded_lecturers, name='overloaded_lecturers'),  
 ]

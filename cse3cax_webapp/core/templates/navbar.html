@@ -1,6 +1,24 @@
-<nav class="navbar navbar-expand-sm navbar-dark bg-dark sticky-top">
+<!-- 
+  Navigation Bar Template
+  =======================
+  This template defines the navigation bar for the University Testing application. 
+  The navbar includes links for managing subject instances, user management, and roster views based on the authenticated user's role.
+  Additionally, it allows theme selection and displays user information (name and role).
+  
+  File: navbar.html
+  Author: Jacob Paff
+  Revisions:
+    - 17-09-24: Initial file created by Jacob Paff.
+    - 19-09-24: Updated to conditionally display Manager and Lecturer links based on role.
+    - 07-10-24: Added role-based condition for "Set Testing Role" link. Fixed role rendering for 'Manager' and 'Testing'.
+-->
+
+
   <div class="container-fluid">
-    <a class="navbar-brand" href="{% url 'home' %}">University Testing!</a>
+    <!-- Brand/Home Link -->
+    <a class="navbar-brand" href="{% url 'home' %}">University Rostering</a>
+    
+    <!-- Toggler for small screens -->
     <button
       class="navbar-toggler"
       type="button"
@@ -12,38 +30,41 @@
     >
       <span class="navbar-toggler-icon"></span>
     </button>
+    
+    <!-- Collapsible navbar links -->
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
         </li>
+        
+        <!-- Manager and Testing roles: Manage Instances and Calendar -->
         {% if user.is_authenticated and user.role_id == 'Testing' or user.role_id == 'Manager' %}
         <li class="nav-item">
-          <a class="nav-link" href="{% url 'subject_instances' %}"
-            >Manager: Manage Instances</a
-          >
+          <a class="nav-link" href="{% url 'subject_instances' %}">Manager: Manage Instances</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="{% url 'assign_roster' %}"
-            >Manager: Instances Calendar</a
-          >
+          <a class="nav-link" href="{% url 'assign_roster' %}">Manager: Instances Calendar</a>
         </li>
         {% endif %}
-        {% if user.is_authenticated and user.role_id == 'Testing'%}
+        
+        <!-- Admin and Lecturer links for 'Testing' role -->
+        {% if user.is_authenticated and user.role_id == 'Testing' %}
         <li class="nav-item">
-          <a class="nav-link" href="{% url 'user_management' %}"
-            >Admin: Manage Users</a>
+          <a class="nav-link" href="{% url 'user_management' %}">Admin: Manage Users</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="{% url 'lecturer_roster' %}"
-            >Lecturer: Roster</a>
+          <a class="nav-link" href="{% url 'lecturer_roster' %}">Lecturer: Roster</a>
         </li>
+        
+        <!-- Special Testing role setup for testing email -->
         {% elif user.is_authenticated and user.email == 'testing@fakeuniversity.edu' %}
           <li class="nav-item">
             <a class="nav-link" href="{% url 'set_testing_role' %}">Set Testing Role</a>
           </li>
         {% endif %}
       </ul>
-      <!-- Dropdown for selecting theme -->
+
+      <!-- User info display -->
       <div class="d-flex align-items-center ms-auto text-light">
         <span class="me-3">
           {% if user.is_authenticated %}
@@ -54,45 +75,7 @@
         </span>
       </div>
 
-        {% comment %}
-        <select
-          id="theme-selector"
-          class="form-select form-select-sm me-3"
-          onchange="changeTheme()"
-          style="width: auto"
-        >
-          <option value="lux" selected>Lux</option>
-          <option value="cerulean">Cerulean</option>
-          <option value="cosmo">Cosmo</option>
-          <option value="cyborg">Cyborg</option>
-          <option value="darkly">Darkly</option>
-          <option value="flatly">Flatly</option>
-          <option value="journal">Journal</option>
-          <option value="litera">Litera</option>
-          <option value="lumen">Lumen</option>
-          <option value="materia">Materia</option>
-          <option value="minty">Minty</option>
-          <option value="morph">Morph</option>
-          <option value="pulse">Pulse</option>
-          <option value="quartz">Quartz</option>
-          <option value="sandstone">Sandstone</option>
-          <option value="simplex">Simplex</option>
-          <option value="sketchy">Sketchy</option>
-          <option value="slate">Slate</option>
-          <option value="solar">Solar</option>
-          <option value="spacelab">Spacelab</option>
-          <option value="superhero">Superhero</option>
-          <option value="united">United</option>
-          <option value="vapor">Vapor</option>
-          <option value="yeti">Yeti</option>
-          <option value="zephyr">Zephyr</option>
-        </select>
-        {% endcomment %}
-
-        <a href="{% url 'logout' %}" class="btn btn-outline-danger btn-sm"
-          >Logout</a
-        >
-      </div>
+      <!-- Logout button -->
+      <a href="{% url 'logout' %}" class="btn btn-outline-danger btn-sm">Logout</a>
     </div>
   </div>
-</nav>

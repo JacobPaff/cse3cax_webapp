@@ -1,5 +1,5 @@
 {% for lecturer in lecturer_list %}
-<tr id="lecturer-{{ lecturer.user_id }}" class="user-row">
+<tr id="lecturer-{{ lecturer.user_id }}" class="user-row {% if lecturer.max_workload_percent > 100 %}table-danger{% endif %}">
   <td>{{ lecturer.first_name }}</td>
   <td>{{ lecturer.last_name }}</td>
   <td>{{ lecturer.max_workload_percent }}%</td>

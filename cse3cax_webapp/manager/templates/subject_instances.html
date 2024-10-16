@@ -1,5 +1,6 @@
 {% extends "base.html" %} 
 {% block content %}
+</a>
 <div class="d-flex align-items-center mb-3 gap-2">
   <button
     type="button"
@@ -14,14 +15,28 @@
     type="text"
     id="search-box"
     name="search"
-    placeholder="Search Subjects..."
+    placeholder="Search Subjects or Lecturers..."
     hx-get="{% url 'instance_list' %}"
-    hx-trigger="keyup changed delay:500ms, change, load"
+    hx-trigger="keyup changed delay:500ms, change, load, instanceListChanged from:body"
     hx-target="#instance-list"
-    hx-indicator=".htmx-indicator"
-    class="form-control form-control-lg flex-grow-1" 
-    {% comment %} style="max-width: 800px;"  {% endcomment %}
+    class="form-control form-control-lg" 
   />
+
+  <!-- Clear Button -->
+  <button class="btn btn-outline-secondary" type="button" id="clear-search" onclick="clearSearch()">Clear</button>
+
+  <!-- Month Selector -->
+  <input
+    type="month"
+    id="month-selector"
+    name="month"
+    class="form-control form-control-lg"
+    hx-get="{% url 'instance_list' %}"
+    hx-trigger="change"
+    hx-target="#instance-list"
+  />
+
+
 </div>
 
 <table class="table">
@@ -38,5 +53,15 @@
     </tr>
   </tbody>
 </table>
+<script>
+  function clearSearch() {
+    // Clear the search input
+    document.getElementById("search-box").value = "";
+
+    // Trigger the htmx request to reload the full instance list
+    htmx.trigger("#search-box", "keyup");
+  }
+</script>
+
 
 {% endblock %}
