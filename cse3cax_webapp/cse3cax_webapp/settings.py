@@ -17,7 +17,7 @@ import os
 
 TESTING = True
 LOCALLY_HOSTED = False
-LOCAL_DB = False
+LOCAL_DB = True
 
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -127,7 +127,7 @@ COGNITO_REGION = 'us-east-1'
 if LOCALLY_HOSTED:
     COGNITO_REDIRECT_URI = 'http://localhost:8000/cognito_callback/'
 else:
-    COGNITO_REDIRECT_URI = 'https://rostering.paff.me/cognito_callback/'
+    COGNITO_REDIRECT_URI = 'https://cbx-2024-sb8-group1.com/cognito_callback/'
 
 AUTH_USER_MODEL = 'core.UserProfile'
 
