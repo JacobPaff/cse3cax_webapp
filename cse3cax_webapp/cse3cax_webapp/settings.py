@@ -17,7 +17,7 @@ import os
 
 TESTING = True
 LOCALLY_HOSTED = False
-LOCAL_DB = True
+LOCAL_DB = False
 
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -97,9 +97,9 @@ else:
         'default': {
             'ENGINE': 'django.db.backends.postgresql',
             'NAME': 'cse3cax_webapp',
-            'USER': 'postgres',
-            'PASSWORD': 'postgres',
-            'HOST': '3.106.202.172',
+            'USER': 'cbx_01',
+            'PASSWORD': 'cbx_G1_01_24',
+            'HOST': 'cbx01.ch4y4k20w4ht.us-east-1.rds.amazonaws.com',
             'PORT': '5432',
         }
     }
@@ -109,11 +109,20 @@ else:
 
 
 # Cognito Details
-COGNITO_DOMAIN = 'djangotestunione.auth.ap-southeast-2.amazoncognito.com'
-COGNITO_USER_POOL_ID = 'ap-southeast-2_KSJHJw714'  # Replace with your User Pool ID
-COGNITO_CLIENT_ID = '4vs2np87ek29a3a5r5ertjdjuq'
-COGNITO_CLIENT_SECRET = '9n0hkdcp0ihgc3ljlmb3qni6uuuqr198bo0uee96fmm26rn1kct'
-COGNITO_REGION = 'ap-southeast-2'
+# COGNITO_DOMAIN = 'djangotestunione.auth.ap-southeast-2.amazoncognito.com'
+# COGNITO_USER_POOL_ID = 'ap-southeast-2_KSJHJw714'  # Replace with your User Pool ID
+# COGNITO_CLIENT_ID = '4vs2np87ek29a3a5r5ertjdjuq'
+# COGNITO_CLIENT_SECRET = '9n0hkdcp0ihgc3ljlmb3qni6uuuqr198bo0uee96fmm26rn1kct'
+# COGNITO_REGION = 'ap-southeast-2'
+
+# Cognito Details
+COGNITO_DOMAIN = 'cbx-2024-sb8-group1.auth.us-east-1.amazoncognito.com'
+COGNITO_USER_POOL_ID = 'us-east-1_Lx44wJUrP'  # Replace with your User Pool ID
+COGNITO_CLIENT_ID = '1uegneka7c6ddprs8eigtcfu00'
+# COGNITO_CLIENT_SECRET = '9n0hkdcp0ihgc3ljlmb3qni6uuuqr198bo0uee96fmm26rn1kct'
+COGNITO_REGION = 'us-east-1'
+
+
 
 if LOCALLY_HOSTED:
     COGNITO_REDIRECT_URI = 'http://localhost:8000/cognito_callback/'
