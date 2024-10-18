@@ -1,0 +1,314 @@
+[
+    {
+        "model": "core.lecturerexpertise",
+        "pk": 121,
+        "fields": {
+            "user": 16,
+            "subject": "BUS2PMX"
+        }
+    },
+    {
+        "model": "core.lecturerexpertise",
+        "pk": 122,
+        "fields": {
+            "user": 16,
+            "subject": "CSE1CFX"
+        }
+    },
+    {
+        "model": "core.lecturerexpertise",
+        "pk": 123,
+        "fields": {
+            "user": 16,
+            "subject": "CSE1IOX"
+        }
+    },
+    {
+        "model": "core.lecturerexpertise",
+        "pk": 124,
+        "fields": {
+            "user": 16,
+            "subject": "CSE1ISX"
+        }
+    },
+    {
+        "model": "core.lecturerexpertise",
+        "pk": 125,
+        "fields": {
+            "user": 16,
+            "subject": "CSE1ITX"
+        }
+    },
+    {
+        "model": "core.lecturerexpertise",
+        "pk": 126,
+        "fields": {
+            "user": 16,
+            "subject": "CSE1OFX"
+        }
+    },
+    {
+        "model": "core.lecturerexpertise",
+        "pk": 127,
+        "fields": {
+            "user": 16,
+            "subject": "CSE1PGX"
+        }
+    },
+    {
+        "model": "core.lecturerexpertise",
+        "pk": 128,
+        "fields": {
+            "user": 16,
+            "subject": "CSE1SIX"
+        }
+    },
+    {
+        "model": "core.lecturerexpertise",
+        "pk": 129,
+        "fields": {
+            "user": 16,
+            "subject": "CSE1SPX"
+        }
+    },
+    {
+        "model": "core.lecturerexpertise",
+        "pk": 130,
+        "fields": {
+            "user": 16,
+            "subject": "CSE2ADX"
+        }
+    },
+    {
+        "model": "core.lecturerexpertise",
+        "pk": 131,
+        "fields": {
+            "user": 16,
+            "subject": "CSE2ANX"
+        }
+    },
+    {
+        "model": "core.lecturerexpertise",
+        "pk": 132,
+        "fields": {
+            "user": 16,
+            "subject": "CSE2CNX"
+        }
+    },
+    {
+        "model": "core.lecturerexpertise",
+        "pk": 133,
+        "fields": {
+            "user": 16,
+            "subject": "CSE2CPX"
+        }
+    },
+    {
+        "model": "core.lecturerexpertise",
+        "pk": 134,
+        "fields": {
+            "user": 16,
+            "subject": "CSE2DCX"
+        }
+    },
+    {
+        "model": "core.lecturerexpertise",
+        "pk": 135,
+        "fields": {
+            "user": 16,
+            "subject": "CSE2ICX"
+        }
+    },
+    {
+        "model": "core.lecturerexpertise",
+        "pk": 136,
+        "fields": {
+            "user": 16,
+            "subject": "CSE2MAX"
+        }
+    },
+    {
+        "model": "core.lecturerexpertise",
+        "pk": 137,
+        "fields": {
+            "user": 16,
+            "subject": "CSE2MLX"
+        }
+    },
+    {
+        "model": "core.lecturerexpertise",
+        "pk": 138,
+        "fields": {
+            "user": 16,
+            "subject": "CSE2NFX"
+        }
+    },
+    {
+        "model": "core.lecturerexpertise",
+        "pk": 139,
+        "fields": {
+            "user": 16,
+            "subject": "CSE2OSX"
+        }
+    },
+    {
+        "model": "core.lecturerexpertise",
+        "pk": 140,
+        "fields": {
+            "user": 16,
+            "subject": "CSE2SAX"
+        }
+    },
+    {
+        "model": "core.lecturerexpertise",
+        "pk": 141,
+        "fields": {
+            "user": 16,
+            "subject": "CSE2SDX"
+        }
+    },
+    {
+        "model": "core.lecturerexpertise",
+        "pk": 142,
+        "fields": {
+            "user": 16,
+            "subject": "CSE2VVX"
+        }
+    },
+    {
+        "model": "core.lecturerexpertise",
+        "pk": 143,
+        "fields": {
+            "user": 16,
+            "subject": "CSE2WDX"
+        }
+    },
+    {
+        "model": "core.lecturerexpertise",
+        "pk": 144,
+        "fields": {
+            "user": 16,
+            "subject": "CSE3ACX"
+        }
+    },
+    {
+        "model": "core.lecturerexpertise",
+        "pk": 145,
+        "fields": {
+            "user": 16,
+            "subject": "CSE3BDX"
+        }
+    },
+    {
+        "model": "core.lecturerexpertise",
+        "pk": 146,
+        "fields": {
+            "user": 16,
+            "subject": "CSE3BGX"
+        }
+    },
+    {
+        "model": "core.lecturerexpertise",
+        "pk": 147,
+        "fields": {
+            "user": 16,
+            "subject": "CSE3CAX"
+        }
+    },
+    {
+        "model": "core.lecturerexpertise",
+        "pk": 148,
+        "fields": {
+            "user": 16,
+            "subject": "CSE3CBX"
+        }
+    },
+    {
+        "model": "core.lecturerexpertise",
+        "pk": 149,
+        "fields": {
+            "user": 16,
+            "subject": "CSE3CIX"
+        }
+    },
+    {
+        "model": "core.lecturerexpertise",
+        "pk": 150,
+        "fields": {
+            "user": 16,
+            "subject": "CSE3CSX"
+        }
+    },
+    {
+        "model": "core.lecturerexpertise",
+        "pk": 151,
+        "fields": {
+            "user": 16,
+            "subject": "CSE3NWX"
+        }
+    },
+    {
+        "model": "core.lecturerexpertise",
+        "pk": 152,
+        "fields": {
+            "user": 16,
+            "subject": "CSE3OTX"
+        }
+    },
+    {
+        "model": "core.lecturerexpertise",
+        "pk": 153,
+        "fields": {
+            "user": 16,
+            "subject": "CSE3PAX"
+        }
+    },
+    {
+        "model": "core.lecturerexpertise",
+        "pk": 154,
+        "fields": {
+            "user": 16,
+            "subject": "CSE3PBX"
+        }
+    },
+    {
+        "model": "core.lecturerexpertise",
+        "pk": 155,
+        "fields": {
+            "user": 16,
+            "subject": "CSE3PCX"
+        }
+    },
+    {
+        "model": "core.lecturerexpertise",
+        "pk": 156,
+        "fields": {
+            "user": 16,
+            "subject": "CSE3PEX"
+        }
+    },
+    {
+        "model": "core.lecturerexpertise",
+        "pk": 157,
+        "fields": {
+            "user": 16,
+            "subject": "CSE3SOX"
+        }
+    },
+    {
+        "model": "core.lecturerexpertise",
+        "pk": 158,
+        "fields": {
+            "user": 16,
+            "subject": "CSE3WSX"
+        }
+    },
+    {
+        "model": "core.lecturerexpertise",
+        "pk": 159,
+        "fields": {
+            "user": 16,
+            "subject": "MAT2DMX"
+        }
+    }
+]
