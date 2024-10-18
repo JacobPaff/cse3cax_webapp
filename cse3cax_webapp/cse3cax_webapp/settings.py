@@ -111,7 +111,7 @@ else:
 
 # Cognito Details
 # COGNITO_DOMAIN = 'djangotestunione.auth.ap-southeast-2.amazoncognito.com'
-# COGNITO_USER_POOL_ID = 'ap-southeast-2_KSJHJw714'  # Replace with your User Pool ID
+# COGNITO_USER_POOL_ID = 'ap-southeast-2_KSJHJw714'  
 # COGNITO_CLIENT_ID = '4vs2np87ek29a3a5r5ertjdjuq'
 # COGNITO_CLIENT_SECRET = '9n0hkdcp0ihgc3ljlmb3qni6uuuqr198bo0uee96fmm26rn1kct'
 # COGNITO_REGION = 'ap-southeast-2'
@@ -119,9 +119,10 @@ else:
 # Cognito Details
 COGNITO_DOMAIN = 'cbx-2024-sb8-group1.auth.us-east-1.amazoncognito.com'
 COGNITO_USER_POOL_ID = 'us-east-1_Lx44wJUrP'  # Replace with your User Pool ID
-COGNITO_CLIENT_ID = '1uegneka7c6ddprs8eigtcfu00'
-# COGNITO_CLIENT_SECRET = '9n0hkdcp0ihgc3ljlmb3qni6uuuqr198bo0uee96fmm26rn1kct'
+COGNITO_CLIENT_ID = '1d4vk56gg2212dsh3prkne39ma'
+COGNITO_CLIENT_SECRET = '6thggutpauu4eqfkocktcu8vgjfkjccmkaipchjav7ca0rctrv1'
 COGNITO_REGION = 'us-east-1'
+
 
 
 
