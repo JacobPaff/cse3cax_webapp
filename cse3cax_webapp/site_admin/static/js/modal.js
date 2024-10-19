@@ -47,7 +47,7 @@
             console.log('htmx:beforeSwap event triggered for target ID:', e.detail.target.id);
             
             // Hide the relevant modal before swapping content
-            if (e.detail.target.id === "dialog" && !e.detail.xhr.status === 204) {
+            if (e.detail.target.id === "dialog" && e.detail.xhr.status === 204) {
                 console.log('Hiding default modal before swap.');
                 const modalElement = document.getElementById('modal');
                 if (modalElement) {
