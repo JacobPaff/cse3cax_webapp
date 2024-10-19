@@ -82,13 +82,13 @@ class UserProfile(AbstractBaseUser):
             workload_percent = 0
         return round(workload_percent, 2)
 
-    def delete_user(self, user_profile):
+    def delete_user(self):
         """
         Delete a user profile and update lecturer workloads if necessary.
         """
         subject_instances = []
         if self.role.role_id == 'Lecturer':
-            subject_instances = SubjectInstance.objects.filter(lecturer=user_profile)
+            subject_instances = SubjectInstance.objects.filter(lecturer=self)
         self.delete()
         if subject_instances:
             for subject_instance in subject_instances:

@@ -55,7 +55,7 @@ def role_redirect(request):
     elif user.role_id == 'Manager':
         return redirect('subject_instances')
     elif user.role_id == 'Lecturer':
-        return redirect('instance_list')
+        return redirect('lecturer_roster')
     return redirect('login')
 
 # Handle Cognito callback and authenticate the user
