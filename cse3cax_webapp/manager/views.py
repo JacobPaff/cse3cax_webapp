@@ -264,7 +264,7 @@ def add_lecturer_instance(request):
     # Add the lecturer to the subject instance lecturer and upates workload
     if subject_instance.add_lecturer(lecturer):
         triggers += ', overloadedLecturers'
-    return HttpResponse(status=204, headers={'Hx-Trigger': triggers})
+    return HttpResponse(status=202, headers={'Hx-Trigger': triggers})
 
 # View to remove a lecturer from a subject instance
 
@@ -281,7 +281,7 @@ def remove_lecturer_instance(request):
     # Remove the lecturer from the subject instance lecturer
     if subject_instance.remove_lecturer(lecturer):
         triggers += ', overloadedLecturers'
-    return HttpResponse(status=204, headers={'Hx-Trigger': triggers})
+    return HttpResponse(status=202, headers={'Hx-Trigger': triggers})
 
 
 # View to assign a roster to subject instances
