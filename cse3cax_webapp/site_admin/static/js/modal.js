@@ -56,8 +56,6 @@
                         console.log('Default modal hidden.');
                     }
                 }
-            } else if (e.detail.xhr.status === 201 || e.detail.xhr.status === 202) {
-                    console.log('Preventing modal from closing for 201 or 202');
             } else if (e.detail.target.id === "overloadedLecturersModalContainer") {
                 console.log('Hiding overloaded lecturers modal before swap.');
                 const modalElement = document.getElementById('overloadedLecturersModalContainer');
