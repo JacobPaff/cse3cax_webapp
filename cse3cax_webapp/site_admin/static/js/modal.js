@@ -45,7 +45,10 @@
 
         htmx.on('htmx:beforeSwap', (e) => {
             console.log('htmx:beforeSwap event triggered for target ID:', e.detail.target.id);
-            
+
+                } else if (e.detail.xhr.status === 201 || e.detail.xhr.status === 202) {
+                    console.log('Preventing modal from closing for 201 or 202');
+                    e.preventDefault();  // Prevent default behavior that hides the modal
             // Hide the relevant modal before swapping content
             if (e.detail.target.id === "dialog" && e.detail.xhr.status === 204) {
                 console.log('Hiding default modal before swap.');
@@ -57,6 +60,8 @@
                         console.log('Default modal hidden.');
                     }
                 }
+            } else if (e.detail.xhr.status === 201 || e.detail.xhr.status === 202) {
+                    console.log('Preventing modal from closing for 201 or 202');
             } else if (e.detail.target.id === "overloadedLecturersModalContainer") {
                 console.log('Hiding overloaded lecturers modal before swap.');
                 const modalElement = document.getElementById('overloadedLecturersModalContainer');
